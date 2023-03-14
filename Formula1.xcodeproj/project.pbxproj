@@ -14,6 +14,14 @@
 		7C2D03C029C0EB0C0023E36E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C2D03BE29C0EB0C0023E36E /* Main.storyboard */; };
 		7C2D03C229C0EB0D0023E36E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C2D03C129C0EB0D0023E36E /* Assets.xcassets */; };
 		7C2D03C529C0EB0D0023E36E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C2D03C329C0EB0D0023E36E /* LaunchScreen.storyboard */; };
+		7C2D03D029C0F31E0023E36E /* VIPERPLUS in Frameworks */ = {isa = PBXBuildFile; productRef = 7C2D03CF29C0F31E0023E36E /* VIPERPLUS */; };
+		7C2D03EF29C0F3FE0023E36E /* XRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D03E729C0F3FE0023E36E /* XRouter.swift */; };
+		7C2D03F029C0F3FE0023E36E /* XAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D03E829C0F3FE0023E36E /* XAssembly.swift */; };
+		7C2D03F129C0F3FE0023E36E /* XInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D03E929C0F3FE0023E36E /* XInteractor.swift */; };
+		7C2D03F229C0F3FE0023E36E /* XiewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C2D03EA29C0F3FE0023E36E /* XiewController.xib */; };
+		7C2D03F429C0F3FE0023E36E /* XProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D03EC29C0F3FE0023E36E /* XProvider.swift */; };
+		7C2D03F529C0F3FE0023E36E /* XViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D03ED29C0F3FE0023E36E /* XViewController.swift */; };
+		7C2D03F629C0F3FE0023E36E /* XPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D03EE29C0F3FE0023E36E /* XPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +35,14 @@
 		7C2D03C129C0EB0D0023E36E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C2D03C429C0EB0D0023E36E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C2D03C629C0EB0D0023E36E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C2D03E729C0F3FE0023E36E /* XRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XRouter.swift; path = "../../../../../../Library/Mobile Documents/com~apple~CloudDocs/Nttdata/Viper/Modelo VIPER/XRouter.swift"; sourceTree = "<group>"; };
+		7C2D03E829C0F3FE0023E36E /* XAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XAssembly.swift; path = "../../../../../../Library/Mobile Documents/com~apple~CloudDocs/Nttdata/Viper/Modelo VIPER/XAssembly.swift"; sourceTree = "<group>"; };
+		7C2D03E929C0F3FE0023E36E /* XInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XInteractor.swift; path = "../../../../../../Library/Mobile Documents/com~apple~CloudDocs/Nttdata/Viper/Modelo VIPER/XInteractor.swift"; sourceTree = "<group>"; };
+		7C2D03EA29C0F3FE0023E36E /* XiewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = XiewController.xib; path = "../../../../../../Library/Mobile Documents/com~apple~CloudDocs/Nttdata/Viper/Modelo VIPER/XiewController.xib"; sourceTree = "<group>"; };
+		7C2D03EC29C0F3FE0023E36E /* XProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XProvider.swift; path = "../../../../../../Library/Mobile Documents/com~apple~CloudDocs/Nttdata/Viper/Modelo VIPER/XProvider.swift"; sourceTree = "<group>"; };
+		7C2D03ED29C0F3FE0023E36E /* XViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XViewController.swift; path = "../../../../../../Library/Mobile Documents/com~apple~CloudDocs/Nttdata/Viper/Modelo VIPER/XViewController.swift"; sourceTree = "<group>"; };
+		7C2D03EE29C0F3FE0023E36E /* XPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XPresenter.swift; path = "../../../../../../Library/Mobile Documents/com~apple~CloudDocs/Nttdata/Viper/Modelo VIPER/XPresenter.swift"; sourceTree = "<group>"; };
+		7C2D03F729C0F4050023E36E /* XViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XViewModel.swift; sourceTree = "<group>"; };
 		F00E14668D0CC5F1D5FE53A0 /* Pods-Formula1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Formula1.release.xcconfig"; path = "Target Support Files/Pods-Formula1/Pods-Formula1.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -36,6 +52,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				062182FF78A63BC87470F617 /* Pods_Formula1.framework in Frameworks */,
+				7C2D03D029C0F31E0023E36E /* VIPERPLUS in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +80,7 @@
 		7C2D03B729C0EB0C0023E36E /* Formula1 */ = {
 			isa = PBXGroup;
 			children = (
+				7C2D03D129C0F3250023E36E /* ViperModel */,
 				7C2D03B829C0EB0C0023E36E /* AppDelegate.swift */,
 				7C2D03BA29C0EB0C0023E36E /* SceneDelegate.swift */,
 				7C2D03BC29C0EB0C0023E36E /* ViewController.swift */,
@@ -74,13 +92,35 @@
 			path = Formula1;
 			sourceTree = "<group>";
 		};
+		7C2D03D129C0F3250023E36E /* ViperModel */ = {
+			isa = PBXGroup;
+			children = (
+				7C2D03E229C0F3420023E36E /* ViewModel */,
+				7C2D03E829C0F3FE0023E36E /* XAssembly.swift */,
+				7C2D03EC29C0F3FE0023E36E /* XProvider.swift */,
+				7C2D03E729C0F3FE0023E36E /* XRouter.swift */,
+				7C2D03E929C0F3FE0023E36E /* XInteractor.swift */,
+				7C2D03EE29C0F3FE0023E36E /* XPresenter.swift */,
+				7C2D03ED29C0F3FE0023E36E /* XViewController.swift */,
+				7C2D03EA29C0F3FE0023E36E /* XiewController.xib */,
+			);
+			path = ViperModel;
+			sourceTree = "<group>";
+		};
+		7C2D03E229C0F3420023E36E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7C2D03F729C0F4050023E36E /* XViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		841AFE98ECFDC3E51C51D002 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				0955BC8762177A4FA4AD275B /* Pods-Formula1.debug.xcconfig */,
 				F00E14668D0CC5F1D5FE53A0 /* Pods-Formula1.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -110,6 +150,9 @@
 			dependencies = (
 			);
 			name = Formula1;
+			packageProductDependencies = (
+				7C2D03CF29C0F31E0023E36E /* VIPERPLUS */,
+			);
 			productName = Formula1;
 			productReference = 7C2D03B529C0EB0C0023E36E /* Formula1.app */;
 			productType = "com.apple.product-type.application";
@@ -138,6 +181,9 @@
 				Base,
 			);
 			mainGroup = 7C2D03AC29C0EB0C0023E36E;
+			packageReferences = (
+				7C2D03CE29C0F31E0023E36E /* XCRemoteSwiftPackageReference "BaseViper" */,
+			);
 			productRefGroup = 7C2D03B629C0EB0C0023E36E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -153,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C2D03C529C0EB0D0023E36E /* LaunchScreen.storyboard in Resources */,
+				7C2D03F229C0F3FE0023E36E /* XiewController.xib in Resources */,
 				7C2D03C229C0EB0D0023E36E /* Assets.xcassets in Resources */,
 				7C2D03C029C0EB0C0023E36E /* Main.storyboard in Resources */,
 			);
@@ -207,9 +254,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C2D03F429C0F3FE0023E36E /* XProvider.swift in Sources */,
 				7C2D03BD29C0EB0C0023E36E /* ViewController.swift in Sources */,
 				7C2D03B929C0EB0C0023E36E /* AppDelegate.swift in Sources */,
+				7C2D03F529C0F3FE0023E36E /* XViewController.swift in Sources */,
 				7C2D03BB29C0EB0C0023E36E /* SceneDelegate.swift in Sources */,
+				7C2D03F629C0F3FE0023E36E /* XPresenter.swift in Sources */,
+				7C2D03F029C0F3FE0023E36E /* XAssembly.swift in Sources */,
+				7C2D03F129C0F3FE0023E36E /* XInteractor.swift in Sources */,
+				7C2D03EF29C0F3FE0023E36E /* XRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +482,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7C2D03CE29C0F31E0023E36E /* XCRemoteSwiftPackageReference "BaseViper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/EdeXApple/BaseViper";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7C2D03CF29C0F31E0023E36E /* VIPERPLUS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C2D03CE29C0F31E0023E36E /* XCRemoteSwiftPackageReference "BaseViper" */;
+			productName = VIPERPLUS;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7C2D03AD29C0EB0C0023E36E /* Project object */;
 }
