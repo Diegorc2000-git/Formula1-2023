@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		062182FF78A63BC87470F617 /* Pods_Formula1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525C59330B2F74E810BD3368 /* Pods_Formula1.framework */; };
+		7C14BAB329C0FBA50091F7AF /* HomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BAB229C0FBA50091F7AF /* HomeContentView.swift */; };
+		7C14BABF29C1EC580091F7AF /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BABE29C1EC580091F7AF /* AuthenticationView.swift */; };
+		7C14BAC129C1EC620091F7AF /* loginEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BAC029C1EC620091F7AF /* loginEmailView.swift */; };
+		7C14BAC329C1EC710091F7AF /* RegisterEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BAC229C1EC710091F7AF /* RegisterEmailView.swift */; };
+		7C14BAC529C1EC870091F7AF /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BAC429C1EC870091F7AF /* AuthenticationViewModel.swift */; };
+		7C14BAC729C1ECA20091F7AF /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BAC629C1ECA20091F7AF /* AuthenticationRepository.swift */; };
+		7C14BAC929C1ECAD0091F7AF /* AuthenticationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BAC829C1ECAD0091F7AF /* AuthenticationDataSource.swift */; };
+		7C14BACC29C2301F0091F7AF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BACB29C2301F0091F7AF /* User.swift */; };
+		7C14BADD29C233090091F7AF /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BADC29C233090091F7AF /* ProfileView.swift */; };
+		7C14BADF29C237A00091F7AF /* LinkedAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BADE29C237A00091F7AF /* LinkedAccount.swift */; };
+		7C14BAE229C239170091F7AF /* FacebookAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BAE129C239170091F7AF /* FacebookAuthentication.swift */; };
 		7C2D03B929C0EB0C0023E36E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D03B829C0EB0C0023E36E /* AppDelegate.swift */; };
 		7C2D03BB29C0EB0C0023E36E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D03BA29C0EB0C0023E36E /* SceneDelegate.swift */; };
 		7C2D03BD29C0EB0C0023E36E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D03BC29C0EB0C0023E36E /* ViewController.swift */; };
@@ -22,11 +33,38 @@
 		7C2D03F429C0F3FE0023E36E /* XProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D03EC29C0F3FE0023E36E /* XProvider.swift */; };
 		7C2D03F529C0F3FE0023E36E /* XViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D03ED29C0F3FE0023E36E /* XViewController.swift */; };
 		7C2D03F629C0F3FE0023E36E /* XPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D03EE29C0F3FE0023E36E /* XPresenter.swift */; };
+		7C2D040C29C0F6390023E36E /* MockingLoginUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D040B29C0F6390023E36E /* MockingLoginUI.swift */; };
+		7C2D040E29C0F6390023E36E /* MockingLoginUILaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D040D29C0F6390023E36E /* MockingLoginUILaunchTests.swift */; };
+		7C2D041629C0F64A0023E36E /* MockWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D041529C0F64A0023E36E /* MockWebService.swift */; };
+		7C2D041729C0F6910023E36E /* MockWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D041529C0F64A0023E36E /* MockWebService.swift */; };
+		7C2D041E29C0F9870023E36E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C2D041D29C0F9870023E36E /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7C2D040F29C0F6390023E36E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7C2D03AD29C0EB0C0023E36E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7C2D03B429C0EB0C0023E36E;
+			remoteInfo = Formula1;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0955BC8762177A4FA4AD275B /* Pods-Formula1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Formula1.debug.xcconfig"; path = "Target Support Files/Pods-Formula1/Pods-Formula1.debug.xcconfig"; sourceTree = "<group>"; };
 		525C59330B2F74E810BD3368 /* Pods_Formula1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Formula1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C14BAB229C0FBA50091F7AF /* HomeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentView.swift; sourceTree = "<group>"; };
+		7C14BABE29C1EC580091F7AF /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		7C14BAC029C1EC620091F7AF /* loginEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginEmailView.swift; sourceTree = "<group>"; };
+		7C14BAC229C1EC710091F7AF /* RegisterEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailView.swift; sourceTree = "<group>"; };
+		7C14BAC429C1EC870091F7AF /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		7C14BAC629C1ECA20091F7AF /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
+		7C14BAC829C1ECAD0091F7AF /* AuthenticationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDataSource.swift; sourceTree = "<group>"; };
+		7C14BACB29C2301F0091F7AF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7C14BADC29C233090091F7AF /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		7C14BADE29C237A00091F7AF /* LinkedAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedAccount.swift; sourceTree = "<group>"; };
+		7C14BAE129C239170091F7AF /* FacebookAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuthentication.swift; sourceTree = "<group>"; };
+		7C14BAE629C2400F0091F7AF /* Formula1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Formula1.entitlements; sourceTree = "<group>"; };
 		7C2D03B529C0EB0C0023E36E /* Formula1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Formula1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C2D03B829C0EB0C0023E36E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C2D03BA29C0EB0C0023E36E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +81,11 @@
 		7C2D03ED29C0F3FE0023E36E /* XViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XViewController.swift; path = "../../../../../../Library/Mobile Documents/com~apple~CloudDocs/Nttdata/Viper/Modelo VIPER/XViewController.swift"; sourceTree = "<group>"; };
 		7C2D03EE29C0F3FE0023E36E /* XPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XPresenter.swift; path = "../../../../../../Library/Mobile Documents/com~apple~CloudDocs/Nttdata/Viper/Modelo VIPER/XPresenter.swift"; sourceTree = "<group>"; };
 		7C2D03F729C0F4050023E36E /* XViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XViewModel.swift; sourceTree = "<group>"; };
+		7C2D040929C0F6390023E36E /* MockingLoginUI.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MockingLoginUI.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C2D040B29C0F6390023E36E /* MockingLoginUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockingLoginUI.swift; sourceTree = "<group>"; };
+		7C2D040D29C0F6390023E36E /* MockingLoginUILaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockingLoginUILaunchTests.swift; sourceTree = "<group>"; };
+		7C2D041529C0F64A0023E36E /* MockWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWebService.swift; sourceTree = "<group>"; };
+		7C2D041D29C0F9870023E36E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F00E14668D0CC5F1D5FE53A0 /* Pods-Formula1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Formula1.release.xcconfig"; path = "Target Support Files/Pods-Formula1/Pods-Formula1.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,13 +99,100 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7C2D040629C0F6390023E36E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C14BAAE29C0FB700091F7AF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7C14BAB129C0FB920091F7AF /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7C14BAB129C0FB920091F7AF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7C14BAB229C0FBA50091F7AF /* HomeContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7C14BABA29C1EC1F0091F7AF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				7C14BACA29C230120091F7AF /* Model */,
+				7C14BABB29C1EC260091F7AF /* AuthenticationViews */,
+				7C14BAC429C1EC870091F7AF /* AuthenticationViewModel.swift */,
+				7C14BABD29C1EC3A0091F7AF /* Repository */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		7C14BABB29C1EC260091F7AF /* AuthenticationViews */ = {
+			isa = PBXGroup;
+			children = (
+				7C14BABE29C1EC580091F7AF /* AuthenticationView.swift */,
+				7C14BAC029C1EC620091F7AF /* loginEmailView.swift */,
+				7C14BAC229C1EC710091F7AF /* RegisterEmailView.swift */,
+			);
+			path = AuthenticationViews;
+			sourceTree = "<group>";
+		};
+		7C14BABD29C1EC3A0091F7AF /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				7C14BAE029C238FF0091F7AF /* FacebookAuthenticated */,
+				7C14BAC629C1ECA20091F7AF /* AuthenticationRepository.swift */,
+				7C14BAC829C1ECAD0091F7AF /* AuthenticationDataSource.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		7C14BACA29C230120091F7AF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7C14BACB29C2301F0091F7AF /* User.swift */,
+				7C14BADE29C237A00091F7AF /* LinkedAccount.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7C14BACF29C231E50091F7AF /* Link */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Link;
+			sourceTree = "<group>";
+		};
+		7C14BADB29C232FE0091F7AF /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				7C14BADC29C233090091F7AF /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		7C14BAE029C238FF0091F7AF /* FacebookAuthenticated */ = {
+			isa = PBXGroup;
+			children = (
+				7C14BAE129C239170091F7AF /* FacebookAuthentication.swift */,
+			);
+			path = FacebookAuthenticated;
+			sourceTree = "<group>";
+		};
 		7C2D03AC29C0EB0C0023E36E = {
 			isa = PBXGroup;
 			children = (
 				7C2D03B729C0EB0C0023E36E /* Formula1 */,
+				7C2D040A29C0F6390023E36E /* MockingLoginUI */,
 				7C2D03B629C0EB0C0023E36E /* Products */,
 				841AFE98ECFDC3E51C51D002 /* Pods */,
 				B18F23AD6911EC498D59C087 /* Frameworks */,
@@ -73,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				7C2D03B529C0EB0C0023E36E /* Formula1.app */,
+				7C2D040929C0F6390023E36E /* MockingLoginUI.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,9 +211,10 @@
 		7C2D03B729C0EB0C0023E36E /* Formula1 */ = {
 			isa = PBXGroup;
 			children = (
+				7C14BAE629C2400F0091F7AF /* Formula1.entitlements */,
+				7C2D041F29C0F9D60023E36E /* Formula1App */,
+				7C2D041829C0F7E30023E36E /* Resources */,
 				7C2D03D129C0F3250023E36E /* ViperModel */,
-				7C2D03B829C0EB0C0023E36E /* AppDelegate.swift */,
-				7C2D03BA29C0EB0C0023E36E /* SceneDelegate.swift */,
 				7C2D03BC29C0EB0C0023E36E /* ViewController.swift */,
 				7C2D03BE29C0EB0C0023E36E /* Main.storyboard */,
 				7C2D03C129C0EB0D0023E36E /* Assets.xcassets */,
@@ -113,6 +245,45 @@
 				7C2D03F729C0F4050023E36E /* XViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7C2D040A29C0F6390023E36E /* MockingLoginUI */ = {
+			isa = PBXGroup;
+			children = (
+				7C2D041429C0F63E0023E36E /* Mocks */,
+				7C2D040B29C0F6390023E36E /* MockingLoginUI.swift */,
+				7C2D040D29C0F6390023E36E /* MockingLoginUILaunchTests.swift */,
+			);
+			path = MockingLoginUI;
+			sourceTree = "<group>";
+		};
+		7C2D041429C0F63E0023E36E /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				7C2D041529C0F64A0023E36E /* MockWebService.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		7C2D041829C0F7E30023E36E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7C2D041D29C0F9870023E36E /* GoogleService-Info.plist */,
+				7C2D03B829C0EB0C0023E36E /* AppDelegate.swift */,
+				7C2D03BA29C0EB0C0023E36E /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7C2D041F29C0F9D60023E36E /* Formula1App */ = {
+			isa = PBXGroup;
+			children = (
+				7C14BADB29C232FE0091F7AF /* Profile */,
+				7C14BACF29C231E50091F7AF /* Link */,
+				7C14BABA29C1EC1F0091F7AF /* Login */,
+				7C14BAAE29C0FB700091F7AF /* Home */,
+			);
+			path = Formula1App;
 			sourceTree = "<group>";
 		};
 		841AFE98ECFDC3E51C51D002 /* Pods */ = {
@@ -157,6 +328,24 @@
 			productReference = 7C2D03B529C0EB0C0023E36E /* Formula1.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7C2D040829C0F6390023E36E /* MockingLoginUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C2D041129C0F6390023E36E /* Build configuration list for PBXNativeTarget "MockingLoginUI" */;
+			buildPhases = (
+				7C2D040529C0F6390023E36E /* Sources */,
+				7C2D040629C0F6390023E36E /* Frameworks */,
+				7C2D040729C0F6390023E36E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7C2D041029C0F6390023E36E /* PBXTargetDependency */,
+			);
+			name = MockingLoginUI;
+			productName = MockingLoginUI;
+			productReference = 7C2D040929C0F6390023E36E /* MockingLoginUI.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -169,6 +358,10 @@
 				TargetAttributes = {
 					7C2D03B429C0EB0C0023E36E = {
 						CreatedOnToolsVersion = 14.2;
+					};
+					7C2D040829C0F6390023E36E = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 7C2D03B429C0EB0C0023E36E;
 					};
 				};
 			};
@@ -183,12 +376,14 @@
 			mainGroup = 7C2D03AC29C0EB0C0023E36E;
 			packageReferences = (
 				7C2D03CE29C0F31E0023E36E /* XCRemoteSwiftPackageReference "BaseViper" */,
+				7C14BAE329C23D4B0091F7AF /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			productRefGroup = 7C2D03B629C0EB0C0023E36E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				7C2D03B429C0EB0C0023E36E /* Formula1 */,
+				7C2D040829C0F6390023E36E /* MockingLoginUI */,
 			);
 		};
 /* End PBXProject section */
@@ -202,6 +397,14 @@
 				7C2D03F229C0F3FE0023E36E /* XiewController.xib in Resources */,
 				7C2D03C229C0EB0D0023E36E /* Assets.xcassets in Resources */,
 				7C2D03C029C0EB0C0023E36E /* Main.storyboard in Resources */,
+				7C2D041E29C0F9870023E36E /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C2D040729C0F6390023E36E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,18 +458,48 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C2D03F429C0F3FE0023E36E /* XProvider.swift in Sources */,
+				7C14BAC729C1ECA20091F7AF /* AuthenticationRepository.swift in Sources */,
+				7C14BAE229C239170091F7AF /* FacebookAuthentication.swift in Sources */,
 				7C2D03BD29C0EB0C0023E36E /* ViewController.swift in Sources */,
 				7C2D03B929C0EB0C0023E36E /* AppDelegate.swift in Sources */,
 				7C2D03F529C0F3FE0023E36E /* XViewController.swift in Sources */,
 				7C2D03BB29C0EB0C0023E36E /* SceneDelegate.swift in Sources */,
+				7C14BAC529C1EC870091F7AF /* AuthenticationViewModel.swift in Sources */,
+				7C2D041729C0F6910023E36E /* MockWebService.swift in Sources */,
+				7C14BAC329C1EC710091F7AF /* RegisterEmailView.swift in Sources */,
 				7C2D03F629C0F3FE0023E36E /* XPresenter.swift in Sources */,
+				7C14BADF29C237A00091F7AF /* LinkedAccount.swift in Sources */,
 				7C2D03F029C0F3FE0023E36E /* XAssembly.swift in Sources */,
 				7C2D03F129C0F3FE0023E36E /* XInteractor.swift in Sources */,
+				7C14BABF29C1EC580091F7AF /* AuthenticationView.swift in Sources */,
+				7C14BADD29C233090091F7AF /* ProfileView.swift in Sources */,
+				7C14BAC929C1ECAD0091F7AF /* AuthenticationDataSource.swift in Sources */,
+				7C14BACC29C2301F0091F7AF /* User.swift in Sources */,
+				7C14BAC129C1EC620091F7AF /* loginEmailView.swift in Sources */,
 				7C2D03EF29C0F3FE0023E36E /* XRouter.swift in Sources */,
+				7C14BAB329C0FBA50091F7AF /* HomeContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C2D040529C0F6390023E36E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C2D041629C0F64A0023E36E /* MockWebService.swift in Sources */,
+				7C2D040C29C0F6390023E36E /* MockingLoginUI.swift in Sources */,
+				7C2D040E29C0F6390023E36E /* MockingLoginUILaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7C2D041029C0F6390023E36E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7C2D03B429C0EB0C0023E36E /* Formula1 */;
+			targetProxy = 7C2D040F29C0F6390023E36E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7C2D03BE29C0EB0C0023E36E /* Main.storyboard */ = {
@@ -408,6 +641,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Formula1/Formula1.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G6M3JH3KTX;
@@ -415,7 +649,6 @@
 				INFOPLIST_FILE = Formula1/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -437,6 +670,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Formula1/Formula1.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G6M3JH3KTX;
@@ -444,7 +678,6 @@
 				INFOPLIST_FILE = Formula1/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -457,6 +690,40 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7C2D041229C0F6390023E36E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G6M3JH3KTX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.drodcasi.MockingLoginUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Formula1;
+			};
+			name = Debug;
+		};
+		7C2D041329C0F6390023E36E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G6M3JH3KTX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.drodcasi.MockingLoginUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Formula1;
 			};
 			name = Release;
 		};
@@ -481,9 +748,26 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		7C2D041129C0F6390023E36E /* Build configuration list for PBXNativeTarget "MockingLoginUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C2D041229C0F6390023E36E /* Debug */,
+				7C2D041329C0F6390023E36E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7C14BAE329C23D4B0091F7AF /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 		7C2D03CE29C0F31E0023E36E /* XCRemoteSwiftPackageReference "BaseViper" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/EdeXApple/BaseViper";

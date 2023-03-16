@@ -9,5 +9,13 @@ target 'Formula1' do
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
 pod 'Firebase/Storage'
+pod 'FirebaseCore'
+pod 'FirebaseFirestore'
+pod 'FirebaseMessaging'
+pod 'FirebaseFirestore'
+
+pod 'FacebookCore'
+pod 'FacebookLogin'
+pod 'FacebookShare'
 
 end

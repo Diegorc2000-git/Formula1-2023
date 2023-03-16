@@ -44,4 +44,21 @@ final class AuthenticationRepository {
         try authenticationFirebaseDatasource.logout()
     }
     
+    func getCurrentProvider() -> [LinkedAccounts] {
+        authenticationFirebaseDatasource.currentProvider()
+    }
+    
+    func linkEmailAndPassword(email: String, password: String, completionBlock: @escaping (Bool) -> Void) {
+        authenticationFirebaseDatasource.linkEmailAndPassword(email: email,
+                                                              password: password,
+                                                              completionBlock: completionBlock)
+    }
+    
+    func linkFacebook(completionBlock: @escaping (Bool) -> Void) {
+        authenticationFirebaseDatasource.linkFacebook(completionBlock: completionBlock)
+    }
+    
+    func loginFacebook(completionBlock: @escaping (Result<User, Error>) -> Void) {
+        authenticationFirebaseDatasource.loginWithFacebook(completionBlock: completionBlock)
+    }
 }

@@ -34,14 +34,31 @@ struct AuthenticationView: View {
                 Button {
                     authenticationSheetView = .login
                 } label: {
-                    Label("Entrar con Email", systemImage: "envelope.fill")
+                    Label("Entrar con Email", image: "icon_email")
+                        .fixedSize()
                 }
-                .tint(.black)
+                .tint(.blue)
+                .foregroundColor(.black)
+                Button {
+                    authenticationViewModel.loginFacebook()
+                } label: {
+                    Label("Entrar con Facebook", image: "icon_facebook")
+                        .fixedSize()
+                        .foregroundColor(.black)
+                }
+                .tint(.blue)
             }
             .controlSize(.large)
             .buttonStyle(.bordered)
             .buttonBorderShape(.capsule)
             .padding(.top, 60)
+            if let messageError = authenticationViewModel.messageError {
+                Text(messageError)
+                    .bold()
+                    .font(.body)
+                    .foregroundColor(.red)
+                    .padding(.top, 20)
+            }
             Spacer()
             VStack {
                 Button {

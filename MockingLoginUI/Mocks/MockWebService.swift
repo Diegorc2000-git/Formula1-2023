@@ -1,10 +1,10 @@
-////
-////  MockWebService.swift
-////  MockingLoginUI
-////
-////  Created by Diego Rodriguez Casillas on 14/3/23.
-////
 //
+//  MockWebService.swift
+//  MockingLoginUI
+//
+//  Created by Diego Rodriguez Casillas on 14/3/23.
+//
+
 //import Foundation
 //import Firebase
 //
@@ -20,7 +20,7 @@
 //    func logOut() throws {
 //
 //    }
-//    
+//
 //    func login(username: String, password: String, completion: @escaping (Result<Void, NetworkError>) -> Void) {
 //
 //        if username == "Diegorc2000@icloud.com" && password == "123456" {

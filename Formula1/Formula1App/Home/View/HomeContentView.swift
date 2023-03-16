@@ -9,7 +9,6 @@ import SwiftUI
 
 struct HomeContentView: View {
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
-    //@StateObject var linkViewModel: LinkViewModel = LinkViewModel()
     
     var body: some View {
         NavigationView {
@@ -18,17 +17,17 @@ struct HomeContentView: View {
                     Text("Bienvenido \(authenticationViewModel.user?.email ?? "No user")")
                         .padding(.top, 32)
                     Spacer()
-                    //LinkView(linkViewModel: linkViewModel)
                 }
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
                 }
-//                ProfileView(authenticationViewModel: authenticationViewModel)
-//                    .tabItem {
-//                        Label("Profile", systemImage: "person.fill")
-//                    }
+                .foregroundColor(.black)
+                ProfileView(authenticationViewModel: authenticationViewModel)
+                    .tabItem {
+                        Label("Profile", systemImage: "person.fill")
+                    }
+                    .tint(.black)
             }
-
             .navigationBarTitleDisplayMode(.inline)
             .navigationTitle("Home")
             .toolbar {
