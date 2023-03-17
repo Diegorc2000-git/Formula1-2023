@@ -16,6 +16,7 @@ struct LoginEmailView: View {
         VStack {
             DismissView()
                 .padding(.top, 8)
+            
             Text("Formula1")
                 .bold()
                 .underline()
@@ -23,12 +24,14 @@ struct LoginEmailView: View {
                 .multilineTextAlignment(.center)
                 .font(.largeTitle)
                 .tint(.primary)
+            
             Image("icon_racing_car")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 100, height: 100)
                 .clipped()
                 .padding(.bottom)
+            
             Group {
                 Text("Loguéate para poder acceder a la app.")
                     .tint(.secondary)
@@ -50,7 +53,7 @@ struct LoginEmailView: View {
                     .cornerRadius(5.0)
                     .padding(.bottom, 20)
                     .keyboardType(.emailAddress)
-                    .accessibilityIdentifier("usernameTextField")
+                    .accessibilityIdentifier("passwordTextField")
                 
                 Button("Login") {
                     authenticationViewModel.login(email: textFieldEmail, password: textFieldPassword)
@@ -61,28 +64,26 @@ struct LoginEmailView: View {
                 .frame(width: 100, height: 45)
                 .background(Color.gray)
                 .cornerRadius(12)
+                .accessibilityIdentifier("loginButton")
+                
                 Text("* campos obligatorios")
                     .padding(.horizontal, 8)
                     .multilineTextAlignment(.center)
                     .font(.title3)
                     .foregroundColor(.gray.opacity(0.5))
+                
                 if let messageError = authenticationViewModel.messageError {
                     Text(messageError)
                         .bold()
                         .font(.body)
                         .foregroundColor(.red)
                         .padding(.top, 20)
+                        .accessibilityIdentifier("messageText")
                 }
             }
             .padding(.horizontal, 32)
             Spacer()
         }
-    }
-}
-
-struct LoginEmailView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginEmailView(authenticationViewModel: AuthenticationViewModel())
     }
 }
 
@@ -101,11 +102,5 @@ struct DismissView: View {
             .padding(.trailing, 12)
         }
         .buttonStyle(.bordered)
-    }
-}
-
-struct DismissView_Previews: PreviewProvider {
-    static var previews: some View {
-        DismissView()
     }
 }

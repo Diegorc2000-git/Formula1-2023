@@ -38,9 +38,3 @@ struct HomeContentView: View {
         }
     }
 }
-
-struct HomeContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeContentView(authenticationViewModel: AuthenticationViewModel())
-    }
-}

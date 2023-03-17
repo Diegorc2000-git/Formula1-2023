@@ -45,7 +45,7 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
 @main
 struct SaveLinkApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    @StateObject var authenticationViewModel = AuthenticationViewModel()
+    @StateObject var authenticationViewModel = AuthenticationViewModel(service: NetworkServiceFactory.create())
 //    @StateObject var remoteConfiguration = RemoteConfiguration()
     
     var body: some Scene {

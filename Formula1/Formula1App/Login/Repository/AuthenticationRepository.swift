@@ -7,7 +7,24 @@
 
 import Foundation
 
-final class AuthenticationRepository {
+enum NetworkError: Error {
+    case badRequest
+    case decodingError
+    case notAuthenticated
+}
+
+protocol NetworkService {
+    func login(email: String, password: String, completionBlock: @escaping (Result<User, Error>) -> Void)
+    func createNewUser(email: String, password: String, completionBlock: @escaping (Result<User, Error>) -> Void)
+    func logout() throws
+    func getCurrentUser() -> User?
+    func getCurrentProvider() -> [LinkedAccounts]
+    func linkEmailAndPassword(email: String, password: String, completionBlock: @escaping (Bool) -> Void)
+    func linkFacebook(completionBlock: @escaping (Bool) -> Void)
+    func loginFacebook(completionBlock: @escaping (Result<User, Error>) -> Void)
+}
+
+class AuthenticationRepository: NetworkService {
     private let authenticationFirebaseDatasource: AuthenticationFirebaseDatasource
     @Published var messageError: String?
     

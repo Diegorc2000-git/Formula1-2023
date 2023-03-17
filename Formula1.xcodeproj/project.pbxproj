@@ -19,6 +19,10 @@
 		7C14BADD29C233090091F7AF /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BADC29C233090091F7AF /* ProfileView.swift */; };
 		7C14BADF29C237A00091F7AF /* LinkedAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BADE29C237A00091F7AF /* LinkedAccount.swift */; };
 		7C14BAE229C239170091F7AF /* FacebookAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BAE129C239170091F7AF /* FacebookAuthentication.swift */; };
+		7C14BAEE29C357590091F7AF /* MockLoginSignInUITesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BAED29C357590091F7AF /* MockLoginSignInUITesting.swift */; };
+		7C14BAF029C357590091F7AF /* MockLoginSignInUITestingLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BAEF29C357590091F7AF /* MockLoginSignInUITestingLaunchTests.swift */; };
+		7C14BAFC29C3671B0091F7AF /* LoginMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BAF729C3636C0091F7AF /* LoginMock.swift */; };
+		7C14BAFF29C368200091F7AF /* NetworkServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BAFE29C368200091F7AF /* NetworkServiceFactory.swift */; };
 		7C2D03B929C0EB0C0023E36E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D03B829C0EB0C0023E36E /* AppDelegate.swift */; };
 		7C2D03BB29C0EB0C0023E36E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D03BA29C0EB0C0023E36E /* SceneDelegate.swift */; };
 		7C2D03BD29C0EB0C0023E36E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D03BC29C0EB0C0023E36E /* ViewController.swift */; };
@@ -33,14 +37,21 @@
 		7C2D03F429C0F3FE0023E36E /* XProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D03EC29C0F3FE0023E36E /* XProvider.swift */; };
 		7C2D03F529C0F3FE0023E36E /* XViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D03ED29C0F3FE0023E36E /* XViewController.swift */; };
 		7C2D03F629C0F3FE0023E36E /* XPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D03EE29C0F3FE0023E36E /* XPresenter.swift */; };
-		7C2D040C29C0F6390023E36E /* MockingLoginUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D040B29C0F6390023E36E /* MockingLoginUI.swift */; };
-		7C2D040E29C0F6390023E36E /* MockingLoginUILaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D040D29C0F6390023E36E /* MockingLoginUILaunchTests.swift */; };
-		7C2D041629C0F64A0023E36E /* MockWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D041529C0F64A0023E36E /* MockWebService.swift */; };
-		7C2D041729C0F6910023E36E /* MockWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D041529C0F64A0023E36E /* MockWebService.swift */; };
+		7C2D040C29C0F6390023E36E /* LoginUITesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D040B29C0F6390023E36E /* LoginUITesting.swift */; };
+		7C2D040E29C0F6390023E36E /* LoginUITestingLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D040D29C0F6390023E36E /* LoginUITestingLaunchTests.swift */; };
 		7C2D041E29C0F9870023E36E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C2D041D29C0F9870023E36E /* GoogleService-Info.plist */; };
+		7C86F2B229C3876800A6B635 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BACB29C2301F0091F7AF /* User.swift */; };
+		7C86F2B429C3878600A6B635 /* LinkedAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BADE29C237A00091F7AF /* LinkedAccount.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7C14BAF129C357590091F7AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7C2D03AD29C0EB0C0023E36E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7C2D03B429C0EB0C0023E36E;
+			remoteInfo = Formula1;
+		};
 		7C2D040F29C0F6390023E36E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7C2D03AD29C0EB0C0023E36E /* Project object */;
@@ -65,6 +76,11 @@
 		7C14BADE29C237A00091F7AF /* LinkedAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedAccount.swift; sourceTree = "<group>"; };
 		7C14BAE129C239170091F7AF /* FacebookAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuthentication.swift; sourceTree = "<group>"; };
 		7C14BAE629C2400F0091F7AF /* Formula1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Formula1.entitlements; sourceTree = "<group>"; };
+		7C14BAEB29C357590091F7AF /* MockLoginSignInUITesting.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MockLoginSignInUITesting.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C14BAED29C357590091F7AF /* MockLoginSignInUITesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginSignInUITesting.swift; sourceTree = "<group>"; };
+		7C14BAEF29C357590091F7AF /* MockLoginSignInUITestingLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginSignInUITestingLaunchTests.swift; sourceTree = "<group>"; };
+		7C14BAF729C3636C0091F7AF /* LoginMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMock.swift; sourceTree = "<group>"; };
+		7C14BAFE29C368200091F7AF /* NetworkServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceFactory.swift; sourceTree = "<group>"; };
 		7C2D03B529C0EB0C0023E36E /* Formula1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Formula1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C2D03B829C0EB0C0023E36E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C2D03BA29C0EB0C0023E36E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,15 +97,21 @@
 		7C2D03ED29C0F3FE0023E36E /* XViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XViewController.swift; path = "../../../../../../Library/Mobile Documents/com~apple~CloudDocs/Nttdata/Viper/Modelo VIPER/XViewController.swift"; sourceTree = "<group>"; };
 		7C2D03EE29C0F3FE0023E36E /* XPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XPresenter.swift; path = "../../../../../../Library/Mobile Documents/com~apple~CloudDocs/Nttdata/Viper/Modelo VIPER/XPresenter.swift"; sourceTree = "<group>"; };
 		7C2D03F729C0F4050023E36E /* XViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XViewModel.swift; sourceTree = "<group>"; };
-		7C2D040929C0F6390023E36E /* MockingLoginUI.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MockingLoginUI.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C2D040B29C0F6390023E36E /* MockingLoginUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockingLoginUI.swift; sourceTree = "<group>"; };
-		7C2D040D29C0F6390023E36E /* MockingLoginUILaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockingLoginUILaunchTests.swift; sourceTree = "<group>"; };
-		7C2D041529C0F64A0023E36E /* MockWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWebService.swift; sourceTree = "<group>"; };
+		7C2D040929C0F6390023E36E /* LoginUITesting.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginUITesting.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C2D040B29C0F6390023E36E /* LoginUITesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITesting.swift; sourceTree = "<group>"; };
+		7C2D040D29C0F6390023E36E /* LoginUITestingLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITestingLaunchTests.swift; sourceTree = "<group>"; };
 		7C2D041D29C0F9870023E36E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F00E14668D0CC5F1D5FE53A0 /* Pods-Formula1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Formula1.release.xcconfig"; path = "Target Support Files/Pods-Formula1/Pods-Formula1.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7C14BAE829C357590091F7AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7C2D03B229C0EB0C0023E36E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -188,11 +210,38 @@
 			path = FacebookAuthenticated;
 			sourceTree = "<group>";
 		};
+		7C14BAEC29C357590091F7AF /* MockLogin&SignInUITesttin */ = {
+			isa = PBXGroup;
+			children = (
+				7C14BAF629C3635E0091F7AF /* Mocks */,
+				7C14BAED29C357590091F7AF /* MockLoginSignInUITesting.swift */,
+				7C14BAEF29C357590091F7AF /* MockLoginSignInUITestingLaunchTests.swift */,
+			);
+			path = "MockLogin&SignInUITesttin";
+			sourceTree = "<group>";
+		};
+		7C14BAF629C3635E0091F7AF /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				7C14BAF729C3636C0091F7AF /* LoginMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		7C14BAFD29C3680F0091F7AF /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				7C14BAFE29C368200091F7AF /* NetworkServiceFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
 		7C2D03AC29C0EB0C0023E36E = {
 			isa = PBXGroup;
 			children = (
 				7C2D03B729C0EB0C0023E36E /* Formula1 */,
 				7C2D040A29C0F6390023E36E /* MockingLoginUI */,
+				7C14BAEC29C357590091F7AF /* MockLogin&SignInUITesttin */,
 				7C2D03B629C0EB0C0023E36E /* Products */,
 				841AFE98ECFDC3E51C51D002 /* Pods */,
 				B18F23AD6911EC498D59C087 /* Frameworks */,
@@ -203,7 +252,8 @@
 			isa = PBXGroup;
 			children = (
 				7C2D03B529C0EB0C0023E36E /* Formula1.app */,
-				7C2D040929C0F6390023E36E /* MockingLoginUI.xctest */,
+				7C2D040929C0F6390023E36E /* LoginUITesting.xctest */,
+				7C14BAEB29C357590091F7AF /* MockLoginSignInUITesting.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -250,19 +300,10 @@
 		7C2D040A29C0F6390023E36E /* MockingLoginUI */ = {
 			isa = PBXGroup;
 			children = (
-				7C2D041429C0F63E0023E36E /* Mocks */,
-				7C2D040B29C0F6390023E36E /* MockingLoginUI.swift */,
-				7C2D040D29C0F6390023E36E /* MockingLoginUILaunchTests.swift */,
+				7C2D040B29C0F6390023E36E /* LoginUITesting.swift */,
+				7C2D040D29C0F6390023E36E /* LoginUITestingLaunchTests.swift */,
 			);
 			path = MockingLoginUI;
-			sourceTree = "<group>";
-		};
-		7C2D041429C0F63E0023E36E /* Mocks */ = {
-			isa = PBXGroup;
-			children = (
-				7C2D041529C0F64A0023E36E /* MockWebService.swift */,
-			);
-			path = Mocks;
 			sourceTree = "<group>";
 		};
 		7C2D041829C0F7E30023E36E /* Resources */ = {
@@ -278,6 +319,7 @@
 		7C2D041F29C0F9D60023E36E /* Formula1App */ = {
 			isa = PBXGroup;
 			children = (
+				7C14BAFD29C3680F0091F7AF /* Factories */,
 				7C14BADB29C232FE0091F7AF /* Profile */,
 				7C14BACF29C231E50091F7AF /* Link */,
 				7C14BABA29C1EC1F0091F7AF /* Login */,
@@ -306,6 +348,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7C14BAEA29C357590091F7AF /* MockLoginSignInUITesting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C14BAF329C357590091F7AF /* Build configuration list for PBXNativeTarget "MockLoginSignInUITesting" */;
+			buildPhases = (
+				7C14BAE729C357590091F7AF /* Sources */,
+				7C14BAE829C357590091F7AF /* Frameworks */,
+				7C14BAE929C357590091F7AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7C14BAF229C357590091F7AF /* PBXTargetDependency */,
+			);
+			name = MockLoginSignInUITesting;
+			productName = "MockLogin&SignInUITesttin";
+			productReference = 7C14BAEB29C357590091F7AF /* MockLoginSignInUITesting.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		7C2D03B429C0EB0C0023E36E /* Formula1 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C2D03C929C0EB0D0023E36E /* Build configuration list for PBXNativeTarget "Formula1" */;
@@ -328,9 +388,9 @@
 			productReference = 7C2D03B529C0EB0C0023E36E /* Formula1.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7C2D040829C0F6390023E36E /* MockingLoginUI */ = {
+		7C2D040829C0F6390023E36E /* LoginUITesting */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7C2D041129C0F6390023E36E /* Build configuration list for PBXNativeTarget "MockingLoginUI" */;
+			buildConfigurationList = 7C2D041129C0F6390023E36E /* Build configuration list for PBXNativeTarget "LoginUITesting" */;
 			buildPhases = (
 				7C2D040529C0F6390023E36E /* Sources */,
 				7C2D040629C0F6390023E36E /* Frameworks */,
@@ -341,9 +401,9 @@
 			dependencies = (
 				7C2D041029C0F6390023E36E /* PBXTargetDependency */,
 			);
-			name = MockingLoginUI;
+			name = LoginUITesting;
 			productName = MockingLoginUI;
-			productReference = 7C2D040929C0F6390023E36E /* MockingLoginUI.xctest */;
+			productReference = 7C2D040929C0F6390023E36E /* LoginUITesting.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -356,6 +416,10 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					7C14BAEA29C357590091F7AF = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 7C2D03B429C0EB0C0023E36E;
+					};
 					7C2D03B429C0EB0C0023E36E = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -383,12 +447,20 @@
 			projectRoot = "";
 			targets = (
 				7C2D03B429C0EB0C0023E36E /* Formula1 */,
-				7C2D040829C0F6390023E36E /* MockingLoginUI */,
+				7C2D040829C0F6390023E36E /* LoginUITesting */,
+				7C14BAEA29C357590091F7AF /* MockLoginSignInUITesting */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7C14BAE929C357590091F7AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7C2D03B329C0EB0C0023E36E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -453,6 +525,17 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7C14BAE729C357590091F7AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C14BAF029C357590091F7AF /* MockLoginSignInUITestingLaunchTests.swift in Sources */,
+				7C86F2B229C3876800A6B635 /* User.swift in Sources */,
+				7C86F2B429C3878600A6B635 /* LinkedAccount.swift in Sources */,
+				7C14BAEE29C357590091F7AF /* MockLoginSignInUITesting.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7C2D03B129C0EB0C0023E36E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -465,8 +548,8 @@
 				7C2D03F529C0F3FE0023E36E /* XViewController.swift in Sources */,
 				7C2D03BB29C0EB0C0023E36E /* SceneDelegate.swift in Sources */,
 				7C14BAC529C1EC870091F7AF /* AuthenticationViewModel.swift in Sources */,
-				7C2D041729C0F6910023E36E /* MockWebService.swift in Sources */,
 				7C14BAC329C1EC710091F7AF /* RegisterEmailView.swift in Sources */,
+				7C14BAFF29C368200091F7AF /* NetworkServiceFactory.swift in Sources */,
 				7C2D03F629C0F3FE0023E36E /* XPresenter.swift in Sources */,
 				7C14BADF29C237A00091F7AF /* LinkedAccount.swift in Sources */,
 				7C2D03F029C0F3FE0023E36E /* XAssembly.swift in Sources */,
@@ -477,6 +560,7 @@
 				7C14BACC29C2301F0091F7AF /* User.swift in Sources */,
 				7C14BAC129C1EC620091F7AF /* loginEmailView.swift in Sources */,
 				7C2D03EF29C0F3FE0023E36E /* XRouter.swift in Sources */,
+				7C14BAFC29C3671B0091F7AF /* LoginMock.swift in Sources */,
 				7C14BAB329C0FBA50091F7AF /* HomeContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,15 +569,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C2D041629C0F64A0023E36E /* MockWebService.swift in Sources */,
-				7C2D040C29C0F6390023E36E /* MockingLoginUI.swift in Sources */,
-				7C2D040E29C0F6390023E36E /* MockingLoginUILaunchTests.swift in Sources */,
+				7C2D040C29C0F6390023E36E /* LoginUITesting.swift in Sources */,
+				7C2D040E29C0F6390023E36E /* LoginUITestingLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		7C14BAF229C357590091F7AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7C2D03B429C0EB0C0023E36E /* Formula1 */;
+			targetProxy = 7C14BAF129C357590091F7AF /* PBXContainerItemProxy */;
+		};
 		7C2D041029C0F6390023E36E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7C2D03B429C0EB0C0023E36E /* Formula1 */;
@@ -521,6 +609,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7C14BAF429C357590091F7AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.drodcasi.MockLoginSignInUITesting;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Formula1;
+			};
+			name = Debug;
+		};
+		7C14BAF529C357590091F7AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.drodcasi.MockLoginSignInUITesting;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Formula1;
+			};
+			name = Release;
+		};
 		7C2D03C729C0EB0D0023E36E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -701,7 +823,7 @@
 				DEVELOPMENT_TEAM = G6M3JH3KTX;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.drodcasi.MockingLoginUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.drodcasi.LoginUITesting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -718,7 +840,7 @@
 				DEVELOPMENT_TEAM = G6M3JH3KTX;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.drodcasi.MockingLoginUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.drodcasi.LoginUITesting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -730,6 +852,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7C14BAF329C357590091F7AF /* Build configuration list for PBXNativeTarget "MockLoginSignInUITesting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C14BAF429C357590091F7AF /* Debug */,
+				7C14BAF529C357590091F7AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7C2D03B029C0EB0C0023E36E /* Build configuration list for PBXProject "Formula1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -748,7 +879,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7C2D041129C0F6390023E36E /* Build configuration list for PBXNativeTarget "MockingLoginUI" */ = {
+		7C2D041129C0F6390023E36E /* Build configuration list for PBXNativeTarget "LoginUITesting" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7C2D041229C0F6390023E36E /* Debug */,

@@ -1,16 +1,15 @@
 //
-//  MockingLoginUI.swift
-//  MockingLoginUI
+//  MockLoginSignInUITesting.swift
+//  MockLogin&SignInUITesttin
 //
-//  Created by Diego Rodriguez Casillas on 14/3/23.
+//  Created by Diego Rodriguez Casillas on 16/3/23.
 //
 
 import XCTest
-@testable 
 
-class when_user_clicks_on_login_button: XCTestCase {
+class whenUserClicksOnLoginButton: XCTestCase {
 
-    private var app: XCUIApplication!
+    private var app: XCUIApplication!//AÑADIR ! sino revienta
     
     override func setUp() {
         app = XCUIApplication()
@@ -19,7 +18,9 @@ class when_user_clicks_on_login_button: XCTestCase {
         app.launch()
     }
     
-    func test_should_display_error_message_for_missing_required_fields() {
+    func testShouldDisplayErrorMessageForMissingRequiredFields() {
+        
+        app.buttons["Entrar con Email"].tap()
         
         let usernameTextField = app.textFields["usernameTextField"]
         usernameTextField.tap()
@@ -34,24 +35,26 @@ class when_user_clicks_on_login_button: XCTestCase {
         
         let messageText = app.staticTexts["messageText"]
         
-        XCTAssertEqual(messageText.label, "Required fields are missing")
+        XCTAssertEqual(messageText.label, "Rellena los campos obligatorios")
         
     }
     
-    func test_should_navigate_to_dashboard_page_when_authenticated() {
+    func testShouldNavigateToDashboardPageWhenAuthenticated() {
+        
+        app.buttons["Entrar con Email"].tap()
         
         let usernameTextField = app.textFields["usernameTextField"]
         usernameTextField.tap()
-        usernameTextField.typeText("JohnDoe")
+        usernameTextField.typeText("d@d.com")
         
         let passwordTextField = app.textFields["passwordTextField"]
         passwordTextField.tap()
-        passwordTextField.typeText("Password")
+        passwordTextField.typeText("123456")
         
         let loginButton = app.buttons["loginButton"]
         loginButton.tap()
         
-        let dashboardNavBarTitle = app.staticTexts["Dashboard"]
+        let dashboardNavBarTitle = app.staticTexts["Home"]
         XCTAssertTrue(dashboardNavBarTitle.waitForExistence(timeout: 0.5))
         
     }

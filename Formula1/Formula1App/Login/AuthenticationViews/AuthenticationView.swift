@@ -39,6 +39,7 @@ struct AuthenticationView: View {
                 }
                 .tint(.blue)
                 .foregroundColor(.black)
+                .accessibilityIdentifier("emailButton")
                 Button {
                     authenticationViewModel.loginFacebook()
                 } label: {
@@ -47,6 +48,7 @@ struct AuthenticationView: View {
                         .foregroundColor(.black)
                 }
                 .tint(.blue)
+                .accessibilityIdentifier("FBButton")
             }
             .controlSize(.large)
             .buttonStyle(.bordered)
@@ -69,6 +71,7 @@ struct AuthenticationView: View {
                         .underline()
                 }
                 .tint(.black)
+                .accessibilityIdentifier("registerButton")
             }
         }
         .sheet(item: $authenticationSheetView) { sheet in
@@ -79,11 +82,5 @@ struct AuthenticationView: View {
                 LoginEmailView(authenticationViewModel: authenticationViewModel)
             }
         }
-    }
-}
-
-struct AuthenticationView_Previews: PreviewProvider {
-    static var previews: some View {
-        AuthenticationView(authenticationViewModel: AuthenticationViewModel())
     }
 }

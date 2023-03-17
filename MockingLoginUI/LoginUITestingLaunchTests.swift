@@ -1,13 +1,13 @@
 //
-//  MockingLoginUILaunchTests.swift
-//  MockingLoginUI
+//  LoginUITestingLaunchTests.swift
+//  LoginUITesting
 //
 //  Created by Diego Rodriguez Casillas on 14/3/23.
 //
 
 import XCTest
 
-final class MockingLoginUILaunchTests: XCTestCase {
+final class LoginUITestingLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
