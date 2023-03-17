@@ -9,6 +9,27 @@ import SwiftUI
 
 struct ProfileView: View {
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
+    
+    var body: some View {
+        NavigationView {
+            VStack {
+                Text("Bienvenido \(authenticationViewModel.user?.email ?? "No user")")
+                    .font(.title2)
+                LinkAccounts(authenticationViewModel: AuthenticationViewModel(service: NetworkServiceFactory.create()))
+            }
+            .navigationTitle("Profile")
+        }
+    }
+}
+
+struct ProfileView_Previews: PreviewProvider {
+    static var previews: some View {
+        ProfileView(authenticationViewModel: AuthenticationViewModel(service: NetworkServiceFactory.create()))
+    }
+}
+
+struct LinkAccounts: View {
+    @ObservedObject var authenticationViewModel: AuthenticationViewModel
     @State var expandVerificationWithEmailForm: Bool = false
     @State var textFieldEmail: String = ""
     @State var textFieldPassword: String = ""
@@ -31,15 +52,17 @@ struct ProfileView: View {
                             .multilineTextAlignment(.center)
                             .padding(.top, 2)
                             .padding(.bottom, 2)
-                        TextField("Añade tu correo electrónico", text: $textFieldEmail)
-                        TextField("Añade tu contraseña", text: $textFieldPassword)
-                        Button("Aceptar") {
+                        TextField("Introduce tu correo electrónico", text: $textFieldEmail)
+                            .multilineTextAlignment(.center)
+                        SecureField("Introduce tu contraseña", text: $textFieldPassword)
+                            .multilineTextAlignment(.center)
+                        Button("Vincular") {
                             authenticationViewModel.linkEmailAndPassword(email: textFieldEmail,
                                                                          password: textFieldPassword)
                         }
-                        .padding(.top, 18)
                         .buttonStyle(.bordered)
-                        .tint(.blue)
+                        .tint(.gray)
+                        .frame(maxWidth: .infinity)
                         if let messageError = authenticationViewModel.messageError {
                             Text(messageError)
                                 .bold()
@@ -56,6 +79,14 @@ struct ProfileView: View {
                         .fixedSize()
                 })
                 .disabled(authenticationViewModel.isFacebookLinked())
+                Button(action: {
+                    authenticationViewModel.logout()
+                }, label: {
+                    Label("Cerrar Sesión", image: "icon_logout")
+                        .fixedSize()
+                        .foregroundColor(.red)
+                })
+                .frame(maxWidth: .infinity)
             } header : {
                 Text("Vincula otras cuentas a la sesión actual")
             }
@@ -74,6 +105,5 @@ struct ProfileView: View {
         } message: {
             Text(authenticationViewModel.isAccountLinked ? "✅ Acabas de vincular tu cuenta" : "❌ Error al vincular la cuenta")
         }
-        
     }
 }

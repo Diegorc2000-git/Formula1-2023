@@ -88,3 +88,9 @@ struct RegisterEmailView: View {
         }
     }
 }
+
+struct RegisterEmailView_Previews: PreviewProvider {
+    static var previews: some View {
+        RegisterEmailView(authenticationViewModel: AuthenticationViewModel(service: NetworkServiceFactory.create()))
+    }
+}

@@ -1,5 +1,5 @@
 //
-//  HomeContentView.swift
+//  TopBarContentView.swift
 //  Formula1
 //
 //  Created by Diego Rodriguez Casillas on 14/3/23.
@@ -7,16 +7,14 @@
 
 import SwiftUI
 
-struct HomeContentView: View {
+struct TopBarContentView: View {
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
     
     var body: some View {
         NavigationView {
             TabView {
                 VStack {
-                    Text("Bienvenido \(authenticationViewModel.user?.email ?? "No user")")
-                        .padding(.top, 32)
-                    Spacer()
+                    
                 }
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
@@ -29,12 +27,13 @@ struct HomeContentView: View {
                     .tint(.black)
             }
             .navigationBarTitleDisplayMode(.inline)
-            .navigationTitle("Home")
-            .toolbar {
-                Button("Logout") {
-                    authenticationViewModel.logout()
-                }
-            }
         }
+    }
+}
+
+
+struct TopBarContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        TopBarContentView(authenticationViewModel: AuthenticationViewModel(service: NetworkServiceFactory.create()))
     }
 }
