@@ -45,15 +45,25 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
 @main
 struct SaveLinkApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    @StateObject var authenticationViewModel = AuthenticationViewModel(service: NetworkServiceFactory.create())
     
     var body: some Scene {
         WindowGroup {
-            if let _ = authenticationViewModel.user {
-                TopBarContentView(authenticationViewModel: authenticationViewModel)
-            } else {
-                AuthenticationView(authenticationViewModel: authenticationViewModel)
-            }
+            AuthenticationView().environmentObject(SessionStore())
         }
     }
 }
+
+/*
+ @main
+ struct SaveLinkApp: App {
+     
+     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+     @StateObject var authenticationViewModel = AuthenticationViewModel(service: NetworkServiceFactory.create())
+
+     var body: some Scene {
+         WindowGroup {
+             TopBarContentView(authenticationViewModel: authenticationViewModel).environmentObject(SessionStore())
+         }
+     }
+ }
+ */

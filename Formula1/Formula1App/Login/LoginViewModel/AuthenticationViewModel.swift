@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 final class AuthenticationViewModel: ObservableObject {
     @Published var user: User?
@@ -24,7 +25,7 @@ final class AuthenticationViewModel: ObservableObject {
         self.user = service.getCurrentUser()
     }
     
-    func createNewUser(email: String, password: String) {
+    func createNewUser(email: String, password: String, imageData: Data) {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         
@@ -36,7 +37,10 @@ final class AuthenticationViewModel: ObservableObject {
             self.messageError = "El email introducido es incorrecto, ejemplo@gmail.com"
         } else {
             service.createNewUser(email: email,
-                                  password: password) { [weak self] result in
+                                  password: password,
+                                  name: "",
+                                  surname: "",
+                                  imageData: imageData) { [weak self] result in
                 switch result {
                 case .success(let user):
                     self?.user = user
@@ -48,7 +52,7 @@ final class AuthenticationViewModel: ObservableObject {
     }
     
     func login(email: String, password: String) {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"        
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         
         if email.isEmpty || password.isEmpty {
@@ -58,8 +62,7 @@ final class AuthenticationViewModel: ObservableObject {
         } else if emailPred.evaluate(with: email) == false {
             self.messageError = "El email introducido es incorrecto, ejemplo@gmail.com"
         } else {
-            service.login(email: email,
-                          password: password) { [weak self] result in
+            service.login(email: email, password: password, name: "", surname: "") { [weak self] result in
                 switch result {
                 case .success(let user):
                     self?.user = user
@@ -72,7 +75,7 @@ final class AuthenticationViewModel: ObservableObject {
     
     func logout() {
         do {
-            try service.logout()
+            try Auth.auth().signOut()
             self.user = nil
         } catch {
             print("Error logout")

@@ -8,7 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		062182FF78A63BC87470F617 /* Pods_Formula1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525C59330B2F74E810BD3368 /* Pods_Formula1.framework */; };
-		7C14BAB329C0FBA50091F7AF /* HomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BAB229C0FBA50091F7AF /* HomeContentView.swift */; };
+		7C14263D29C48C3D0091FFF6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14263C29C48C3D0091FFF6 /* Extensions.swift */; };
+		7C14263F29C494F30091FFF6 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14263E29C494F30091FFF6 /* AuthService.swift */; };
+		7C14264429C9C6930091FFF6 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14264329C9C6930091FFF6 /* SessionStore.swift */; };
+		7C14265129C9E0BF0091FFF6 /* HomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14265029C9E0BF0091FFF6 /* HomeContentView.swift */; };
+		7C14265429C9E8480091FFF6 /* ProfileContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14265329C9E8480091FFF6 /* ProfileContentView.swift */; };
+		7C14265729C9EDB20091FFF6 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7C14265629C9EDB20091FFF6 /* SDWebImageSwiftUI */; };
+		7C14265929C9EEEC0091FFF6 /* ProfileHeaderContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14265829C9EEEC0091FFF6 /* ProfileHeaderContentView.swift */; };
+		7C14265C29CA10380091FFF6 /* ButtonModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14265B29CA10380091FFF6 /* ButtonModifiers.swift */; };
+		7C14265E29CA173B0091FFF6 /* EditProfileContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14265D29CA173B0091FFF6 /* EditProfileContentView.swift */; };
+		7C14266029CA1CEF0091FFF6 /* TextFieldModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14265F29CA1CEF0091FFF6 /* TextFieldModifiers.swift */; };
+		7C14BAB329C0FBA50091F7AF /* TopBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BAB229C0FBA50091F7AF /* TopBarContentView.swift */; };
 		7C14BABF29C1EC580091F7AF /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BABE29C1EC580091F7AF /* AuthenticationView.swift */; };
 		7C14BAC129C1EC620091F7AF /* loginEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BAC029C1EC620091F7AF /* loginEmailView.swift */; };
 		7C14BAC329C1EC710091F7AF /* RegisterEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BAC229C1EC710091F7AF /* RegisterEmailView.swift */; };
@@ -65,7 +75,16 @@
 /* Begin PBXFileReference section */
 		0955BC8762177A4FA4AD275B /* Pods-Formula1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Formula1.debug.xcconfig"; path = "Target Support Files/Pods-Formula1/Pods-Formula1.debug.xcconfig"; sourceTree = "<group>"; };
 		525C59330B2F74E810BD3368 /* Pods_Formula1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Formula1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C14BAB229C0FBA50091F7AF /* HomeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentView.swift; sourceTree = "<group>"; };
+		7C14263C29C48C3D0091FFF6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		7C14263E29C494F30091FFF6 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		7C14264329C9C6930091FFF6 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
+		7C14265029C9E0BF0091FFF6 /* HomeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentView.swift; sourceTree = "<group>"; };
+		7C14265329C9E8480091FFF6 /* ProfileContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileContentView.swift; sourceTree = "<group>"; };
+		7C14265829C9EEEC0091FFF6 /* ProfileHeaderContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderContentView.swift; sourceTree = "<group>"; };
+		7C14265B29CA10380091FFF6 /* ButtonModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifiers.swift; sourceTree = "<group>"; };
+		7C14265D29CA173B0091FFF6 /* EditProfileContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileContentView.swift; sourceTree = "<group>"; };
+		7C14265F29CA1CEF0091FFF6 /* TextFieldModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifiers.swift; sourceTree = "<group>"; };
+		7C14BAB229C0FBA50091F7AF /* TopBarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarContentView.swift; sourceTree = "<group>"; };
 		7C14BABE29C1EC580091F7AF /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		7C14BAC029C1EC620091F7AF /* loginEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginEmailView.swift; sourceTree = "<group>"; };
 		7C14BAC229C1EC710091F7AF /* RegisterEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailView.swift; sourceTree = "<group>"; };
@@ -118,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C14265729C9EDB20091FFF6 /* SDWebImageSwiftUI in Frameworks */,
 				062182FF78A63BC87470F617 /* Pods_Formula1.framework in Frameworks */,
 				7C2D03D029C0F31E0023E36E /* VIPERPLUS in Frameworks */,
 			);
@@ -133,18 +153,110 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7C14BAAE29C0FB700091F7AF /* Home */ = {
+		7C14264529C9D6E80091FFF6 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				7C14264C29C9D7690091FFF6 /* View */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		7C14264629C9D6F60091FFF6 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				7C14264A29C9D75D0091FFF6 /* View */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		7C14264729C9D72C0091FFF6 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				7C14264B29C9D7650091FFF6 /* View */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		7C14264A29C9D75D0091FFF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7C14BAC029C1EC620091F7AF /* loginEmailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7C14264B29C9D7650091FFF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7C14BABE29C1EC580091F7AF /* AuthenticationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7C14264C29C9D7690091FFF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7C14BAC229C1EC710091F7AF /* RegisterEmailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7C14264D29C9D77E0091FFF6 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7C14264329C9C6930091FFF6 /* SessionStore.swift */,
+				7C14263E29C494F30091FFF6 /* AuthService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		7C14264E29C9E08E0091FFF6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7C14264F29C9E0AA0091FFF6 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7C14264F29C9E0AA0091FFF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7C14265029C9E0BF0091FFF6 /* HomeContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7C14265229C9E83C0091FFF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7C14265329C9E8480091FFF6 /* ProfileContentView.swift */,
+				7C14265829C9EEEC0091FFF6 /* ProfileHeaderContentView.swift */,
+				7C14265D29CA173B0091FFF6 /* EditProfileContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7C14265A29CA10290091FFF6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7C14265B29CA10380091FFF6 /* ButtonModifiers.swift */,
+				7C14265F29CA1CEF0091FFF6 /* TextFieldModifiers.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		7C14BAAE29C0FB700091F7AF /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
 				7C14BAB129C0FB920091F7AF /* View */,
 			);
-			path = Home;
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		7C14BAB129C0FB920091F7AF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7C14BAB229C0FBA50091F7AF /* HomeContentView.swift */,
+				7C14BAB229C0FBA50091F7AF /* TopBarContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -152,23 +264,24 @@
 		7C14BABA29C1EC1F0091F7AF /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				7C14BABB29C1EC260091F7AF /* LoginViewModel */,
+				7C14264D29C9D77E0091FFF6 /* Service */,
+				7C14264729C9D72C0091FFF6 /* Start */,
+				7C14264629C9D6F60091FFF6 /* SignIn */,
+				7C14264529C9D6E80091FFF6 /* SignUp */,
 				7C64BC1D29C48122004352E4 /* Utilities */,
 				7C14BACA29C230120091F7AF /* Model */,
-				7C14BABB29C1EC260091F7AF /* AuthenticationViews */,
-				7C14BAC429C1EC870091F7AF /* AuthenticationViewModel.swift */,
 				7C14BABD29C1EC3A0091F7AF /* Repository */,
 			);
 			path = Login;
 			sourceTree = "<group>";
 		};
-		7C14BABB29C1EC260091F7AF /* AuthenticationViews */ = {
+		7C14BABB29C1EC260091F7AF /* LoginViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				7C14BABE29C1EC580091F7AF /* AuthenticationView.swift */,
-				7C14BAC029C1EC620091F7AF /* loginEmailView.swift */,
-				7C14BAC229C1EC710091F7AF /* RegisterEmailView.swift */,
+				7C14BAC429C1EC870091F7AF /* AuthenticationViewModel.swift */,
 			);
-			path = AuthenticationViews;
+			path = LoginViewModel;
 			sourceTree = "<group>";
 		};
 		7C14BABD29C1EC3A0091F7AF /* Repository */ = {
@@ -186,20 +299,15 @@
 			children = (
 				7C14BACB29C2301F0091F7AF /* User.swift */,
 				7C14BADE29C237A00091F7AF /* LinkedAccount.swift */,
+				7C14263C29C48C3D0091FFF6 /* Extensions.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		7C14BACF29C231E50091F7AF /* Link */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Link;
 			sourceTree = "<group>";
 		};
 		7C14BADB29C232FE0091F7AF /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				7C14265229C9E83C0091FFF6 /* View */,
 				7C14BADC29C233090091F7AF /* ProfileView.swift */,
 			);
 			path = Profile;
@@ -267,6 +375,7 @@
 				7C14BAE629C2400F0091F7AF /* Formula1.entitlements */,
 				7C2D041F29C0F9D60023E36E /* Formula1App */,
 				7C2D041829C0F7E30023E36E /* Resources */,
+				7C14265A29CA10290091FFF6 /* Components */,
 				7C2D03D129C0F3250023E36E /* ViperModel */,
 				7C2D03BC29C0EB0C0023E36E /* ViewController.swift */,
 				7C2D03BE29C0EB0C0023E36E /* Main.storyboard */,
@@ -322,11 +431,11 @@
 		7C2D041F29C0F9D60023E36E /* Formula1App */ = {
 			isa = PBXGroup;
 			children = (
+				7C14264E29C9E08E0091FFF6 /* Home */,
 				7C14BAFD29C3680F0091F7AF /* Factories */,
 				7C14BADB29C232FE0091F7AF /* Profile */,
-				7C14BACF29C231E50091F7AF /* Link */,
 				7C14BABA29C1EC1F0091F7AF /* Login */,
-				7C14BAAE29C0FB700091F7AF /* Home */,
+				7C14BAAE29C0FB700091F7AF /* TabBar */,
 			);
 			path = Formula1App;
 			sourceTree = "<group>";
@@ -394,6 +503,7 @@
 			name = Formula1;
 			packageProductDependencies = (
 				7C2D03CF29C0F31E0023E36E /* VIPERPLUS */,
+				7C14265629C9EDB20091FFF6 /* SDWebImageSwiftUI */,
 			);
 			productName = Formula1;
 			productReference = 7C2D03B529C0EB0C0023E36E /* Formula1.app */;
@@ -452,6 +562,7 @@
 			packageReferences = (
 				7C2D03CE29C0F31E0023E36E /* XCRemoteSwiftPackageReference "BaseViper" */,
 				7C14BAE329C23D4B0091F7AF /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				7C14265529C9EDB20091FFF6 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 7C2D03B629C0EB0C0023E36E /* Products */;
 			projectDirPath = "";
@@ -551,13 +662,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C14265C29CA10380091FFF6 /* ButtonModifiers.swift in Sources */,
+				7C14265129C9E0BF0091FFF6 /* HomeContentView.swift in Sources */,
+				7C14264429C9C6930091FFF6 /* SessionStore.swift in Sources */,
 				7C2D03F429C0F3FE0023E36E /* XProvider.swift in Sources */,
 				7C14BAC729C1ECA20091F7AF /* AuthenticationRepository.swift in Sources */,
 				7C14BAE229C239170091F7AF /* FacebookAuthentication.swift in Sources */,
 				7C2D03BD29C0EB0C0023E36E /* ViewController.swift in Sources */,
+				7C14265929C9EEEC0091FFF6 /* ProfileHeaderContentView.swift in Sources */,
+				7C14265429C9E8480091FFF6 /* ProfileContentView.swift in Sources */,
 				7C2D03B929C0EB0C0023E36E /* AppDelegate.swift in Sources */,
 				7C2D03F529C0F3FE0023E36E /* XViewController.swift in Sources */,
 				7C2D03BB29C0EB0C0023E36E /* SceneDelegate.swift in Sources */,
+				7C14263F29C494F30091FFF6 /* AuthService.swift in Sources */,
 				7C14BAC529C1EC870091F7AF /* AuthenticationViewModel.swift in Sources */,
 				7C14BAC329C1EC710091F7AF /* RegisterEmailView.swift in Sources */,
 				7C14BAFF29C368200091F7AF /* NetworkServiceFactory.swift in Sources */,
@@ -569,11 +686,14 @@
 				7C14BABF29C1EC580091F7AF /* AuthenticationView.swift in Sources */,
 				7C14BADD29C233090091F7AF /* ProfileView.swift in Sources */,
 				7C14BAC929C1ECAD0091F7AF /* AuthenticationDataSource.swift in Sources */,
+				7C14265E29CA173B0091FFF6 /* EditProfileContentView.swift in Sources */,
 				7C14BACC29C2301F0091F7AF /* User.swift in Sources */,
+				7C14263D29C48C3D0091FFF6 /* Extensions.swift in Sources */,
 				7C14BAC129C1EC620091F7AF /* loginEmailView.swift in Sources */,
 				7C2D03EF29C0F3FE0023E36E /* XRouter.swift in Sources */,
 				7C14BAFC29C3671B0091F7AF /* LoginMock.swift in Sources */,
-				7C14BAB329C0FBA50091F7AF /* HomeContentView.swift in Sources */,
+				7C14266029CA1CEF0091FFF6 /* TextFieldModifiers.swift in Sources */,
+				7C14BAB329C0FBA50091F7AF /* TopBarContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -785,6 +905,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -814,6 +935,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -903,6 +1025,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7C14265529C9EDB20091FFF6 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		7C14BAE329C23D4B0091F7AF /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/facebook/facebook-ios-sdk.git";
@@ -922,6 +1052,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7C14265629C9EDB20091FFF6 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C14265529C9EDB20091FFF6 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
 		7C2D03CF29C0F31E0023E36E /* VIPERPLUS */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7C2D03CE29C0F31E0023E36E /* XCRemoteSwiftPackageReference "BaseViper" */;

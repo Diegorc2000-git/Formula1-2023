@@ -7,6 +7,11 @@
 
 import Foundation
 
-struct User {
+struct User: Encodable, Decodable {
+    let uid: String
     let email: String
+    let profileImage: String
+    let bio: String
+    let name: String
+    let surname: String
 }

@@ -1,5 +1,5 @@
 //
-//  RegisterEmailView.swift
+//  loginEmailView.swift
 //  Formula1
 //
 //  Created by Diego Rodriguez Casillas on 15/3/23.
@@ -7,16 +7,54 @@
 
 import SwiftUI
 
-struct RegisterEmailView: View {
+struct LoginEmailView: View {
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
-    @State var textFieldEmail: String = ""
-    @State var textFieldPassword: String = ""
+    @State var email: String = ""
+    @State var password: String = ""
+    
+    @State var error: String = ""
+    @State var showingAlert = false
+    @State var alertTitle: String = "¡Ha ocurrido un error!"
+    
+    func errorCheck() -> String? {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        
+        if email.isEmpty || password.isEmpty {
+            return "Rellena los campos obligatorios."
+        } else if password.count < 6 {
+            return "La contraseña tiene que ser de al menos 6 digitos."
+        } else if emailPred.evaluate(with: email) == false {
+            return "El email introducido es incorrecto, ejemplo@gmail.com"
+        }
+        return nil
+    }
+    
+    func clear() {
+        self.email = ""
+        self.password = ""
+    }
+    
+    func signIn() {
+        if let error = errorCheck() {
+            self.error = error
+            self.showingAlert = true
+            return
+        }
+        AuthService.signIn(email: email, password: password, onSuccess: { (user) in
+            self.clear()
+        }) { errorMessage in
+            print("Error \(errorMessage)")
+            self.error = errorMessage
+            self.showingAlert = true
+            return
+        }
+    }
     
     var body: some View {
         VStack {
             DismissView()
                 .padding(.top, 8)
-            
             Text("Formula1")
                 .bold()
                 .underline()
@@ -24,41 +62,34 @@ struct RegisterEmailView: View {
                 .multilineTextAlignment(.center)
                 .font(.largeTitle)
                 .tint(.primary)
-            
-            Image("icon_lights")
+            Image("icon_racing_car")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 100, height: 100)
                 .clipped()
                 .padding(.bottom)
-            
             Group {
-                
-                Text("Regístrate para poder acceder a la app.")
+                Text("Loguéate para poder acceder a la app.")
                     .tint(.secondary)
                     .multilineTextAlignment(.center)
                     .padding(.top, 2)
                     .padding(.bottom, 2)
-                
-                TextField("Introduce tu correo electrónico", text: $textFieldEmail)
+                TextField("Introduce tu correo electrónico*", text: $email)
                     .padding()
                     .background(.gray.opacity(0.2))
                     .cornerRadius(5.0)
                     .padding(.bottom, 20)
                     .keyboardType(.emailAddress)
                     .accessibilityIdentifier("usernameTextField")
-                
-                TextField("Introduce tu contraseña", text: $textFieldPassword)
+                SecureField("Introduce tu contraseña*", text: $password)
                     .padding()
                     .background(.gray.opacity(0.2))
                     .cornerRadius(5.0)
                     .padding(.bottom, 20)
                     .keyboardType(.emailAddress)
                     .accessibilityIdentifier("passwordTextField")
-                
-                Button("Aceptar") {
-                    authenticationViewModel.createNewUser(email: textFieldEmail,
-                                                          password: textFieldPassword)
+                Button(action: signIn) {
+                    Text("Login")
                 }
                 .font(.headline)
                 .foregroundColor(.white)
@@ -66,14 +97,15 @@ struct RegisterEmailView: View {
                 .frame(width: 100, height: 45)
                 .background(Color.gray)
                 .cornerRadius(12)
-                .accessibilityIdentifier("signInButton")
-                
+                .accessibilityIdentifier("loginButton")
+                .alert(isPresented: $showingAlert) {
+                    Alert(title: Text(alertTitle), message: Text(error), dismissButton: .default(Text("OK")))
+                }
                 Text("* campos obligatorios")
                     .padding(.horizontal, 8)
                     .multilineTextAlignment(.center)
                     .font(.title3)
                     .foregroundColor(.gray.opacity(0.5))
-                
                 if let messageError = authenticationViewModel.messageError {
                     Text(messageError)
                         .bold()
@@ -89,8 +121,20 @@ struct RegisterEmailView: View {
     }
 }
 
-struct RegisterEmailView_Previews: PreviewProvider {
-    static var previews: some View {
-        RegisterEmailView(authenticationViewModel: AuthenticationViewModel(service: NetworkServiceFactory.create()))
+struct DismissView: View {
+    @Environment(\.dismiss) var dismiss
+    
+    var body: some View {
+        HStack {
+            Spacer()
+            Button(action: {
+                dismiss()
+            }, label: {
+                Image(systemName: "xmark")
+            })
+            .tint(.black)
+            .padding(.trailing, 12)
+        }
+        .buttonStyle(.bordered)
     }
 }

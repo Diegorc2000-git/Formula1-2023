@@ -9,7 +9,7 @@ import Foundation
 
 class LoginMock: NetworkService {
     
-    func createNewUser(email: String, password: String, completionBlock: @escaping (Result<User, Error>) -> Void) {
+    func createNewUser(email: String, password: String, name: String, surname: String, imageData: Data, completionBlock: @escaping (Result<User, Error>) -> Void) {
         
     }
     
@@ -40,10 +40,10 @@ class LoginMock: NetworkService {
     }
     
     
-    func login(email: String, password: String, completionBlock: @escaping (Result<User, Error>) -> Void) {
+    func login(email: String, password: String, name: String, surname: String, completionBlock: @escaping (Result<User, Error>) -> Void) {
         
         if email == "d@d.com" && password == "123456" {
-            completionBlock(.success(User(email: email)))
+            completionBlock(.success(User(uid: "", email: email, profileImage: "", bio: "", name: name, surname: surname)))
         } else {
             completionBlock(.failure(Error.self as! Error))
         }

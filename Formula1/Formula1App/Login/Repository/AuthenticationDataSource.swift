@@ -6,19 +6,95 @@
 //
 
 import Foundation
+import Firebase
 import FirebaseAuth
+import FirebaseStorage
 
 final class AuthenticationFirebaseDatasource {
+    
     private let facebookAuthentication = FacebookAuthentication()
+    static var storage = Storage.storage()
+    static var storageRoot = storage.reference()
+    static var storageProfile = storageRoot.child("profile")
+    
+    static func storageProfileId(userId: String) -> StorageReference {
+        return storageProfile.child(userId)
+    }
+    
+    static func editProfile(userId: String, name: String, surname: String, bio: String, imageData: Data, metaData: StorageMetadata, storageProfileImageRef: StorageReference, onError: @escaping(_ errorMessage: String) -> Void) {
+     
+        storageProfileImageRef.putData(imageData, metadata: metaData) { (StorageMetadata, error) in
+            if error != nil {
+                onError(error!.localizedDescription)
+                return
+            }
+            storageProfileImageRef.downloadURL { (url, error) in
+                if let metaImageUrl = url?.absoluteString {
+                    
+                    if let changeRequest =
+                        Auth.auth().currentUser?.createProfileChangeRequest() {
+                        changeRequest.photoURL = url
+                        changeRequest.commitChanges { error in
+                            if error != nil {
+                                onError(error!.localizedDescription)
+                                return
+                            }
+                        }
+                    }
+                    let firestoreUserId = AuthService.getUserId(userId: userId)
+                    
+                    firestoreUserId.updateData([
+                        "profileImageUrl": metaImageUrl,
+                        "bio": bio,
+                        "name": name,
+                        "surname": surname
+                    ])
+                }
+            }
+        }
+        
+    }
+    
+    static func saveProfileImage(userId: String, email: String, name: String, surname: String, imageData: Data, metaData: StorageMetadata, storageProfileImageRef: StorageReference, onSuccess: @escaping(_ user: User) -> Void, onError: @escaping(_ errorMessage: String) -> Void) {
+        
+        storageProfileImageRef.putData(imageData, metadata: metaData) { (StorageMetadata, error) in
+            if error != nil {
+                onError(error!.localizedDescription)
+                return
+            }
+            storageProfileImageRef.downloadURL { (url, error) in
+                if let metaImageUrl = url?.absoluteString {
+                    if let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest() {
+                        changeRequest.photoURL = url
+                        changeRequest.commitChanges { (error) in
+                            if error != nil {
+                                onError(error!.localizedDescription)
+                                return
+                            }
+                        }
+                    }
+                    let firestoreUserId = AuthService.getUserId(userId: userId)
+                    let user = User.init(uid: userId, email: email, profileImage: metaImageUrl, bio: "", name: "", surname: "")
+                    guard let dict = try? user.asDictionary() else { return }
+                    firestoreUserId.setData(dict) { (error) in
+                        if error != nil {
+                            onError(error!.localizedDescription)
+                        }
+                    }
+                    onSuccess(user)
+                }
+            }
+        }
+    }
     
     func getCurrentUser() -> User? {
         guard let email = Auth.auth().currentUser?.email else {
             return nil
         }
-        return .init(email: email)
+        return .init(User(uid: "", email: email, profileImage: "", bio: "", name: "", surname: ""))
     }
     
-    func createNewUser(email: String, password: String, completionBlock: @escaping (Result<User, Error>) -> Void) {
+    func createNewUser(email: String, password: String, name: String, surname: String, imageData: Data, completionBlock: @escaping (Result<User, Error>) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) { authDataResult, error in
             if let error = error {
                 print("Error creating a new user \(error.localizedDescription)")
@@ -27,11 +103,11 @@ final class AuthenticationFirebaseDatasource {
             }
             let email = authDataResult?.user.email ?? "No email"
             print("New user created with info \(email)")
-            completionBlock(.success(.init(email: email)))
+            completionBlock(.success(.init(uid: "", email: email, profileImage: "", bio: "", name: "", surname: "")))
         }
     }
     
-    func login(email: String, password: String, completionBlock: @escaping (Result<User, Error>) -> Void) {
+    func login(email: String, password: String, name: String, surname: String, completionBlock: @escaping (Result<User, Error>) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password) { authDataResult, error in
             if let error = error {
                 print("Error login user \(error.localizedDescription)")
@@ -40,7 +116,7 @@ final class AuthenticationFirebaseDatasource {
             }
             let email = authDataResult?.user.email ?? "No email"
             print("User login with info \(email)")
-            completionBlock(.success(.init(email: email)))
+            completionBlock(.success(.init(uid: "", email: email, profileImage: "", bio: "", name: "", surname: "")))
         }
     }
     
@@ -119,7 +195,7 @@ final class AuthenticationFirebaseDatasource {
                     }
                     let email = authDataResult?.user.email ?? "No email"
                     print("New user created with info \(email)")
-                    completionBlock(.success(.init(email: email)))
+                    completionBlock(.success(.init(uid: "", email: email, profileImage: "", bio: "", name: "", surname: "")))
                 }
             case .failure(let error):
                 print("Error signIn with Facebook \(error.localizedDescription)")

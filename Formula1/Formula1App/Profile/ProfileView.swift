@@ -8,31 +8,27 @@
 import SwiftUI
 
 struct ProfileView: View {
-    @ObservedObject var authenticationViewModel: AuthenticationViewModel
     
     var body: some View {
-        NavigationView {
-            VStack {
-                Text("Bienvenido \(authenticationViewModel.user?.email ?? "No user")")
-                    .font(.title2)
-                LinkAccounts(authenticationViewModel: AuthenticationViewModel(service: NetworkServiceFactory.create()))
-            }
-            .navigationTitle("Profile")
+        VStack {
+            LinkAccounts(authenticationViewModel: AuthenticationViewModel(service: NetworkServiceFactory.create()))
         }
     }
 }
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView(authenticationViewModel: AuthenticationViewModel(service: NetworkServiceFactory.create()))
+        ProfileView()
     }
 }
 
 struct LinkAccounts: View {
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
+    @EnvironmentObject var session: SessionStore
     @State var expandVerificationWithEmailForm: Bool = false
     @State var textFieldEmail: String = ""
     @State var textFieldPassword: String = ""
+    @State private var isLinksActive = false
     
     var body: some View {
         Form {
@@ -79,6 +75,12 @@ struct LinkAccounts: View {
                         .fixedSize()
                 })
                 .disabled(authenticationViewModel.isFacebookLinked())
+                NavigationLink(destination: EditProfileContentView(session: self.session.session), isActive: $isLinksActive) {
+                    Button(action: { self.isLinksActive = true }) {
+                        Label("Editar Perfil", image: "icon_editar")
+                            .fixedSize()
+                    }
+                }
                 Button(action: {
                     authenticationViewModel.logout()
                 }, label: {

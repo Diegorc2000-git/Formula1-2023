@@ -14,8 +14,8 @@ enum NetworkError: Error {
 }
 
 protocol NetworkService {
-    func login(email: String, password: String, completionBlock: @escaping (Result<User, Error>) -> Void)
-    func createNewUser(email: String, password: String, completionBlock: @escaping (Result<User, Error>) -> Void)
+    func login(email: String, password: String, name: String, surname: String, completionBlock: @escaping (Result<User, Error>) -> Void)
+    func createNewUser(email: String, password: String, name: String, surname: String, imageData: Data, completionBlock: @escaping (Result<User, Error>) -> Void)
     func logout() throws
     func getCurrentUser() -> User?
     func getCurrentProvider() -> [LinkedAccounts]
@@ -36,23 +36,23 @@ class AuthenticationRepository: NetworkService {
         authenticationFirebaseDatasource.getCurrentUser()
     }
     
-    func createNewUser(email: String, password: String, completionBlock: @escaping (Result<User, Error>) -> Void) {
-        if email.isEmpty || password.isEmpty {
-            self.messageError = "Rellena los campos"
-        } else {
-            authenticationFirebaseDatasource.createNewUser(email: email,
-                                                           password: password,
-                                                           completionBlock: completionBlock)
-        }
-        
+    func createNewUser(email: String, password: String, name: String, surname: String, imageData: Data, completionBlock: @escaping (Result<User, Error>) -> Void) {
+        authenticationFirebaseDatasource.createNewUser(email: email,
+                                                       password: password,
+                                                       name: name,
+                                                       surname: surname,
+                                                       imageData: imageData,
+                                                       completionBlock: completionBlock)
     }
     
-    func login(email: String, password: String, completionBlock: @escaping (Result<User, Error>) -> Void) {
+    func login(email: String, password: String, name: String, surname: String, completionBlock: @escaping (Result<User, Error>) -> Void) {
         if email.isEmpty || password.isEmpty {
             self.messageError = "Rellena los campos"
         } else {
             authenticationFirebaseDatasource.login(email: email,
                                                    password: password,
+                                                   name: name,
+                                                   surname: surname,
                                                    completionBlock: completionBlock)
         }
     }

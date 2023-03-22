@@ -17,6 +17,30 @@ enum AuthenticationSheetView: String, Identifiable {
 }
 
 struct AuthenticationView: View {
+    @EnvironmentObject var session: SessionStore
+    
+    func listen() {
+        session.listen()
+    }
+    
+    var body: some View {
+        Group {
+            if (session.session != nil) {
+                TopBarContentView()
+            } else {
+                AuthenticationView2(authenticationViewModel: AuthenticationViewModel(service: NetworkServiceFactory.create()))
+            }
+        }.onAppear(perform: listen)
+    }
+}
+
+struct AuthenticationView_Previews: PreviewProvider {
+    static var previews: some View {
+        AuthenticationView()
+    }
+}
+
+struct AuthenticationView2: View {
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
     @State private var authenticationSheetView: AuthenticationSheetView?
     
@@ -73,8 +97,7 @@ struct AuthenticationView: View {
                 .tint(.black)
                 .accessibilityIdentifier("registerButton")
             }
-        }
-        .sheet(item: $authenticationSheetView) { sheet in
+        }.sheet(item: $authenticationSheetView) { sheet in
             switch sheet {
             case .register:
                 RegisterEmailView(authenticationViewModel: authenticationViewModel)
@@ -83,4 +106,5 @@ struct AuthenticationView: View {
             }
         }
     }
+    
 }
