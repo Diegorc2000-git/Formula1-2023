@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "ururs.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

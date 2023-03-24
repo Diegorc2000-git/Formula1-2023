@@ -40,19 +40,19 @@
 		7C2D03C229C0EB0D0023E36E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C2D03C129C0EB0D0023E36E /* Assets.xcassets */; };
 		7C2D03C529C0EB0D0023E36E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C2D03C329C0EB0D0023E36E /* LaunchScreen.storyboard */; };
 		7C2D03D029C0F31E0023E36E /* VIPERPLUS in Frameworks */ = {isa = PBXBuildFile; productRef = 7C2D03CF29C0F31E0023E36E /* VIPERPLUS */; };
-		7C2D03EF29C0F3FE0023E36E /* XRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D03E729C0F3FE0023E36E /* XRouter.swift */; };
-		7C2D03F029C0F3FE0023E36E /* XAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D03E829C0F3FE0023E36E /* XAssembly.swift */; };
-		7C2D03F129C0F3FE0023E36E /* XInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D03E929C0F3FE0023E36E /* XInteractor.swift */; };
-		7C2D03F229C0F3FE0023E36E /* XiewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C2D03EA29C0F3FE0023E36E /* XiewController.xib */; };
-		7C2D03F429C0F3FE0023E36E /* XProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D03EC29C0F3FE0023E36E /* XProvider.swift */; };
-		7C2D03F529C0F3FE0023E36E /* XViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D03ED29C0F3FE0023E36E /* XViewController.swift */; };
-		7C2D03F629C0F3FE0023E36E /* XPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D03EE29C0F3FE0023E36E /* XPresenter.swift */; };
 		7C2D040C29C0F6390023E36E /* LoginUITesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D040B29C0F6390023E36E /* LoginUITesting.swift */; };
 		7C2D040E29C0F6390023E36E /* LoginUITestingLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D040D29C0F6390023E36E /* LoginUITestingLaunchTests.swift */; };
 		7C2D041E29C0F9870023E36E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C2D041D29C0F9870023E36E /* GoogleService-Info.plist */; };
+		7C32DD8729CCB14900290BBB /* F1Cars.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 7C32DD8629CCB14800290BBB /* F1Cars.rcproject */; };
+		7C32DD8B29CCB3C100290BBB /* ARViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C32DD8A29CCB3C100290BBB /* ARViewModel.swift */; };
+		7C32DD8D29CCB3D400290BBB /* ARCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C32DD8C29CCB3D400290BBB /* ARCoordinator.swift */; };
+		7C32DD8F29CCB3F000290BBB /* ARContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C32DD8E29CCB3F000290BBB /* ARContentView.swift */; };
+		7C32DD9129CCB46200290BBB /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C32DD9029CCB46200290BBB /* ARView.swift */; };
 		7C64BC1F29C48132004352E4 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C64BC1E29C48132004352E4 /* ImagePicker.swift */; };
 		7C86F2B229C3876800A6B635 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BACB29C2301F0091F7AF /* User.swift */; };
 		7C86F2B429C3878600A6B635 /* LinkedAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BADE29C237A00091F7AF /* LinkedAccount.swift */; };
+		7CB8149629CC7EF400378B64 /* FocusNode in Frameworks */ = {isa = PBXBuildFile; productRef = 7CB8149529CC7EF400378B64 /* FocusNode */; };
+		7CB8149929CC805400378B64 /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 7CB8149829CC805400378B64 /* FocusEntity */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,18 +109,15 @@
 		7C2D03C129C0EB0D0023E36E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C2D03C429C0EB0D0023E36E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C2D03C629C0EB0D0023E36E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7C2D03E729C0F3FE0023E36E /* XRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XRouter.swift; path = "../../../../../../Library/Mobile Documents/com~apple~CloudDocs/Nttdata/Viper/Modelo VIPER/XRouter.swift"; sourceTree = "<group>"; };
-		7C2D03E829C0F3FE0023E36E /* XAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XAssembly.swift; path = "../../../../../../Library/Mobile Documents/com~apple~CloudDocs/Nttdata/Viper/Modelo VIPER/XAssembly.swift"; sourceTree = "<group>"; };
-		7C2D03E929C0F3FE0023E36E /* XInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XInteractor.swift; path = "../../../../../../Library/Mobile Documents/com~apple~CloudDocs/Nttdata/Viper/Modelo VIPER/XInteractor.swift"; sourceTree = "<group>"; };
-		7C2D03EA29C0F3FE0023E36E /* XiewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = XiewController.xib; path = "../../../../../../Library/Mobile Documents/com~apple~CloudDocs/Nttdata/Viper/Modelo VIPER/XiewController.xib"; sourceTree = "<group>"; };
-		7C2D03EC29C0F3FE0023E36E /* XProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XProvider.swift; path = "../../../../../../Library/Mobile Documents/com~apple~CloudDocs/Nttdata/Viper/Modelo VIPER/XProvider.swift"; sourceTree = "<group>"; };
-		7C2D03ED29C0F3FE0023E36E /* XViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XViewController.swift; path = "../../../../../../Library/Mobile Documents/com~apple~CloudDocs/Nttdata/Viper/Modelo VIPER/XViewController.swift"; sourceTree = "<group>"; };
-		7C2D03EE29C0F3FE0023E36E /* XPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XPresenter.swift; path = "../../../../../../Library/Mobile Documents/com~apple~CloudDocs/Nttdata/Viper/Modelo VIPER/XPresenter.swift"; sourceTree = "<group>"; };
-		7C2D03F729C0F4050023E36E /* XViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XViewModel.swift; sourceTree = "<group>"; };
 		7C2D040929C0F6390023E36E /* LoginUITesting.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginUITesting.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C2D040B29C0F6390023E36E /* LoginUITesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITesting.swift; sourceTree = "<group>"; };
 		7C2D040D29C0F6390023E36E /* LoginUITestingLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITestingLaunchTests.swift; sourceTree = "<group>"; };
 		7C2D041D29C0F9870023E36E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7C32DD8629CCB14800290BBB /* F1Cars.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = F1Cars.rcproject; sourceTree = "<group>"; };
+		7C32DD8A29CCB3C100290BBB /* ARViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewModel.swift; sourceTree = "<group>"; };
+		7C32DD8C29CCB3D400290BBB /* ARCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCoordinator.swift; sourceTree = "<group>"; };
+		7C32DD8E29CCB3F000290BBB /* ARContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARContentView.swift; sourceTree = "<group>"; };
+		7C32DD9029CCB46200290BBB /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
 		7C64BC1E29C48132004352E4 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		F00E14668D0CC5F1D5FE53A0 /* Pods-Formula1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Formula1.release.xcconfig"; path = "Target Support Files/Pods-Formula1/Pods-Formula1.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,9 +134,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CB8149929CC805400378B64 /* FocusEntity in Frameworks */,
 				7C14265729C9EDB20091FFF6 /* SDWebImageSwiftUI in Frameworks */,
 				062182FF78A63BC87470F617 /* Pods_Formula1.framework in Frameworks */,
 				7C2D03D029C0F31E0023E36E /* VIPERPLUS in Frameworks */,
+				7CB8149629CC7EF400378B64 /* FocusNode in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,13 +235,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		7C14265A29CA10290091FFF6 /* Components */ = {
+		7C14265A29CA10290091FFF6 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				7C14265B29CA10380091FFF6 /* ButtonModifiers.swift */,
 				7C14265F29CA1CEF0091FFF6 /* TextFieldModifiers.swift */,
+				7C32DD9029CCB46200290BBB /* ARView.swift */,
 			);
-			path = Components;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		7C14BAAE29C0FB700091F7AF /* TabBar */ = {
@@ -375,8 +375,7 @@
 				7C14BAE629C2400F0091F7AF /* Formula1.entitlements */,
 				7C2D041F29C0F9D60023E36E /* Formula1App */,
 				7C2D041829C0F7E30023E36E /* Resources */,
-				7C14265A29CA10290091FFF6 /* Components */,
-				7C2D03D129C0F3250023E36E /* ViperModel */,
+				7C14265A29CA10290091FFF6 /* Extension */,
 				7C2D03BC29C0EB0C0023E36E /* ViewController.swift */,
 				7C2D03BE29C0EB0C0023E36E /* Main.storyboard */,
 				7C2D03C129C0EB0D0023E36E /* Assets.xcassets */,
@@ -384,29 +383,6 @@
 				7C2D03C629C0EB0D0023E36E /* Info.plist */,
 			);
 			path = Formula1;
-			sourceTree = "<group>";
-		};
-		7C2D03D129C0F3250023E36E /* ViperModel */ = {
-			isa = PBXGroup;
-			children = (
-				7C2D03E229C0F3420023E36E /* ViewModel */,
-				7C2D03E829C0F3FE0023E36E /* XAssembly.swift */,
-				7C2D03EC29C0F3FE0023E36E /* XProvider.swift */,
-				7C2D03E729C0F3FE0023E36E /* XRouter.swift */,
-				7C2D03E929C0F3FE0023E36E /* XInteractor.swift */,
-				7C2D03EE29C0F3FE0023E36E /* XPresenter.swift */,
-				7C2D03ED29C0F3FE0023E36E /* XViewController.swift */,
-				7C2D03EA29C0F3FE0023E36E /* XiewController.xib */,
-			);
-			path = ViperModel;
-			sourceTree = "<group>";
-		};
-		7C2D03E229C0F3420023E36E /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				7C2D03F729C0F4050023E36E /* XViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		7C2D040A29C0F6390023E36E /* MockingLoginUI */ = {
@@ -431,6 +407,7 @@
 		7C2D041F29C0F9D60023E36E /* Formula1App */ = {
 			isa = PBXGroup;
 			children = (
+				7C940D0529CB2324000D3E23 /* AR */,
 				7C14264E29C9E08E0091FFF6 /* Home */,
 				7C14BAFD29C3680F0091F7AF /* Factories */,
 				7C14BADB29C232FE0091F7AF /* Profile */,
@@ -440,12 +417,55 @@
 			path = Formula1App;
 			sourceTree = "<group>";
 		};
+		7C32DD8829CCB3A500290BBB /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				7C32DD8C29CCB3D400290BBB /* ARCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		7C32DD8929CCB3AD00290BBB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7C32DD8A29CCB3C100290BBB /* ARViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		7C64BC1D29C48122004352E4 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				7C64BC1E29C48132004352E4 /* ImagePicker.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		7C940D0529CB2324000D3E23 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				7C32DD8929CCB3AD00290BBB /* ViewModel */,
+				7C32DD8829CCB3A500290BBB /* Coordinator */,
+				7CB8148429CC7C5800378B64 /* View */,
+				7CB8147929CC7BDC00378B64 /* Models */,
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
+		7CB8147929CC7BDC00378B64 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7C32DD8629CCB14800290BBB /* F1Cars.rcproject */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7CB8148429CC7C5800378B64 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7C32DD8E29CCB3F000290BBB /* ARContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		841AFE98ECFDC3E51C51D002 /* Pods */ = {
@@ -504,6 +524,8 @@
 			packageProductDependencies = (
 				7C2D03CF29C0F31E0023E36E /* VIPERPLUS */,
 				7C14265629C9EDB20091FFF6 /* SDWebImageSwiftUI */,
+				7CB8149529CC7EF400378B64 /* FocusNode */,
+				7CB8149829CC805400378B64 /* FocusEntity */,
 			);
 			productName = Formula1;
 			productReference = 7C2D03B529C0EB0C0023E36E /* Formula1.app */;
@@ -563,6 +585,8 @@
 				7C2D03CE29C0F31E0023E36E /* XCRemoteSwiftPackageReference "BaseViper" */,
 				7C14BAE329C23D4B0091F7AF /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 				7C14265529C9EDB20091FFF6 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				7CB8149429CC7EF400378B64 /* XCRemoteSwiftPackageReference "ARKit-FocusNode" */,
+				7CB8149729CC805400378B64 /* XCRemoteSwiftPackageReference "FocusEntity" */,
 			);
 			productRefGroup = 7C2D03B629C0EB0C0023E36E /* Products */;
 			projectDirPath = "";
@@ -588,7 +612,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C2D03C529C0EB0D0023E36E /* LaunchScreen.storyboard in Resources */,
-				7C2D03F229C0F3FE0023E36E /* XiewController.xib in Resources */,
 				7C2D03C229C0EB0D0023E36E /* Assets.xcassets in Resources */,
 				7C2D03C029C0EB0C0023E36E /* Main.storyboard in Resources */,
 				7C2D041E29C0F9870023E36E /* GoogleService-Info.plist in Resources */,
@@ -665,32 +688,31 @@
 				7C14265C29CA10380091FFF6 /* ButtonModifiers.swift in Sources */,
 				7C14265129C9E0BF0091FFF6 /* HomeContentView.swift in Sources */,
 				7C14264429C9C6930091FFF6 /* SessionStore.swift in Sources */,
-				7C2D03F429C0F3FE0023E36E /* XProvider.swift in Sources */,
+				7C32DD8F29CCB3F000290BBB /* ARContentView.swift in Sources */,
 				7C14BAC729C1ECA20091F7AF /* AuthenticationRepository.swift in Sources */,
 				7C14BAE229C239170091F7AF /* FacebookAuthentication.swift in Sources */,
 				7C2D03BD29C0EB0C0023E36E /* ViewController.swift in Sources */,
 				7C14265929C9EEEC0091FFF6 /* ProfileHeaderContentView.swift in Sources */,
+				7C32DD8B29CCB3C100290BBB /* ARViewModel.swift in Sources */,
 				7C14265429C9E8480091FFF6 /* ProfileContentView.swift in Sources */,
 				7C2D03B929C0EB0C0023E36E /* AppDelegate.swift in Sources */,
-				7C2D03F529C0F3FE0023E36E /* XViewController.swift in Sources */,
 				7C2D03BB29C0EB0C0023E36E /* SceneDelegate.swift in Sources */,
 				7C14263F29C494F30091FFF6 /* AuthService.swift in Sources */,
 				7C14BAC529C1EC870091F7AF /* AuthenticationViewModel.swift in Sources */,
+				7C32DD8D29CCB3D400290BBB /* ARCoordinator.swift in Sources */,
 				7C14BAC329C1EC710091F7AF /* RegisterEmailView.swift in Sources */,
 				7C14BAFF29C368200091F7AF /* NetworkServiceFactory.swift in Sources */,
-				7C2D03F629C0F3FE0023E36E /* XPresenter.swift in Sources */,
 				7C14BADF29C237A00091F7AF /* LinkedAccount.swift in Sources */,
-				7C2D03F029C0F3FE0023E36E /* XAssembly.swift in Sources */,
 				7C64BC1F29C48132004352E4 /* ImagePicker.swift in Sources */,
-				7C2D03F129C0F3FE0023E36E /* XInteractor.swift in Sources */,
 				7C14BABF29C1EC580091F7AF /* AuthenticationView.swift in Sources */,
 				7C14BADD29C233090091F7AF /* ProfileView.swift in Sources */,
 				7C14BAC929C1ECAD0091F7AF /* AuthenticationDataSource.swift in Sources */,
 				7C14265E29CA173B0091FFF6 /* EditProfileContentView.swift in Sources */,
+				7C32DD9129CCB46200290BBB /* ARView.swift in Sources */,
+				7C32DD8729CCB14900290BBB /* F1Cars.rcproject in Sources */,
 				7C14BACC29C2301F0091F7AF /* User.swift in Sources */,
 				7C14263D29C48C3D0091FFF6 /* Extensions.swift in Sources */,
 				7C14BAC129C1EC620091F7AF /* loginEmailView.swift in Sources */,
-				7C2D03EF29C0F3FE0023E36E /* XRouter.swift in Sources */,
 				7C14BAFC29C3671B0091F7AF /* LoginMock.swift in Sources */,
 				7C14266029CA1CEF0091FFF6 /* TextFieldModifiers.swift in Sources */,
 				7C14BAB329C0FBA50091F7AF /* TopBarContentView.swift in Sources */,
@@ -901,7 +923,7 @@
 				DEVELOPMENT_TEAM = G6M3JH3KTX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Formula1/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Usar la camara";
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -931,7 +953,7 @@
 				DEVELOPMENT_TEAM = G6M3JH3KTX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Formula1/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Usar la camara";
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1049,6 +1071,22 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		7CB8149429CC7EF400378B64 /* XCRemoteSwiftPackageReference "ARKit-FocusNode" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maxxfrazer/ARKit-FocusNode";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		7CB8149729CC805400378B64 /* XCRemoteSwiftPackageReference "FocusEntity" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maxxfrazer/FocusEntity.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1061,6 +1099,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7C2D03CE29C0F31E0023E36E /* XCRemoteSwiftPackageReference "BaseViper" */;
 			productName = VIPERPLUS;
+		};
+		7CB8149529CC7EF400378B64 /* FocusNode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7CB8149429CC7EF400378B64 /* XCRemoteSwiftPackageReference "ARKit-FocusNode" */;
+			productName = FocusNode;
+		};
+		7CB8149829CC805400378B64 /* FocusEntity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7CB8149729CC805400378B64 /* XCRemoteSwiftPackageReference "FocusEntity" */;
+			productName = FocusEntity;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

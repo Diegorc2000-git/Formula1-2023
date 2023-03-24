@@ -1,0 +1,42 @@
+[
+  {
+    "libraryIdentifier" : "c9ef945276108c491c85319184cfdd78",
+    "format" : "model",
+    "displayName" : "f1AstonMartin.usdz"
+  },
+  {
+    "libraryIdentifier" : "3569b3a4d9eef69ed665268ffd964e60",
+    "format" : "model",
+    "displayName" : "f1Ferrari.usdz"
+  },
+  {
+    "libraryIdentifier" : "652efe6859d4065890dd1df5ecb7efb5",
+    "format" : "model",
+    "displayName" : "f1Mclaren.usdz"
+  },
+  {
+    "libraryIdentifier" : "cbba9054a65621a136d738704c3f8bee",
+    "format" : "model",
+    "displayName" : "f1RedBull.usdz"
+  },
+  {
+    "libraryIdentifier" : "571de51e6a2e5bf2d557c7424b780884",
+    "format" : "model",
+    "displayName" : "911_GT2_RS_2018.usdz"
+  },
+  {
+    "libraryIdentifier" : "348a619f6bd98232978046d4cf6c912a",
+    "format" : "model",
+    "displayName" : "Huracan_Falcon.usdz"
+  },
+  {
+    "libraryIdentifier" : "038117e872102cb200f56d7089ac98bd",
+    "format" : "model",
+    "displayName" : "Ferrari_812_Superfast.usdz"
+  },
+  {
+    "libraryIdentifier" : "5858db2929251bac2508bcdd7142fee9",
+    "format" : "model",
+    "displayName" : "Urus_Absolut.usdz"
+  }
+]

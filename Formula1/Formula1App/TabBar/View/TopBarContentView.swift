@@ -16,7 +16,7 @@ struct TopBarContentView: View {
     }
 }
 
-var tabs = ["house.fill", "map.fill", "car.fill", "person.fill"]
+var tabs = ["house.fill", "map.fill", "car.side", "person.fill"]
 
 struct CustomTabView: View {
     @State var selectedTab = "house.fill"
@@ -25,7 +25,6 @@ struct CustomTabView: View {
     var body: some View {
         NavigationView {
             ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
-                NavigationView {
                     TabView(selection: $selectedTab) {
                         HomeContentView()
                             .tag("house.fill")
@@ -33,13 +32,13 @@ struct CustomTabView: View {
                         HomeContentView()
                             .tag("map.fill")
                         
-                        HomeContentView()
-                            .tag("car.fill")
+                        ARContentView()
+                            .tag("car.side")
                         
                         ProfileContentView()
                             .tag("person.fill")
                     }
-                }
+                
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
                 .ignoresSafeArea(.all, edges: .bottom)
                 
