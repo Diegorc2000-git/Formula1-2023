@@ -21,7 +21,9 @@ var tabs = ["house.fill", "map.fill", "car.side", "person.fill"]
 struct CustomTabView: View {
     @State var selectedTab = "house.fill"
     @State var edge = UIApplication.shared.windows.first?.safeAreaInsets
-    
+    @State private var showMenu = false
+    @StateObject var settings = Settings()
+
     var body: some View {
         NavigationView {
             ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
@@ -32,8 +34,9 @@ struct CustomTabView: View {
                         HomeContentView()
                             .tag("map.fill")
                         
-                        ARContentView()
+                        ARHome()
                             .tag("car.side")
+                            .environmentObject(settings)
                         
                         ProfileContentView()
                             .tag("person.fill")

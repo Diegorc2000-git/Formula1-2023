@@ -1,8 +1,8 @@
 //
-//  ARCoordinator.swift
+//  Coordinator.swift
 //  Formula1
 //
-//  Created by Diego Rodriguez Casillas on 23/3/23.
+//  Created by Diego Rodriguez Casillas on 24/3/23.
 //
 
 import Foundation
