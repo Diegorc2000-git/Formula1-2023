@@ -21,8 +21,6 @@ var tabs = ["house.fill", "map.fill", "car.side", "person.fill"]
 struct CustomTabView: View {
     @State var selectedTab = "house.fill"
     @State var edge = UIApplication.shared.windows.first?.safeAreaInsets
-    @State private var showMenu = false
-    @StateObject var settings = Settings()
 
     var body: some View {
         NavigationView {
@@ -34,15 +32,13 @@ struct CustomTabView: View {
                         HomeContentView()
                             .tag("map.fill")
                         
-                        ARHome()
+                        HomeSecondTagView()
                             .tag("car.side")
-                            .environmentObject(settings)
                         
                         ProfileContentView()
                             .tag("person.fill")
                     }
                 
-                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
                 .ignoresSafeArea(.all, edges: .bottom)
                 
                 HStack(spacing: 0) {

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "bandera.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

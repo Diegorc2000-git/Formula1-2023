@@ -73,12 +73,14 @@ struct LinkAccounts: View {
                 }, label: {
                     Label("Vincula Facebook", image: "icon_facebook")
                         .fixedSize()
+                        .foregroundColor(.white)
                 })
                 .disabled(authenticationViewModel.isFacebookLinked())
                 NavigationLink(destination: EditProfileContentView(session: self.session.session), isActive: $isLinksActive) {
                     Button(action: { self.isLinksActive = true }) {
                         Label("Editar Perfil", image: "icon_editar")
                             .fixedSize()
+                            .foregroundColor(.white)
                     }
                 }
                 Button(action: {

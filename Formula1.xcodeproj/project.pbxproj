@@ -44,35 +44,24 @@
 		7C2D040E29C0F6390023E36E /* LoginUITestingLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D040D29C0F6390023E36E /* LoginUITestingLaunchTests.swift */; };
 		7C2D041E29C0F9870023E36E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C2D041D29C0F9870023E36E /* GoogleService-Info.plist */; };
 		7C32DD8729CCB14900290BBB /* F1Cars.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 7C32DD8629CCB14800290BBB /* F1Cars.rcproject */; };
-		7C32DD8F29CCB3F000290BBB /* ARMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C32DD8E29CCB3F000290BBB /* ARMenu.swift */; };
+		7C32DD8F29CCB3F000290BBB /* ARMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C32DD8E29CCB3F000290BBB /* ARMenuView.swift */; };
 		7C32DD9129CCB46200290BBB /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C32DD9029CCB46200290BBB /* ARView.swift */; };
-		7C32DD9329CD932900290BBB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C32DD9229CD932900290BBB /* Model.swift */; };
-		7C32DD9729CDA16F00290BBB /* ARHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C32DD9629CDA16F00290BBB /* ARHome.swift */; };
-		7C32DDA829CDAB3700290BBB /* zaz.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 7C32DD9929CDAB3700290BBB /* zaz.usdz */; };
-		7C32DDA929CDAB3700290BBB /* ducati.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 7C32DD9A29CDAB3700290BBB /* ducati.usdz */; };
-		7C32DDAA29CDAB3700290BBB /* harley.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 7C32DD9B29CDAB3700290BBB /* harley.usdz */; };
-		7C32DDAB29CDAB3700290BBB /* fida.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 7C32DD9C29CDAB3700290BBB /* fida.usdz */; };
-		7C32DDAC29CDAB3700290BBB /* ferrari.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 7C32DD9D29CDAB3700290BBB /* ferrari.usdz */; };
-		7C32DDAD29CDAB3700290BBB /* urus.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 7C32DD9E29CDAB3700290BBB /* urus.usdz */; };
-		7C32DDAE29CDAB3700290BBB /* aventador.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 7C32DD9F29CDAB3700290BBB /* aventador.usdz */; };
-		7C32DDAF29CDAB3700290BBB /* uracan.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 7C32DDA029CDAB3700290BBB /* uracan.usdz */; };
-		7C32DDB029CDAB3700290BBB /* redbull.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 7C32DDA129CDAB3700290BBB /* redbull.usdz */; };
-		7C32DDB129CDAB3700290BBB /* 911.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 7C32DDA229CDAB3700290BBB /* 911.usdz */; };
-		7C32DDB229CDAB3700290BBB /* ford.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 7C32DDA329CDAB3700290BBB /* ford.usdz */; };
-		7C32DDB329CDAB3700290BBB /* tyres.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 7C32DDA429CDAB3700290BBB /* tyres.usdz */; };
-		7C32DDB429CDAB3700290BBB /* 812.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 7C32DDA529CDAB3700290BBB /* 812.usdz */; };
-		7C32DDB529CDAB3700290BBB /* astonmartin.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 7C32DDA629CDAB3700290BBB /* astonmartin.usdz */; };
-		7C32DDB629CDAB3700290BBB /* mclaren.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 7C32DDA729CDAB3700290BBB /* mclaren.usdz */; };
-		7C32DDBD29CDB86300290BBB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C32DDBC29CDB86300290BBB /* Coordinator.swift */; };
-		7C32DDBF29CDB87600290BBB /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C32DDBE29CDB87600290BBB /* ViewModel.swift */; };
-		7C32DDC129CDB8A500290BBB /* ARContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C32DDC029CDB8A500290BBB /* ARContentView.swift */; };
-		7C32DDC329CDB94000290BBB /* ARHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C32DDC229CDB94000290BBB /* ARHomeView.swift */; };
+		7C32DD9329CD932900290BBB /* ARViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C32DD9229CD932900290BBB /* ARViewModel.swift */; };
+		7C32DD9729CDA16F00290BBB /* ARHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C32DD9629CDA16F00290BBB /* ARHomeView.swift */; };
 		7C32DDC529CDB9B500290BBB /* ARCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C32DDC429CDB9B500290BBB /* ARCells.swift */; };
-		7C32DDC929CDBA1B00290BBB /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C32DDC829CDBA1B00290BBB /* Settings.swift */; };
+		7C45CBF429D1BD49009ED77E /* HomeSecondTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C45CBF329D1BD49009ED77E /* HomeSecondTagView.swift */; };
+		7C45CC2629D1C3C2009ED77E /* astonMartin.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 7C45CC1F29D1C3C2009ED77E /* astonMartin.usdz */; };
+		7C45CC2729D1C3C2009ED77E /* mclaren.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 7C45CC2029D1C3C2009ED77E /* mclaren.usdz */; };
+		7C45CC2829D1C3C2009ED77E /* ferrari.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 7C45CC2129D1C3C2009ED77E /* ferrari.usdz */; };
+		7C45CC2929D1C3C2009ED77E /* 911Gt3Rs.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 7C45CC2229D1C3C2009ED77E /* 911Gt3Rs.usdz */; };
+		7C45CC2A29D1C3C2009ED77E /* generic.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 7C45CC2329D1C3C2009ED77E /* generic.usdz */; };
+		7C45CC2B29D1C3C2009ED77E /* 812.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 7C45CC2429D1C3C2009ED77E /* 812.usdz */; };
+		7C45CC2C29D1C3C2009ED77E /* mercedesAmgGt.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 7C45CC2529D1C3C2009ED77E /* mercedesAmgGt.usdz */; };
+		7C45CC3329D1F641009ED77E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C45CC3229D1F641009ED77E /* Coordinator.swift */; };
+		7C45CC3529D1F749009ED77E /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C45CC3429D1F749009ED77E /* CameraView.swift */; };
 		7C64BC1F29C48132004352E4 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C64BC1E29C48132004352E4 /* ImagePicker.swift */; };
 		7C86F2B229C3876800A6B635 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BACB29C2301F0091F7AF /* User.swift */; };
 		7C86F2B429C3878600A6B635 /* LinkedAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BADE29C237A00091F7AF /* LinkedAccount.swift */; };
-		7CB8149629CC7EF400378B64 /* FocusNode in Frameworks */ = {isa = PBXBuildFile; productRef = 7CB8149529CC7EF400378B64 /* FocusNode */; };
 		7CB8149929CC805400378B64 /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 7CB8149829CC805400378B64 /* FocusEntity */; };
 /* End PBXBuildFile section */
 
@@ -135,31 +124,21 @@
 		7C2D040D29C0F6390023E36E /* LoginUITestingLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITestingLaunchTests.swift; sourceTree = "<group>"; };
 		7C2D041D29C0F9870023E36E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7C32DD8629CCB14800290BBB /* F1Cars.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = F1Cars.rcproject; sourceTree = "<group>"; };
-		7C32DD8E29CCB3F000290BBB /* ARMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARMenu.swift; sourceTree = "<group>"; };
+		7C32DD8E29CCB3F000290BBB /* ARMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARMenuView.swift; sourceTree = "<group>"; };
 		7C32DD9029CCB46200290BBB /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
-		7C32DD9229CD932900290BBB /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		7C32DD9629CDA16F00290BBB /* ARHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARHome.swift; sourceTree = "<group>"; };
-		7C32DD9929CDAB3700290BBB /* zaz.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = zaz.usdz; sourceTree = "<group>"; };
-		7C32DD9A29CDAB3700290BBB /* ducati.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ducati.usdz; sourceTree = "<group>"; };
-		7C32DD9B29CDAB3700290BBB /* harley.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = harley.usdz; sourceTree = "<group>"; };
-		7C32DD9C29CDAB3700290BBB /* fida.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = fida.usdz; sourceTree = "<group>"; };
-		7C32DD9D29CDAB3700290BBB /* ferrari.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ferrari.usdz; sourceTree = "<group>"; };
-		7C32DD9E29CDAB3700290BBB /* urus.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = urus.usdz; sourceTree = "<group>"; };
-		7C32DD9F29CDAB3700290BBB /* aventador.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = aventador.usdz; sourceTree = "<group>"; };
-		7C32DDA029CDAB3700290BBB /* uracan.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = uracan.usdz; sourceTree = "<group>"; };
-		7C32DDA129CDAB3700290BBB /* redbull.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = redbull.usdz; sourceTree = "<group>"; };
-		7C32DDA229CDAB3700290BBB /* 911.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = 911.usdz; sourceTree = "<group>"; };
-		7C32DDA329CDAB3700290BBB /* ford.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ford.usdz; sourceTree = "<group>"; };
-		7C32DDA429CDAB3700290BBB /* tyres.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = tyres.usdz; sourceTree = "<group>"; };
-		7C32DDA529CDAB3700290BBB /* 812.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = 812.usdz; sourceTree = "<group>"; };
-		7C32DDA629CDAB3700290BBB /* astonmartin.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = astonmartin.usdz; sourceTree = "<group>"; };
-		7C32DDA729CDAB3700290BBB /* mclaren.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = mclaren.usdz; sourceTree = "<group>"; };
-		7C32DDBC29CDB86300290BBB /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		7C32DDBE29CDB87600290BBB /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		7C32DDC029CDB8A500290BBB /* ARContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARContentView.swift; sourceTree = "<group>"; };
-		7C32DDC229CDB94000290BBB /* ARHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARHomeView.swift; sourceTree = "<group>"; };
+		7C32DD9229CD932900290BBB /* ARViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewModel.swift; sourceTree = "<group>"; };
+		7C32DD9629CDA16F00290BBB /* ARHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARHomeView.swift; sourceTree = "<group>"; };
 		7C32DDC429CDB9B500290BBB /* ARCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCells.swift; sourceTree = "<group>"; };
-		7C32DDC829CDBA1B00290BBB /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		7C45CBF329D1BD49009ED77E /* HomeSecondTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSecondTagView.swift; sourceTree = "<group>"; };
+		7C45CC1F29D1C3C2009ED77E /* astonMartin.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = astonMartin.usdz; sourceTree = "<group>"; };
+		7C45CC2029D1C3C2009ED77E /* mclaren.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = mclaren.usdz; sourceTree = "<group>"; };
+		7C45CC2129D1C3C2009ED77E /* ferrari.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ferrari.usdz; sourceTree = "<group>"; };
+		7C45CC2229D1C3C2009ED77E /* 911Gt3Rs.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = 911Gt3Rs.usdz; sourceTree = "<group>"; };
+		7C45CC2329D1C3C2009ED77E /* generic.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = generic.usdz; sourceTree = "<group>"; };
+		7C45CC2429D1C3C2009ED77E /* 812.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = 812.usdz; sourceTree = "<group>"; };
+		7C45CC2529D1C3C2009ED77E /* mercedesAmgGt.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = mercedesAmgGt.usdz; sourceTree = "<group>"; };
+		7C45CC3229D1F641009ED77E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		7C45CC3429D1F749009ED77E /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		7C64BC1E29C48132004352E4 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		F00E14668D0CC5F1D5FE53A0 /* Pods-Formula1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Formula1.release.xcconfig"; path = "Target Support Files/Pods-Formula1/Pods-Formula1.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -180,7 +159,6 @@
 				7C14265729C9EDB20091FFF6 /* SDWebImageSwiftUI in Frameworks */,
 				062182FF78A63BC87470F617 /* Pods_Formula1.framework in Frameworks */,
 				7C2D03D029C0F31E0023E36E /* VIPERPLUS in Frameworks */,
-				7CB8149629CC7EF400378B64 /* FocusNode in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,7 +427,9 @@
 		7C2D041F29C0F9D60023E36E /* Formula1App */ = {
 			isa = PBXGroup;
 			children = (
-				7C940D0529CB2324000D3E23 /* AR */,
+				7C45CBF229D1BD2E009ED77E /* 3 Tag */,
+				7C45CBF129D1BD29009ED77E /* 2 Tag */,
+				7C45CBF029D1BD1B009ED77E /* 1 Tag */,
 				7C14264E29C9E08E0091FFF6 /* Home */,
 				7C14BAFD29C3680F0091F7AF /* Factories */,
 				7C14BADB29C232FE0091F7AF /* Profile */,
@@ -462,7 +442,7 @@
 		7C32DD8929CCB3AD00290BBB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				7C32DD9229CD932900290BBB /* Model.swift */,
+				7C32DD9229CD932900290BBB /* ARViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -470,33 +450,15 @@
 		7C32DD9829CDAB0F00290BBB /* 3DModels */ = {
 			isa = PBXGroup;
 			children = (
-				7C32DDA529CDAB3700290BBB /* 812.usdz */,
-				7C32DDA229CDAB3700290BBB /* 911.usdz */,
-				7C32DD9F29CDAB3700290BBB /* aventador.usdz */,
-				7C32DD9A29CDAB3700290BBB /* ducati.usdz */,
-				7C32DDA629CDAB3700290BBB /* astonmartin.usdz */,
-				7C32DD9D29CDAB3700290BBB /* ferrari.usdz */,
-				7C32DDA729CDAB3700290BBB /* mclaren.usdz */,
-				7C32DDA129CDAB3700290BBB /* redbull.usdz */,
-				7C32DD9C29CDAB3700290BBB /* fida.usdz */,
-				7C32DDA329CDAB3700290BBB /* ford.usdz */,
-				7C32DD9B29CDAB3700290BBB /* harley.usdz */,
-				7C32DDA029CDAB3700290BBB /* uracan.usdz */,
-				7C32DDA429CDAB3700290BBB /* tyres.usdz */,
-				7C32DD9E29CDAB3700290BBB /* urus.usdz */,
-				7C32DD9929CDAB3700290BBB /* zaz.usdz */,
+				7C45CC2429D1C3C2009ED77E /* 812.usdz */,
+				7C45CC2229D1C3C2009ED77E /* 911Gt3Rs.usdz */,
+				7C45CC1F29D1C3C2009ED77E /* astonMartin.usdz */,
+				7C45CC2129D1C3C2009ED77E /* ferrari.usdz */,
+				7C45CC2329D1C3C2009ED77E /* generic.usdz */,
+				7C45CC2029D1C3C2009ED77E /* mclaren.usdz */,
+				7C45CC2529D1C3C2009ED77E /* mercedesAmgGt.usdz */,
 			);
 			path = 3DModels;
-			sourceTree = "<group>";
-		};
-		7C32DDB729CDB81A00290BBB /* F1Cars */ = {
-			isa = PBXGroup;
-			children = (
-				7C32DDBB29CDB84200290BBB /* View */,
-				7C32DDBA29CDB83900290BBB /* Coordinator */,
-				7C32DDB929CDB82E00290BBB /* ViewModel */,
-			);
-			path = F1Cars;
 			sourceTree = "<group>";
 		};
 		7C32DDB829CDB82100290BBB /* Automobiles */ = {
@@ -507,30 +469,6 @@
 				7C32DD8929CCB3AD00290BBB /* ViewModel */,
 			);
 			path = Automobiles;
-			sourceTree = "<group>";
-		};
-		7C32DDB929CDB82E00290BBB /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				7C32DDBE29CDB87600290BBB /* ViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		7C32DDBA29CDB83900290BBB /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				7C32DDBC29CDB86300290BBB /* Coordinator.swift */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		7C32DDBB29CDB84200290BBB /* View */ = {
-			isa = PBXGroup;
-			children = (
-				7C32DDC029CDB8A500290BBB /* ARContentView.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		7C32DDC629CDB9D500290BBB /* Cells */ = {
@@ -544,9 +482,32 @@
 		7C32DDC729CDBA0E00290BBB /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				7C32DDC829CDBA1B00290BBB /* Settings.swift */,
+				7C45CC3229D1F641009ED77E /* Coordinator.swift */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		7C45CBF029D1BD1B009ED77E /* 1 Tag */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "1 Tag";
+			sourceTree = "<group>";
+		};
+		7C45CBF129D1BD29009ED77E /* 2 Tag */ = {
+			isa = PBXGroup;
+			children = (
+				7C45CBF329D1BD49009ED77E /* HomeSecondTagView.swift */,
+				7C940D0529CB2324000D3E23 /* AR */,
+			);
+			path = "2 Tag";
+			sourceTree = "<group>";
+		};
+		7C45CBF229D1BD2E009ED77E /* 3 Tag */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "3 Tag";
 			sourceTree = "<group>";
 		};
 		7C64BC1D29C48122004352E4 /* Utilities */ = {
@@ -560,9 +521,7 @@
 		7C940D0529CB2324000D3E23 /* AR */ = {
 			isa = PBXGroup;
 			children = (
-				7C32DDC229CDB94000290BBB /* ARHomeView.swift */,
 				7C32DDB829CDB82100290BBB /* Automobiles */,
-				7C32DDB729CDB81A00290BBB /* F1Cars */,
 				7CB8147929CC7BDC00378B64 /* Models */,
 			);
 			path = AR;
@@ -581,8 +540,9 @@
 			isa = PBXGroup;
 			children = (
 				7C32DDC629CDB9D500290BBB /* Cells */,
-				7C32DD8E29CCB3F000290BBB /* ARMenu.swift */,
-				7C32DD9629CDA16F00290BBB /* ARHome.swift */,
+				7C32DD8E29CCB3F000290BBB /* ARMenuView.swift */,
+				7C32DD9629CDA16F00290BBB /* ARHomeView.swift */,
+				7C45CC3429D1F749009ED77E /* CameraView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -643,7 +603,6 @@
 			packageProductDependencies = (
 				7C2D03CF29C0F31E0023E36E /* VIPERPLUS */,
 				7C14265629C9EDB20091FFF6 /* SDWebImageSwiftUI */,
-				7CB8149529CC7EF400378B64 /* FocusNode */,
 				7CB8149829CC805400378B64 /* FocusEntity */,
 			);
 			productName = Formula1;
@@ -704,7 +663,6 @@
 				7C2D03CE29C0F31E0023E36E /* XCRemoteSwiftPackageReference "BaseViper" */,
 				7C14BAE329C23D4B0091F7AF /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 				7C14265529C9EDB20091FFF6 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
-				7CB8149429CC7EF400378B64 /* XCRemoteSwiftPackageReference "ARKit-FocusNode" */,
 				7CB8149729CC805400378B64 /* XCRemoteSwiftPackageReference "FocusEntity" */,
 			);
 			productRefGroup = 7C2D03B629C0EB0C0023E36E /* Products */;
@@ -730,25 +688,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C45CC2829D1C3C2009ED77E /* ferrari.usdz in Resources */,
 				7C2D03C529C0EB0D0023E36E /* LaunchScreen.storyboard in Resources */,
-				7C32DDAE29CDAB3700290BBB /* aventador.usdz in Resources */,
-				7C32DDAB29CDAB3700290BBB /* fida.usdz in Resources */,
 				7C2D03C229C0EB0D0023E36E /* Assets.xcassets in Resources */,
+				7C45CC2A29D1C3C2009ED77E /* generic.usdz in Resources */,
+				7C45CC2629D1C3C2009ED77E /* astonMartin.usdz in Resources */,
+				7C45CC2B29D1C3C2009ED77E /* 812.usdz in Resources */,
+				7C45CC2C29D1C3C2009ED77E /* mercedesAmgGt.usdz in Resources */,
 				7C2D03C029C0EB0C0023E36E /* Main.storyboard in Resources */,
-				7C32DDB329CDAB3700290BBB /* tyres.usdz in Resources */,
-				7C32DDA929CDAB3700290BBB /* ducati.usdz in Resources */,
-				7C32DDB229CDAB3700290BBB /* ford.usdz in Resources */,
-				7C32DDAF29CDAB3700290BBB /* uracan.usdz in Resources */,
-				7C32DDAC29CDAB3700290BBB /* ferrari.usdz in Resources */,
-				7C32DDB029CDAB3700290BBB /* redbull.usdz in Resources */,
-				7C32DDB529CDAB3700290BBB /* astonmartin.usdz in Resources */,
-				7C32DDAA29CDAB3700290BBB /* harley.usdz in Resources */,
+				7C45CC2729D1C3C2009ED77E /* mclaren.usdz in Resources */,
 				7C2D041E29C0F9870023E36E /* GoogleService-Info.plist in Resources */,
-				7C32DDB129CDAB3700290BBB /* 911.usdz in Resources */,
-				7C32DDAD29CDAB3700290BBB /* urus.usdz in Resources */,
-				7C32DDA829CDAB3700290BBB /* zaz.usdz in Resources */,
-				7C32DDB429CDAB3700290BBB /* 812.usdz in Resources */,
-				7C32DDB629CDAB3700290BBB /* mclaren.usdz in Resources */,
+				7C45CC2929D1C3C2009ED77E /* 911Gt3Rs.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -822,34 +772,32 @@
 				7C14265C29CA10380091FFF6 /* ButtonModifiers.swift in Sources */,
 				7C14265129C9E0BF0091FFF6 /* HomeContentView.swift in Sources */,
 				7C14264429C9C6930091FFF6 /* SessionStore.swift in Sources */,
-				7C32DDC129CDB8A500290BBB /* ARContentView.swift in Sources */,
-				7C32DD8F29CCB3F000290BBB /* ARMenu.swift in Sources */,
+				7C45CC3529D1F749009ED77E /* CameraView.swift in Sources */,
+				7C32DD8F29CCB3F000290BBB /* ARMenuView.swift in Sources */,
 				7C14BAC729C1ECA20091F7AF /* AuthenticationRepository.swift in Sources */,
 				7C14BAE229C239170091F7AF /* FacebookAuthentication.swift in Sources */,
 				7C2D03BD29C0EB0C0023E36E /* ViewController.swift in Sources */,
-				7C32DD9729CDA16F00290BBB /* ARHome.swift in Sources */,
+				7C32DD9729CDA16F00290BBB /* ARHomeView.swift in Sources */,
 				7C14265929C9EEEC0091FFF6 /* ProfileHeaderContentView.swift in Sources */,
-				7C32DDBD29CDB86300290BBB /* Coordinator.swift in Sources */,
 				7C14265429C9E8480091FFF6 /* ProfileContentView.swift in Sources */,
 				7C2D03B929C0EB0C0023E36E /* AppDelegate.swift in Sources */,
 				7C2D03BB29C0EB0C0023E36E /* SceneDelegate.swift in Sources */,
+				7C45CBF429D1BD49009ED77E /* HomeSecondTagView.swift in Sources */,
 				7C14263F29C494F30091FFF6 /* AuthService.swift in Sources */,
 				7C14BAC529C1EC870091F7AF /* AuthenticationViewModel.swift in Sources */,
 				7C14BAC329C1EC710091F7AF /* RegisterEmailView.swift in Sources */,
-				7C32DDC929CDBA1B00290BBB /* Settings.swift in Sources */,
 				7C14BAFF29C368200091F7AF /* NetworkServiceFactory.swift in Sources */,
 				7C14BADF29C237A00091F7AF /* LinkedAccount.swift in Sources */,
-				7C32DDBF29CDB87600290BBB /* ViewModel.swift in Sources */,
 				7C64BC1F29C48132004352E4 /* ImagePicker.swift in Sources */,
 				7C14BABF29C1EC580091F7AF /* AuthenticationView.swift in Sources */,
 				7C14BADD29C233090091F7AF /* ProfileView.swift in Sources */,
 				7C14BAC929C1ECAD0091F7AF /* AuthenticationDataSource.swift in Sources */,
 				7C14265E29CA173B0091FFF6 /* EditProfileContentView.swift in Sources */,
-				7C32DD9329CD932900290BBB /* Model.swift in Sources */,
+				7C32DD9329CD932900290BBB /* ARViewModel.swift in Sources */,
 				7C32DD9129CCB46200290BBB /* ARView.swift in Sources */,
 				7C32DD8729CCB14900290BBB /* F1Cars.rcproject in Sources */,
+				7C45CC3329D1F641009ED77E /* Coordinator.swift in Sources */,
 				7C14BACC29C2301F0091F7AF /* User.swift in Sources */,
-				7C32DDC329CDB94000290BBB /* ARHomeView.swift in Sources */,
 				7C14263D29C48C3D0091FFF6 /* Extensions.swift in Sources */,
 				7C14BAC129C1EC620091F7AF /* loginEmailView.swift in Sources */,
 				7C14BAFC29C3671B0091F7AF /* LoginMock.swift in Sources */,
@@ -1064,9 +1012,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Formula1/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Usar la camara";
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1094,9 +1043,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Formula1/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Usar la camara";
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1211,14 +1161,6 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		7CB8149429CC7EF400378B64 /* XCRemoteSwiftPackageReference "ARKit-FocusNode" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/maxxfrazer/ARKit-FocusNode";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
 		7CB8149729CC805400378B64 /* XCRemoteSwiftPackageReference "FocusEntity" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/maxxfrazer/FocusEntity.git";
@@ -1239,11 +1181,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7C2D03CE29C0F31E0023E36E /* XCRemoteSwiftPackageReference "BaseViper" */;
 			productName = VIPERPLUS;
-		};
-		7CB8149529CC7EF400378B64 /* FocusNode */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7CB8149429CC7EF400378B64 /* XCRemoteSwiftPackageReference "ARKit-FocusNode" */;
-			productName = FocusNode;
 		};
 		7CB8149829CC805400378B64 /* FocusEntity */ = {
 			isa = XCSwiftPackageProductDependency;
