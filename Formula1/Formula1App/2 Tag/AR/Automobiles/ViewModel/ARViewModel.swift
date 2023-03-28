@@ -44,17 +44,17 @@ class ARViewModel {
         self.scale = scale
     }
     
-    func loadModel() {
-        let fileName = name + ".usdz"
-        print(fileName)
-        cancellable = ModelEntity.loadModelAsync(named: fileName)
+    func loadModel(){
+        let filename = name + ".usdz"
+        print(filename)
+        cancellable = ModelEntity.loadModelAsync(named: filename)
             .sink(receiveCompletion: { loadCompletion in
-                switch loadCompletion  {
-                case .finished:
-                    print("Modelo Cargado")
-                    break
+                switch loadCompletion {
                 case .failure(let error):
-                    print("Error al cargar el modelo", error.localizedDescription)
+                    print("_Error al cargar el modelo", error.localizedDescription)
+                case .finished:
+                    print("_Modelo cargado correctamente")
+                    break
                 }
             }, receiveValue: { modelEntity in
                 self.modelEntity = modelEntity

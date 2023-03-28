@@ -14,18 +14,18 @@ struct LoginEmailView: View {
     
     @State var error: String = ""
     @State var showingAlert = false
-    @State var alertTitle: String = "¡Ha ocurrido un error!"
+    @State var alertTitle: String = LocalizedKeys.Errors.errorTitle
     
     func errorCheck() -> String? {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         
         if email.isEmpty || password.isEmpty {
-            return "Rellena los campos obligatorios."
+            return LocalizedKeys.Errors.emailEmpty
         } else if password.count < 6 {
-            return "La contraseña tiene que ser de al menos 6 digitos."
+            return LocalizedKeys.Errors.passwordNotChar
         } else if emailPred.evaluate(with: email) == false {
-            return "El email introducido es incorrecto, ejemplo@gmail.com"
+            return LocalizedKeys.Errors.emailNotValid
         }
         return nil
     }
@@ -55,7 +55,7 @@ struct LoginEmailView: View {
         VStack {
             DismissView()
                 .padding(.top, 8)
-            Text("Formula1")
+            Text(LocalizedKeys.App.appName)
                 .bold()
                 .underline()
                 .padding(.horizontal, 8)
@@ -69,19 +69,19 @@ struct LoginEmailView: View {
                 .clipped()
                 .padding(.bottom)
             Group {
-                Text("Loguéate para poder acceder a la app.")
+                Text(LocalizedKeys.SignIn.loginTitle)
                     .tint(.secondary)
                     .multilineTextAlignment(.center)
                     .padding(.top, 2)
                     .padding(.bottom, 2)
-                TextField("Introduce tu correo electrónico*", text: $email)
+                TextField(LocalizedKeys.SignIn.emailTextFieldLogin, text: $email)
                     .padding()
                     .background(.gray.opacity(0.2))
                     .cornerRadius(5.0)
                     .padding(.bottom, 20)
                     .keyboardType(.emailAddress)
                     .accessibilityIdentifier("usernameTextField")
-                SecureField("Introduce tu contraseña*", text: $password)
+                SecureField(LocalizedKeys.SignIn.passwordTextFieldLogin, text: $password)
                     .padding()
                     .background(.gray.opacity(0.2))
                     .cornerRadius(5.0)
@@ -89,7 +89,7 @@ struct LoginEmailView: View {
                     .keyboardType(.emailAddress)
                     .accessibilityIdentifier("passwordTextField")
                 Button(action: signIn) {
-                    Text("Login")
+                    Text(LocalizedKeys.SignIn.loginButtonTitle)
                 }
                 .font(.headline)
                 .foregroundColor(.white)
@@ -99,9 +99,9 @@ struct LoginEmailView: View {
                 .cornerRadius(12)
                 .accessibilityIdentifier("loginButton")
                 .alert(isPresented: $showingAlert) {
-                    Alert(title: Text(alertTitle), message: Text(error), dismissButton: .default(Text("OK")))
+                    Alert(title: Text(alertTitle), message: Text(error), dismissButton: .default(Text(LocalizedKeys.Generic.ok)))
                 }
-                Text("* campos obligatorios")
+                Text(LocalizedKeys.Generic.requiredFields)
                     .padding(.horizontal, 8)
                     .multilineTextAlignment(.center)
                     .font(.title3)

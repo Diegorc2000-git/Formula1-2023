@@ -80,7 +80,7 @@ struct EditProfileContentView: View {
         ScrollView {
             VStack(spacing: 8) {
                 
-                Text("Editar Perfil")
+                Text(LocalizedKeys.Profile.profileEditProfile)
                     .font(.largeTitle)
                 
                 VStack {
@@ -102,23 +102,23 @@ struct EditProfileContentView: View {
                         }
                     }
                 }
-                TextField("Introduce tu Nombre*", text: $name)
+                TextField(LocalizedKeys.Profile.editProfileName, text: $name)
                     .modifier(TextFieldModifiers())
                     .accessibilityIdentifier("nameTextField")
-                TextField("Introduce tus Apellidos*", text: $surname)
+                TextField(LocalizedKeys.Profile.editProfileSurname, text: $surname)
                     .modifier(TextFieldModifiers())
                     .accessibilityIdentifier("surnameTextField")
-                TextField("Introduce tu Biografia*", text: $bio)
+                TextField(LocalizedKeys.Profile.editProfileBio, text: $bio)
                     .modifier(TextFieldModifiers())
                     .accessibilityIdentifier("bioTextField")
                 Button(action: edit) {
-                    Text("Edit").font(.title).modifier(ButtonModifiers())
+                    Text(LocalizedKeys.Profile.editButton).font(.title).modifier(ButtonModifiers())
                 }
                 .alert(isPresented: $showingAlert) {
-                    Alert(title: Text(alertTitle), message: Text(error), dismissButton: .default(Text("OK")))
+                    Alert(title: Text(alertTitle), message: Text(error), dismissButton: .default(Text(LocalizedKeys.Generic.ok)))
                 }
                 
-                Text("Los cambios se aplicaran la proxima vez que hagas login")
+                Text(LocalizedKeys.Profile.editSubtitle)
                     .padding()
             }
         }.navigationTitle(session.session?.name ?? "")
@@ -126,10 +126,10 @@ struct EditProfileContentView: View {
                 ImagePicker(pickerImage: self.$pickerImage, showImagePicker: self.$showingImagePicker, imageData: self.$imageData)
             }
             .actionSheet(isPresented: $showingActionSheet) {
-                ActionSheet(title: Text(""), buttons: [.default(Text("Choose a photo")) {
+                ActionSheet(title: Text(""), buttons: [.default(Text(LocalizedKeys.SignUp.choosePhoto)) {
                     self.sourceType = .photoLibrary
                     self.showingImagePicker = true
-                },.default(Text("Take a photo")) {
+                },.default(Text(LocalizedKeys.SignUp.takePhoto)) {
                     self.sourceType = .camera
                     self.showingImagePicker = true
                 }, .cancel()])

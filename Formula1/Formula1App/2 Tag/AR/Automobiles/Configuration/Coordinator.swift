@@ -17,11 +17,11 @@ class CoordinatorCustomARView: ARView {
     
     required init(frame: CGRect) {
         super.init(frame: frame)
-        self.focusEntity = FocusEntity(on: self, style: .classic(color: .white))
+        self.focusEntity = FocusEntity(on: self, style: .classic(color: .yellow))
     }
     
     @MainActor required dynamic init?(coder decoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError("_init(coder:) has not been implemented")
     }
     
 }
@@ -31,7 +31,7 @@ class CoordinatorSettings: ObservableObject {
     @Published var selectedModel: ARViewModel? {
         //Se activa cada vez que la varibale tiene un cambio
         willSet(newValue) {
-            print("Selccionamos el modelo")
+            print("_Modelo seleccionado: " + (newValue?.name ?? ""))
         }
     }
     
@@ -39,7 +39,7 @@ class CoordinatorSettings: ObservableObject {
         //Se activa cada vez que la varibale tiene un cambio
         willSet(newValue) {
             guard let model = newValue else { return }
-            print("Confirmamos el modelo", model.name)
+            print("_Confirmamos el modelo", model.name)
         }
     }
     

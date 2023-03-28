@@ -35,24 +35,24 @@ struct LinkAccounts: View {
             Section {
                 Button(action: {
                     expandVerificationWithEmailForm.toggle()
-                    print("Vincular Email y Password")
+                    print(LocalizedKeys.VinculatedAccounts.vinculateEmailPassword)
                 }, label: {
-                    Label("Vincula Email", image: "icon_email")
+                    Label(LocalizedKeys.Profile.profileVinculatedEmail, image: "icon_email")
                         .fixedSize()
                 })
                 .disabled(authenticationViewModel.isEmailAndPasswordLinked())
                 if expandVerificationWithEmailForm {
                     Group {
-                        Text("Vincula tu correo electrónico con la sesión que tienes actualmente iniciada.")
+                        Text(LocalizedKeys.VinculatedAccounts.vinculateEmailWithSessionAccount)
                             .tint(.secondary)
                             .multilineTextAlignment(.center)
                             .padding(.top, 2)
                             .padding(.bottom, 2)
-                        TextField("Introduce tu correo electrónico", text: $textFieldEmail)
+                        TextField(LocalizedKeys.VinculatedAccounts.vinculateEnterEmail, text: $textFieldEmail)
                             .multilineTextAlignment(.center)
-                        SecureField("Introduce tu contraseña", text: $textFieldPassword)
+                        SecureField(LocalizedKeys.VinculatedAccounts.vinculateEnterPassword, text: $textFieldPassword)
                             .multilineTextAlignment(.center)
-                        Button("Vincular") {
+                        Button(LocalizedKeys.VinculatedAccounts.vinculateButton) {
                             authenticationViewModel.linkEmailAndPassword(email: textFieldEmail,
                                                                          password: textFieldPassword)
                         }
@@ -71,14 +71,14 @@ struct LinkAccounts: View {
                 Button(action: {
                     authenticationViewModel.linkFacebook()
                 }, label: {
-                    Label("Vincula Facebook", image: "icon_facebook")
+                    Label(LocalizedKeys.Profile.profileVinculatedFacebook, image: "icon_facebook")
                         .fixedSize()
                         .foregroundColor(.white)
                 })
                 .disabled(authenticationViewModel.isFacebookLinked())
                 NavigationLink(destination: EditProfileContentView(session: self.session.session), isActive: $isLinksActive) {
                     Button(action: { self.isLinksActive = true }) {
-                        Label("Editar Perfil", image: "icon_editar")
+                        Label(LocalizedKeys.Profile.profileEditProfile, image: "icon_editar")
                             .fixedSize()
                             .foregroundColor(.white)
                     }
@@ -86,28 +86,28 @@ struct LinkAccounts: View {
                 Button(action: {
                     authenticationViewModel.logout()
                 }, label: {
-                    Label("Cerrar Sesión", image: "icon_logout")
+                    Label(LocalizedKeys.Profile.profileLogOut, image: "icon_logout")
                         .fixedSize()
                         .foregroundColor(.red)
                 })
                 .frame(maxWidth: .infinity)
             } header : {
-                Text("Vincula otras cuentas a la sesión actual")
+                Text(LocalizedKeys.Profile.profileVinculatedAccountsTitle)
             }
         }
         .task {
             authenticationViewModel.getCurrentProvider()
         }
-        .alert(authenticationViewModel.isAccountLinked ? "¡Cuenta Vinculada!" : "Error",
+        .alert(authenticationViewModel.isAccountLinked ? LocalizedKeys.VinculatedAccounts.vinculateAlertAccountVinculated : LocalizedKeys.Errors.error,
                isPresented: $authenticationViewModel.showAlert) {
-            Button("Aceptar") {
+            Button(LocalizedKeys.Generic.ok) {
                 print("Dismiss Alert")
                 if authenticationViewModel.isAccountLinked {
                     expandVerificationWithEmailForm = false
                 }
             }
         } message: {
-            Text(authenticationViewModel.isAccountLinked ? "✅ Acabas de vincular tu cuenta" : "❌ Error al vincular la cuenta")
+            Text(authenticationViewModel.isAccountLinked ? LocalizedKeys.VinculatedAccounts.vinculateAlertAccountVinculatedSuccess : LocalizedKeys.VinculatedAccounts.vinculateAlertAccountVinculatedFailure)
         }
     }
 }

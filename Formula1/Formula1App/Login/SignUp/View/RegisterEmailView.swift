@@ -21,7 +21,7 @@ struct RegisterEmailView: View {
     @State var sourceType: UIImagePickerController.SourceType = .photoLibrary
     @State var error: String = ""
     @State var showingAlert = false
-    @State var alertTitle: String = "¡Ha ocurrido un error!"
+    @State var alertTitle: String = LocalizedKeys.Errors.errorTitle
     
     func loadImage() {
         guard let inputImage = pickerImage else { return }
@@ -33,11 +33,11 @@ struct RegisterEmailView: View {
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         
         if email.isEmpty || password.isEmpty || imageData.isEmpty {
-            return "Rellena los campos obligatorios y añade una imagen de perfil"
+            return LocalizedKeys.Errors.emailEmpty
         } else if password.count < 6 {
-            return "La contraseña tiene que ser de al menos 6 digitos"
+            return LocalizedKeys.Errors.passwordNotChar
         } else if emailPred.evaluate(with: email) == false {
-            return "El email introducido es incorrecto, ejemplo@gmail.com"
+            return LocalizedKeys.Errors.emailNotValid
         }
         return nil
     }
@@ -68,7 +68,7 @@ struct RegisterEmailView: View {
         VStack {
             DismissView()
                 .padding(.top, 8)
-            Text("Formula1")
+            Text(LocalizedKeys.App.appName)
                 .bold()
                 .underline()
                 .padding(.horizontal, 8)
@@ -76,7 +76,7 @@ struct RegisterEmailView: View {
                 .font(.largeTitle)
                 .tint(.primary)
             Group {
-                Text("Regístrate para poder acceder a la app.")
+                Text(LocalizedKeys.SignUp.signupTitle)
                     .tint(.secondary)
                     .multilineTextAlignment(.center)
                     .padding(.top, 2)
@@ -101,9 +101,9 @@ struct RegisterEmailView: View {
                         }
                 }
                 VStack(spacing: 32) {
-                    TextField("Introduce tu correo electrónico", text: $email)
+                    TextField(LocalizedKeys.SignUp.emailTextFieldSignup, text: $email)
                         .accessibilityIdentifier("usernameTextField")
-                    SecureField("Introduce tu contraseña", text: $password)
+                    SecureField(LocalizedKeys.SignUp.passwordTextFieldSignup, text: $password)
                         .accessibilityIdentifier("passwordTextField")
                 }
                 .padding()
@@ -112,7 +112,7 @@ struct RegisterEmailView: View {
                 .padding(.bottom, 20)
                 .keyboardType(.emailAddress)
                 Button(action: signUp) {
-                    Text("Aceptar")
+                    Text(LocalizedKeys.Generic.ok)
                 }
                 .font(.headline)
                 .foregroundColor(.white)
@@ -124,7 +124,7 @@ struct RegisterEmailView: View {
                 .alert(isPresented: $showingAlert) {
                     Alert(title: Text(alertTitle), message: Text(error), dismissButton: .default(Text("OK")))
                 }
-                Text("* campos obligatorios")
+                Text(LocalizedKeys.Generic.requiredFields)
                     .padding(.horizontal, 8)
                     .multilineTextAlignment(.center)
                     .font(.title3)
@@ -145,10 +145,10 @@ struct RegisterEmailView: View {
             ImagePicker(pickerImage: self.$pickerImage, showImagePicker: self.$showingImagePicker, imageData: self.$imageData)
         }
         .actionSheet(isPresented: $showingActionSheet) {
-            ActionSheet(title: Text(""), buttons: [.default(Text("Choose a photo")) {
+            ActionSheet(title: Text(""), buttons: [.default(Text(LocalizedKeys.SignUp.choosePhoto)) {
                 self.sourceType = .photoLibrary
                 self.showingImagePicker = true
-            },.default(Text("Take a photo")) {
+            },.default(Text(LocalizedKeys.SignUp.takePhoto)) {
                 self.sourceType = .camera
                 self.showingImagePicker = true
             }, .cancel()])

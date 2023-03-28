@@ -36,7 +36,7 @@ struct ControlView: View {
             .padding(.bottom, 30)
             .background(.white)
         }
-        .navigationTitle("Menu AR")
+        .navigationTitle(LocalizedKeys.AR.arTitle)
     }
 }
 
@@ -46,7 +46,7 @@ struct ARMenuView: View {
     
     var body: some View {
         ScrollView(showsIndicators: false) {
-            Text("Menú")
+            Text(LocalizedKeys.AR.arTitle)
                 .font(.largeTitle)
                 .padding(12)
             CategoryView(showMenu: $showMenu)

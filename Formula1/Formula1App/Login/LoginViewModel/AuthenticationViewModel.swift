@@ -56,11 +56,11 @@ final class AuthenticationViewModel: ObservableObject {
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         
         if email.isEmpty || password.isEmpty {
-            self.messageError = "Rellena los campos obligatorios"
+            self.messageError = LocalizedKeys.Errors.emailEmpty
         } else if password.count < 6 {
-            self.messageError = "La contraseña tiene que ser de al menos 6 digitos"
+            self.messageError = LocalizedKeys.Errors.passwordNotChar
         } else if emailPred.evaluate(with: email) == false {
-            self.messageError = "El email introducido es incorrecto, ejemplo@gmail.com"
+            self.messageError = LocalizedKeys.Errors.emailNotValid
         } else {
             service.login(email: email, password: password, name: "", surname: "") { [weak self] result in
                 switch result {

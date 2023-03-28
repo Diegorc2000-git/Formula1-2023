@@ -15,7 +15,7 @@ struct ProfileHeaderContentView: View {
     
     var body: some View {
         VStack {
-            Text("Perfil")
+            Text(LocalizedKeys.Profile.profileTitle)
                 .font(.title)
                 .padding(.top, 12)
             VStack {
@@ -27,15 +27,15 @@ struct ProfileHeaderContentView: View {
                         .frame(width: 250, height: 250, alignment: .leading)
                 }
                 VStack(alignment: .leading) {
-                    Text("Email: ").font(.headline).bold()
+                    Text(LocalizedKeys.Profile.profileEmail).font(.headline).bold()
                     + Text(user?.email ?? "")
-                    Text("Nombre: ").font(.headline).bold()
+                    Text(LocalizedKeys.Profile.profileName).font(.headline).bold()
                     + Text((user?.name ?? "") + " " + (user?.surname ?? ""))
                 }
                 .padding(.trailing, 12)
             }
             VStack {
-                Text("Biografia: ").font(.headline).bold()
+                Text(LocalizedKeys.Profile.profileBio).font(.headline).bold()
                 + Text(session.session?.bio ?? "")
             }
             .padding(.horizontal, 12.0)

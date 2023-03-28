@@ -47,7 +47,7 @@ struct AuthenticationView2: View {
     var body: some View {
         VStack {
             Spacer()
-            Text("Inicia Sesión")
+            Text(LocalizedKeys.SignIn.loginButtonTitle)
                 .font(.largeTitle)
                 .bold()
                 .underline()
@@ -58,7 +58,7 @@ struct AuthenticationView2: View {
                 Button {
                     authenticationSheetView = .login
                 } label: {
-                    Label("Entrar con Email", image: "icon_email")
+                    Label(LocalizedKeys.SignIn.enterWithEmail, image: "icon_email")
                         .fixedSize()
                 }
                 .tint(.blue)
@@ -67,7 +67,7 @@ struct AuthenticationView2: View {
                 Button {
                     authenticationViewModel.loginFacebook()
                 } label: {
-                    Label("Entrar con Facebook", image: "icon_facebook")
+                    Label(LocalizedKeys.SignIn.enterWithFacebook, image: "icon_facebook")
                         .fixedSize()
                         .foregroundColor(.black)
                 }
@@ -90,8 +90,8 @@ struct AuthenticationView2: View {
                 Button {
                     authenticationSheetView = .register
                 } label: {
-                    Text("¿No tienes cuenta?")
-                    Text("Regístrate")
+                    Text(LocalizedKeys.SignIn.noAccount)
+                    Text(LocalizedKeys.SignIn.signupButtonTitle)
                         .underline()
                 }
                 .tint(.black)

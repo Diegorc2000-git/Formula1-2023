@@ -29,7 +29,7 @@ struct GridView: View {
                     ForEach(0..<items.count, id: \.self) { index in
                         let model = items[index]
                         Button(action: {
-                            print("Seleccionar Modelo")
+                            print("_Modelo Seleccionado: " + (model.name))
                             model.loadModel()
                             settings.selectedModel = model
                             showMenu.toggle()

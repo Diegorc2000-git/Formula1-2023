@@ -1,0 +1,74 @@
+//APP
+"" = "";
+"app_name" = "Formula1";
+
+//Generic
+"required_fields" = "* Campos obligatorios";
+"ok" = "Aceptar";
+
+// SignIn
+"login_button_title" = "Inicio Sesión";
+"signup_button_title" = "Regístrate";
+"no_account" = "¿No tienes cuenta?";
+"enter_with_email" = "Entrar con Email";
+"enter_with_facebook" = "Entrar con Facebook";
+"login_title" = "Loguéate para poder acceder a la app";
+"email_text_field_login" = "Introduce tu correo electrónico*";
+"password_text_field_login" = "Introduce tu contraseña";
+"login_button" = "Iniciar sesión";
+
+// SignUp
+"signup_title" = "Regístrate para poder acceder a la app.";
+"email_text_field_signup" = "Introduce tu correo electrónico*";
+"password_text_field_signup" = "Introduce tu contraseña";
+"signup_button" = "Registrarse";
+"choose_photo" = "Escoger foto";
+"take_photo" = "Hacer foto";
+
+// 2 Tab
+"second_tab_title" = "Información sobre F1";
+"menu_ar_cell_title" = "Abrir menú aumentado";
+"menu_cicuits_cell_title" = "Abrir Circuitos";
+"menu_pilots_cell_title" = "Abrir Pilotos";
+"menu_teams_cell_title" = "Abrir Escuderias";
+
+// AR
+"ar_title" = "Menu AR";
+"ar_menu_title_f1" = "Formula 1";
+"ar_menu_title_supercars" = "Superdeportivos";
+
+// Profile
+"profile_email" = "Email: ";
+"profile_name" = "Nombre: ";
+"profile_bio" = "Biografia: ";
+"profile_vinculated_accounts_title" = "Vincula otras cuentas a la sesión actual";
+"profile_vinculated_email" = "Vincular Email";
+"profile_vinculated_facebook" = "Vincular cuenta de Facebook";
+"profile_edit_profile" = "Editar Perfil";
+"profile_log_out" = "Cerrar Sesión";
+"profile_title" = "Perfil";
+
+// Edit Profile
+"edit_profile_name" = "Introduce tu nombre*: ";
+"edit_profile_surname" = "Introduce tu apellido*: ";
+"edit_profile_bio" = "Introduce una biografia*: ";
+"edit_button" = "Editar";
+"edit_subtitle" = "Los cambios se aplican la proxima vez que inicies sesion";
+
+// Vinculated Accounts
+"vinculate_email_password" = "Vincular Email y Password";
+"vinculate_email_with_session_account" = "Vincula tu correo electrónico con la sesión que tienes actualmente iniciada.";
+"vinculate_enter_email" = "Introduce tu correo electrónico*";
+"vinculate_enter_password" = "Introduce tu contraseña";
+"vinculate_button" = "Vincular";
+"vinculate_alert_account_vinculated" = "¡Cuenta Vinculada!";
+"vinculate_alert_account_vinculated_success" = "✅ Acabas de vincular tu cuenta";
+"vinculate_alert_account_vinculated_failure" = "❌ Error al vincular la cuenta";
+
+
+// Errors
+"error" = "Error";
+"error_title" = "¡Ha ocurrido un error!";
+"email_empty" = "Rellena los campos obligatorios.";
+"password_not_char" = "La contraseña tiene que ser de al menos 6 digitos.";
+"email_not_valid" = "El email introducido es incorrecto, ejemplo@gmail.com";

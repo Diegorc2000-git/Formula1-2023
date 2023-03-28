@@ -18,7 +18,7 @@ struct HomeSecondTagView: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
-                Text("Información sobre F1")
+                Text(LocalizedKeys.SecondTab.secondTabTitle)
                     .font(.title)
                     .padding(.leading, 24)
                     .padding(.top, 12)
@@ -30,7 +30,7 @@ struct HomeSecondTagView: View {
                                 Image("icon_ar")
                                     .resizable()
                                     .frame(width: 75, height: 75)
-                                Text("Abrir menú aumentado")
+                                Text(LocalizedKeys.SecondTab.menuArCellTitle)
                                     .frame(maxWidth: .infinity, alignment: .leading)
                             }
                         }
@@ -45,7 +45,7 @@ struct HomeSecondTagView: View {
                                 Image("icon_bandera")
                                     .resizable()
                                     .frame(width: 75, height: 75)
-                                Text("Abrir Circuitos")
+                                Text(LocalizedKeys.SecondTab.menuCicuitsCellTitle)
                                     .frame(maxWidth: .infinity, alignment: .leading)
                             }
                         }
@@ -60,7 +60,7 @@ struct HomeSecondTagView: View {
                                 Image("icon_casco")
                                     .resizable()
                                     .frame(width: 75, height: 75)
-                                Text("Abrir Pilotos")
+                                Text(LocalizedKeys.SecondTab.menuPilotsCellTitle)
                                     .frame(maxWidth: .infinity, alignment: .leading)
                             }
                         }
@@ -71,7 +71,7 @@ struct HomeSecondTagView: View {
                         .aspectRatio(1, contentMode: .fill)
                         
                         NavigationLink(destination: ARHomeView()) {
-                            Text("Abrir Escuderias")
+                            Text(LocalizedKeys.SecondTab.menuTeamsCellTitle)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                         }
                         .padding()

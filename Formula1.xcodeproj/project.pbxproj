@@ -58,6 +58,8 @@
 		7C45CC3329D1F641009ED77E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C45CC3229D1F641009ED77E /* Coordinator.swift */; };
 		7C45CC3529D1F749009ED77E /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C45CC3429D1F749009ED77E /* CameraView.swift */; };
 		7C45CC3729D1FAD2009ED77E /* generic.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 7C45CC3629D1FAD2009ED77E /* generic.usdz */; };
+		7C45CC4529D20047009ED77E /* LocalizedKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C45CC4429D20047009ED77E /* LocalizedKeys.swift */; };
+		7C45CC4829D200D1009ED77E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C45CC4A29D200D1009ED77E /* Localizable.strings */; };
 		7C64BC1F29C48132004352E4 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C64BC1E29C48132004352E4 /* ImagePicker.swift */; };
 		7C86F2B229C3876800A6B635 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BACB29C2301F0091F7AF /* User.swift */; };
 		7C86F2B429C3878600A6B635 /* LinkedAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BADE29C237A00091F7AF /* LinkedAccount.swift */; };
@@ -137,6 +139,9 @@
 		7C45CC3229D1F641009ED77E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		7C45CC3429D1F749009ED77E /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		7C45CC3629D1FAD2009ED77E /* generic.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = generic.usdz; sourceTree = "<group>"; };
+		7C45CC4429D20047009ED77E /* LocalizedKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedKeys.swift; sourceTree = "<group>"; };
+		7C45CC4929D200D1009ED77E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7C45CC4B29D200EC009ED77E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7C64BC1E29C48132004352E4 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		F00E14668D0CC5F1D5FE53A0 /* Pods-Formula1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Formula1.release.xcconfig"; path = "Target Support Files/Pods-Formula1/Pods-Formula1.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -394,6 +399,7 @@
 				7C2D041F29C0F9D60023E36E /* Formula1App */,
 				7C2D041829C0F7E30023E36E /* Resources */,
 				7C14265A29CA10290091FFF6 /* Extension */,
+				7C45CC4329D1FFC2009ED77E /* Localizables */,
 				7C2D03BC29C0EB0C0023E36E /* ViewController.swift */,
 				7C2D03BE29C0EB0C0023E36E /* Main.storyboard */,
 				7C2D03C129C0EB0D0023E36E /* Assets.xcassets */,
@@ -506,6 +512,15 @@
 			children = (
 			);
 			path = "3 Tag";
+			sourceTree = "<group>";
+		};
+		7C45CC4329D1FFC2009ED77E /* Localizables */ = {
+			isa = PBXGroup;
+			children = (
+				7C45CC4429D20047009ED77E /* LocalizedKeys.swift */,
+				7C45CC4A29D200D1009ED77E /* Localizable.strings */,
+			);
+			path = Localizables;
 			sourceTree = "<group>";
 		};
 		7C64BC1D29C48122004352E4 /* Utilities */ = {
@@ -654,6 +669,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 7C2D03AC29C0EB0C0023E36E;
 			packageReferences = (
@@ -686,6 +702,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C45CC2829D1C3C2009ED77E /* ferrari.usdz in Resources */,
+				7C45CC4829D200D1009ED77E /* Localizable.strings in Resources */,
 				7C45CC3729D1FAD2009ED77E /* generic.usdz in Resources */,
 				7C2D03C529C0EB0D0023E36E /* LaunchScreen.storyboard in Resources */,
 				7C2D03C229C0EB0D0023E36E /* Assets.xcassets in Resources */,
@@ -785,6 +802,7 @@
 				7C14BAC329C1EC710091F7AF /* RegisterEmailView.swift in Sources */,
 				7C14BAFF29C368200091F7AF /* NetworkServiceFactory.swift in Sources */,
 				7C14BADF29C237A00091F7AF /* LinkedAccount.swift in Sources */,
+				7C45CC4529D20047009ED77E /* LocalizedKeys.swift in Sources */,
 				7C64BC1F29C48132004352E4 /* ImagePicker.swift in Sources */,
 				7C14BABF29C1EC580091F7AF /* AuthenticationView.swift in Sources */,
 				7C14BADD29C233090091F7AF /* ProfileView.swift in Sources */,
@@ -844,6 +862,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		7C45CC4A29D200D1009ED77E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7C45CC4929D200D1009ED77E /* en */,
+				7C45CC4B29D200EC009ED77E /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -885,6 +912,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -945,6 +973,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
