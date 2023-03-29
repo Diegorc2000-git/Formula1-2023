@@ -10,8 +10,7 @@ import Foundation
 struct User: Encodable, Decodable {
     let uid: String
     let email: String
-    let profileImage: String
+    let profileImageUrl: String
     let bio: String
-    let name: String
-    let surname: String
+    let username: String
 }

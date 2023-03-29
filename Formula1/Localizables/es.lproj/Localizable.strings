@@ -14,7 +14,7 @@
 "enter_with_facebook" = "Entrar con Facebook";
 "login_title" = "Loguéate para poder acceder a la app";
 "email_text_field_login" = "Introduce tu correo electrónico*";
-"password_text_field_login" = "Introduce tu contraseña";
+"password_text_field_login" = "Introduce tu contraseña*";
 "login_button" = "Iniciar sesión";
 
 // SignUp

@@ -8,9 +8,20 @@
 import Foundation
 
 class LoginMock: NetworkService {
-    
-    func createNewUser(email: String, password: String, name: String, surname: String, imageData: Data, completionBlock: @escaping (Result<User, Error>) -> Void) {
+    func editProfile(username: String, bio: String, imageData: Data, onSuccess: @escaping (User) -> Void, onError: @escaping (String) -> Void) {
         
+    }
+    
+    func signUp(username: String, email: String, password: String, imageData: Data, onSuccess: @escaping(_ user: User) -> Void, onError: @escaping(_ errorMessage: String) -> Void) {
+
+    }
+    
+    func signIn(email: String, password: String, onSuccess: @escaping(_ user: User) -> Void, onError: @escaping(_ errorMessage: String) -> Void) {
+        if email == "d@d.com" && password == "123456" {
+            //onSuccess(.success(User(uid: "", email: email, profileImageUrl: "", bio: "", username: "")))
+        } else {
+            //onError(.failure(Error.self as! Error))
+        }
     }
     
     func logout() throws {
@@ -18,35 +29,8 @@ class LoginMock: NetworkService {
     }
     
     func getCurrentUser() -> User? {
-        let authenticationFirebaseDatasource = AuthenticationFirebaseDatasource()
-        return authenticationFirebaseDatasource.getCurrentUser()
-    }
-
-    func getCurrentProvider() -> [LinkedAccounts] {
-        let authenticationFirebaseDatasource = AuthenticationFirebaseDatasource()
-        return authenticationFirebaseDatasource.currentProvider()
-    }
-
-    func linkEmailAndPassword(email: String, password: String, completionBlock: @escaping (Bool) -> Void) {
-        
-    }
-    
-    func linkFacebook(completionBlock: @escaping (Bool) -> Void) {
-        
-    }
-    
-    func loginFacebook(completionBlock: @escaping (Result<User, Error>) -> Void) {
-        
-    }
-    
-    
-    func login(email: String, password: String, name: String, surname: String, completionBlock: @escaping (Result<User, Error>) -> Void) {
-        
-        if email == "d@d.com" && password == "123456" {
-            completionBlock(.success(User(uid: "", email: email, profileImage: "", bio: "", name: name, surname: surname)))
-        } else {
-            completionBlock(.failure(Error.self as! Error))
-        }
+        let authenticationProvider = LoginAccountRegistrationProvider()
+        return authenticationProvider.getCurrentUser()
     }
     
 }

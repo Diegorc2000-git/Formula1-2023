@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		062182FF78A63BC87470F617 /* Pods_Formula1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525C59330B2F74E810BD3368 /* Pods_Formula1.framework */; };
 		7C14263D29C48C3D0091FFF6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14263C29C48C3D0091FFF6 /* Extensions.swift */; };
-		7C14263F29C494F30091FFF6 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14263E29C494F30091FFF6 /* AuthService.swift */; };
 		7C14264429C9C6930091FFF6 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14264329C9C6930091FFF6 /* SessionStore.swift */; };
 		7C14265129C9E0BF0091FFF6 /* HomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14265029C9E0BF0091FFF6 /* HomeContentView.swift */; };
 		7C14265429C9E8480091FFF6 /* ProfileContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14265329C9E8480091FFF6 /* ProfileContentView.swift */; };
@@ -20,15 +19,13 @@
 		7C14266029CA1CEF0091FFF6 /* TextFieldModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14265F29CA1CEF0091FFF6 /* TextFieldModifiers.swift */; };
 		7C14BAB329C0FBA50091F7AF /* TopBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BAB229C0FBA50091F7AF /* TopBarContentView.swift */; };
 		7C14BABF29C1EC580091F7AF /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BABE29C1EC580091F7AF /* AuthenticationView.swift */; };
-		7C14BAC129C1EC620091F7AF /* loginEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BAC029C1EC620091F7AF /* loginEmailView.swift */; };
+		7C14BAC129C1EC620091F7AF /* LoginEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BAC029C1EC620091F7AF /* LoginEmailView.swift */; };
 		7C14BAC329C1EC710091F7AF /* RegisterEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BAC229C1EC710091F7AF /* RegisterEmailView.swift */; };
 		7C14BAC529C1EC870091F7AF /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BAC429C1EC870091F7AF /* AuthenticationViewModel.swift */; };
 		7C14BAC729C1ECA20091F7AF /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BAC629C1ECA20091F7AF /* AuthenticationRepository.swift */; };
-		7C14BAC929C1ECAD0091F7AF /* AuthenticationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BAC829C1ECAD0091F7AF /* AuthenticationDataSource.swift */; };
+		7C14BAC929C1ECAD0091F7AF /* LoginAccountRegistrationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BAC829C1ECAD0091F7AF /* LoginAccountRegistrationProvider.swift */; };
 		7C14BACC29C2301F0091F7AF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BACB29C2301F0091F7AF /* User.swift */; };
 		7C14BADD29C233090091F7AF /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BADC29C233090091F7AF /* ProfileView.swift */; };
-		7C14BADF29C237A00091F7AF /* LinkedAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BADE29C237A00091F7AF /* LinkedAccount.swift */; };
-		7C14BAE229C239170091F7AF /* FacebookAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BAE129C239170091F7AF /* FacebookAuthentication.swift */; };
 		7C14BAEE29C357590091F7AF /* MockLoginSignInUITesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BAED29C357590091F7AF /* MockLoginSignInUITesting.swift */; };
 		7C14BAF029C357590091F7AF /* MockLoginSignInUITestingLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BAEF29C357590091F7AF /* MockLoginSignInUITestingLaunchTests.swift */; };
 		7C14BAFC29C3671B0091F7AF /* LoginMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BAF729C3636C0091F7AF /* LoginMock.swift */; };
@@ -62,8 +59,8 @@
 		7C45CC4829D200D1009ED77E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C45CC4A29D200D1009ED77E /* Localizable.strings */; };
 		7C64BC1F29C48132004352E4 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C64BC1E29C48132004352E4 /* ImagePicker.swift */; };
 		7C86F2B229C3876800A6B635 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BACB29C2301F0091F7AF /* User.swift */; };
-		7C86F2B429C3878600A6B635 /* LinkedAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14BADE29C237A00091F7AF /* LinkedAccount.swift */; };
 		7CB8149929CC805400378B64 /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 7CB8149829CC805400378B64 /* FocusEntity */; };
+		7CE6756429D33A7000908946 /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE6756329D33A7000908946 /* FormField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +84,6 @@
 		0955BC8762177A4FA4AD275B /* Pods-Formula1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Formula1.debug.xcconfig"; path = "Target Support Files/Pods-Formula1/Pods-Formula1.debug.xcconfig"; sourceTree = "<group>"; };
 		525C59330B2F74E810BD3368 /* Pods_Formula1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Formula1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C14263C29C48C3D0091FFF6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		7C14263E29C494F30091FFF6 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		7C14264329C9C6930091FFF6 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 		7C14265029C9E0BF0091FFF6 /* HomeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentView.swift; sourceTree = "<group>"; };
 		7C14265329C9E8480091FFF6 /* ProfileContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileContentView.swift; sourceTree = "<group>"; };
@@ -97,15 +93,13 @@
 		7C14265F29CA1CEF0091FFF6 /* TextFieldModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifiers.swift; sourceTree = "<group>"; };
 		7C14BAB229C0FBA50091F7AF /* TopBarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarContentView.swift; sourceTree = "<group>"; };
 		7C14BABE29C1EC580091F7AF /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
-		7C14BAC029C1EC620091F7AF /* loginEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginEmailView.swift; sourceTree = "<group>"; };
+		7C14BAC029C1EC620091F7AF /* LoginEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmailView.swift; sourceTree = "<group>"; };
 		7C14BAC229C1EC710091F7AF /* RegisterEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailView.swift; sourceTree = "<group>"; };
 		7C14BAC429C1EC870091F7AF /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		7C14BAC629C1ECA20091F7AF /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
-		7C14BAC829C1ECAD0091F7AF /* AuthenticationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDataSource.swift; sourceTree = "<group>"; };
+		7C14BAC829C1ECAD0091F7AF /* LoginAccountRegistrationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAccountRegistrationProvider.swift; sourceTree = "<group>"; };
 		7C14BACB29C2301F0091F7AF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7C14BADC29C233090091F7AF /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		7C14BADE29C237A00091F7AF /* LinkedAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedAccount.swift; sourceTree = "<group>"; };
-		7C14BAE129C239170091F7AF /* FacebookAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuthentication.swift; sourceTree = "<group>"; };
 		7C14BAE629C2400F0091F7AF /* Formula1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Formula1.entitlements; sourceTree = "<group>"; };
 		7C14BAEB29C357590091F7AF /* MockLoginSignInUITesting.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MockLoginSignInUITesting.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C14BAED29C357590091F7AF /* MockLoginSignInUITesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginSignInUITesting.swift; sourceTree = "<group>"; };
@@ -143,6 +137,7 @@
 		7C45CC4929D200D1009ED77E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7C45CC4B29D200EC009ED77E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7C64BC1E29C48132004352E4 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		7CE6756329D33A7000908946 /* FormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
 		F00E14668D0CC5F1D5FE53A0 /* Pods-Formula1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Formula1.release.xcconfig"; path = "Target Support Files/Pods-Formula1/Pods-Formula1.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -202,7 +197,7 @@
 		7C14264A29C9D75D0091FFF6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7C14BAC029C1EC620091F7AF /* loginEmailView.swift */,
+				7C14BAC029C1EC620091F7AF /* LoginEmailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -227,7 +222,6 @@
 			isa = PBXGroup;
 			children = (
 				7C14264329C9C6930091FFF6 /* SessionStore.swift */,
-				7C14263E29C494F30091FFF6 /* AuthService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -264,6 +258,7 @@
 				7C14265B29CA10380091FFF6 /* ButtonModifiers.swift */,
 				7C14265F29CA1CEF0091FFF6 /* TextFieldModifiers.swift */,
 				7C32DD9029CCB46200290BBB /* ARView.swift */,
+				7CE6756329D33A7000908946 /* FormField.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -310,9 +305,8 @@
 		7C14BABD29C1EC3A0091F7AF /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				7C14BAE029C238FF0091F7AF /* FacebookAuthenticated */,
 				7C14BAC629C1ECA20091F7AF /* AuthenticationRepository.swift */,
-				7C14BAC829C1ECAD0091F7AF /* AuthenticationDataSource.swift */,
+				7C14BAC829C1ECAD0091F7AF /* LoginAccountRegistrationProvider.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -321,7 +315,6 @@
 			isa = PBXGroup;
 			children = (
 				7C14BACB29C2301F0091F7AF /* User.swift */,
-				7C14BADE29C237A00091F7AF /* LinkedAccount.swift */,
 				7C14263C29C48C3D0091FFF6 /* Extensions.swift */,
 			);
 			path = Model;
@@ -334,14 +327,6 @@
 				7C14BADC29C233090091F7AF /* ProfileView.swift */,
 			);
 			path = Profile;
-			sourceTree = "<group>";
-		};
-		7C14BAE029C238FF0091F7AF /* FacebookAuthenticated */ = {
-			isa = PBXGroup;
-			children = (
-				7C14BAE129C239170091F7AF /* FacebookAuthentication.swift */,
-			);
-			path = FacebookAuthenticated;
 			sourceTree = "<group>";
 		};
 		7C14BAEC29C357590091F7AF /* MockLogin&SignInUITesttin */ = {
@@ -436,7 +421,6 @@
 				7C45CBF029D1BD1B009ED77E /* 1 Tag */,
 				7C14264E29C9E08E0091FFF6 /* Home */,
 				7C14BAFD29C3680F0091F7AF /* Factories */,
-				7C14BADB29C232FE0091F7AF /* Profile */,
 				7C14BABA29C1EC1F0091F7AF /* Login */,
 				7C14BAAE29C0FB700091F7AF /* TabBar */,
 			);
@@ -510,6 +494,7 @@
 		7C45CBF229D1BD2E009ED77E /* 3 Tag */ = {
 			isa = PBXGroup;
 			children = (
+				7C14BADB29C232FE0091F7AF /* Profile */,
 			);
 			path = "3 Tag";
 			sourceTree = "<group>";
@@ -674,7 +659,6 @@
 			mainGroup = 7C2D03AC29C0EB0C0023E36E;
 			packageReferences = (
 				7C2D03CE29C0F31E0023E36E /* XCRemoteSwiftPackageReference "BaseViper" */,
-				7C14BAE329C23D4B0091F7AF /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 				7C14265529C9EDB20091FFF6 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				7CB8149729CC805400378B64 /* XCRemoteSwiftPackageReference "FocusEntity" */,
 			);
@@ -774,7 +758,6 @@
 			files = (
 				7C14BAF029C357590091F7AF /* MockLoginSignInUITestingLaunchTests.swift in Sources */,
 				7C86F2B229C3876800A6B635 /* User.swift in Sources */,
-				7C86F2B429C3878600A6B635 /* LinkedAccount.swift in Sources */,
 				7C14BAEE29C357590091F7AF /* MockLoginSignInUITesting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -789,7 +772,7 @@
 				7C45CC3529D1F749009ED77E /* CameraView.swift in Sources */,
 				7C32DD8F29CCB3F000290BBB /* ARMenuView.swift in Sources */,
 				7C14BAC729C1ECA20091F7AF /* AuthenticationRepository.swift in Sources */,
-				7C14BAE229C239170091F7AF /* FacebookAuthentication.swift in Sources */,
+				7CE6756429D33A7000908946 /* FormField.swift in Sources */,
 				7C2D03BD29C0EB0C0023E36E /* ViewController.swift in Sources */,
 				7C32DD9729CDA16F00290BBB /* ARHomeView.swift in Sources */,
 				7C14265929C9EEEC0091FFF6 /* ProfileHeaderContentView.swift in Sources */,
@@ -797,23 +780,21 @@
 				7C2D03B929C0EB0C0023E36E /* AppDelegate.swift in Sources */,
 				7C2D03BB29C0EB0C0023E36E /* SceneDelegate.swift in Sources */,
 				7C45CBF429D1BD49009ED77E /* HomeSecondTagView.swift in Sources */,
-				7C14263F29C494F30091FFF6 /* AuthService.swift in Sources */,
 				7C14BAC529C1EC870091F7AF /* AuthenticationViewModel.swift in Sources */,
 				7C14BAC329C1EC710091F7AF /* RegisterEmailView.swift in Sources */,
 				7C14BAFF29C368200091F7AF /* NetworkServiceFactory.swift in Sources */,
-				7C14BADF29C237A00091F7AF /* LinkedAccount.swift in Sources */,
 				7C45CC4529D20047009ED77E /* LocalizedKeys.swift in Sources */,
 				7C64BC1F29C48132004352E4 /* ImagePicker.swift in Sources */,
 				7C14BABF29C1EC580091F7AF /* AuthenticationView.swift in Sources */,
 				7C14BADD29C233090091F7AF /* ProfileView.swift in Sources */,
-				7C14BAC929C1ECAD0091F7AF /* AuthenticationDataSource.swift in Sources */,
+				7C14BAC929C1ECAD0091F7AF /* LoginAccountRegistrationProvider.swift in Sources */,
 				7C14265E29CA173B0091FFF6 /* EditProfileContentView.swift in Sources */,
 				7C32DD9329CD932900290BBB /* ARViewModel.swift in Sources */,
 				7C32DD9129CCB46200290BBB /* ARView.swift in Sources */,
 				7C45CC3329D1F641009ED77E /* Coordinator.swift in Sources */,
 				7C14BACC29C2301F0091F7AF /* User.swift in Sources */,
 				7C14263D29C48C3D0091FFF6 /* Extensions.swift in Sources */,
-				7C14BAC129C1EC620091F7AF /* loginEmailView.swift in Sources */,
+				7C14BAC129C1EC620091F7AF /* LoginEmailView.swift in Sources */,
 				7C14BAFC29C3671B0091F7AF /* LoginMock.swift in Sources */,
 				7C32DDC529CDB9B500290BBB /* ARCells.swift in Sources */,
 				7C14266029CA1CEF0091FFF6 /* TextFieldModifiers.swift in Sources */,
@@ -1168,14 +1149,6 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 2.0.0;
-			};
-		};
-		7C14BAE329C23D4B0091F7AF /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/facebook/facebook-ios-sdk.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
 			};
 		};
 		7C2D03CE29C0F31E0023E36E /* XCRemoteSwiftPackageReference "BaseViper" */ = {

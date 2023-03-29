@@ -6,76 +6,51 @@
 //
 
 import Foundation
-
-enum NetworkError: Error {
-    case badRequest
-    case decodingError
-    case notAuthenticated
-}
+import Firebase
+import FirebaseStorage
 
 protocol NetworkService {
-    func login(email: String, password: String, name: String, surname: String, completionBlock: @escaping (Result<User, Error>) -> Void)
-    func createNewUser(email: String, password: String, name: String, surname: String, imageData: Data, completionBlock: @escaping (Result<User, Error>) -> Void)
+    func signIn(email: String, password: String, onSuccess: @escaping(_ user: User) -> Void, onError: @escaping(_ errorMessage: String) -> Void)
+    func signUp(username: String, email: String, password: String, imageData: Data, onSuccess: @escaping(_ user: User) -> Void, onError: @escaping(_ errorMessage: String) -> Void)
     func logout() throws
     func getCurrentUser() -> User?
-    func getCurrentProvider() -> [LinkedAccounts]
-    func linkEmailAndPassword(email: String, password: String, completionBlock: @escaping (Bool) -> Void)
-    func linkFacebook(completionBlock: @escaping (Bool) -> Void)
-    func loginFacebook(completionBlock: @escaping (Result<User, Error>) -> Void)
+    func editProfile(username: String, bio: String, imageData: Data, onSuccess: @escaping(_ user: User) -> Void, onError: @escaping(_ errorMessage: String) -> Void)
 }
 
 class AuthenticationRepository: NetworkService {
-    private let authenticationFirebaseDatasource: AuthenticationFirebaseDatasource
+    private let authenticationProvider: LoginAccountRegistrationProvider
     @Published var messageError: String?
     
-    init(authenticationFirebaseDatasource: AuthenticationFirebaseDatasource = AuthenticationFirebaseDatasource()) {
-        self.authenticationFirebaseDatasource = authenticationFirebaseDatasource
+    init(authenticationProvider: LoginAccountRegistrationProvider = LoginAccountRegistrationProvider()) {
+        self.authenticationProvider = authenticationProvider
     }
     
     func getCurrentUser() -> User? {
-        authenticationFirebaseDatasource.getCurrentUser()
+        authenticationProvider.getCurrentUser()
     }
     
-    func createNewUser(email: String, password: String, name: String, surname: String, imageData: Data, completionBlock: @escaping (Result<User, Error>) -> Void) {
-        authenticationFirebaseDatasource.createNewUser(email: email,
-                                                       password: password,
-                                                       name: name,
-                                                       surname: surname,
-                                                       imageData: imageData,
-                                                       completionBlock: completionBlock)
+    func signUp(username: String, email: String, password: String, imageData: Data, onSuccess: @escaping(_ user: User) -> Void, onError: @escaping(_ errorMessage: String) -> Void) {
+        authenticationProvider.signUp(username: username, email: email, password: password, imageData: imageData, onSuccess: onSuccess, onError: onError)
     }
-    
-    func login(email: String, password: String, name: String, surname: String, completionBlock: @escaping (Result<User, Error>) -> Void) {
-        if email.isEmpty || password.isEmpty {
-            self.messageError = "Rellena los campos"
-        } else {
-            authenticationFirebaseDatasource.login(email: email,
-                                                   password: password,
-                                                   name: name,
-                                                   surname: surname,
-                                                   completionBlock: completionBlock)
-        }
+
+    func signIn(email: String, password: String, onSuccess: @escaping(_ user: User) -> Void, onError: @escaping(_ errorMessage: String) -> Void) {
+        authenticationProvider.signIn(email: email, password: password, onSuccess: onSuccess, onError: onError)
     }
     
     func logout() throws {
-        try authenticationFirebaseDatasource.logout()
+        try authenticationProvider.logout()
     }
     
-    func getCurrentProvider() -> [LinkedAccounts] {
-        authenticationFirebaseDatasource.currentProvider()
-    }
-    
-    func linkEmailAndPassword(email: String, password: String, completionBlock: @escaping (Bool) -> Void) {
-        authenticationFirebaseDatasource.linkEmailAndPassword(email: email,
-                                                              password: password,
-                                                              completionBlock: completionBlock)
-    }
-    
-    func linkFacebook(completionBlock: @escaping (Bool) -> Void) {
-        authenticationFirebaseDatasource.linkFacebook(completionBlock: completionBlock)
-    }
-    
-    func loginFacebook(completionBlock: @escaping (Result<User, Error>) -> Void) {
-        authenticationFirebaseDatasource.loginWithFacebook(completionBlock: completionBlock)
+    func editProfile(username: String, bio: String, imageData: Data, onSuccess: @escaping(_ user: User) -> Void, onError: @escaping(_ errorMessage: String) -> Void) {
+
+        guard let userId = Auth.auth().currentUser?.uid else { return }
+        
+        let storageProfileUserId = LoginAccountRegistrationProvider.storageProfileId(userId: userId)
+        
+        let metadata = StorageMetadata()
+        metadata.contentType = "image/jpg"
+        
+        authenticationProvider.editProfile(userId: userId, username: username, bio: bio, imageData: imageData, metaData: metadata, storageProfileImageRef: storageProfileUserId, onError: onError)
+        
     }
 }

@@ -56,9 +56,9 @@ struct ARController: UIViewRepresentable {
         
         arView.installGestures([.all], for: clonedEntity) // para poder mover y girar el objeto
         
-        let anchorEntity = AnchorEntity(plane: .any) // Para anclarlo
-        anchorEntity.addChild(clonedEntity)
-        arView.scene.addAnchor(anchorEntity)
+//        let anchorEntity = AnchorEntity(plane: .any) // Para anclarlo
+//        anchorEntity.addChild(clonedEntity)
+//        arView.scene.addAnchor(anchorEntity)
     }
     
 }

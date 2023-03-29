@@ -62,6 +62,8 @@ struct CustomTabView: View {
             .ignoresSafeArea(.keyboard, edges: .bottom)
             .background(Color.black.opacity(0.05).ignoresSafeArea(.all, edges: .all))
         }
+        .accentColor(.black)
+        .preferredColorScheme(.light)
     }
 }
 

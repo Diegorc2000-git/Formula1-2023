@@ -12,8 +12,6 @@ final class AuthenticationViewModel: ObservableObject {
     @Published var user: User?
     @Published var messageError: String?
     @Published var showAlert: Bool = false
-    @Published var isAccountLinked: Bool = false
-    @Published var linkedAccounts: [LinkedAccounts] = []
     private let service: NetworkService
     
     init(service: NetworkService) {
@@ -25,7 +23,7 @@ final class AuthenticationViewModel: ObservableObject {
         self.user = service.getCurrentUser()
     }
     
-    func createNewUser(email: String, password: String, imageData: Data) {
+    func createNewUserViewModel(username: String, email: String, password: String, imageData: Data, onSuccess: @escaping(_ user: User) -> Void, onError: @escaping(_ errorMessage: String) -> Void) {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         
@@ -36,22 +34,11 @@ final class AuthenticationViewModel: ObservableObject {
         } else if emailPred.evaluate(with: email) == false {
             self.messageError = "El email introducido es incorrecto, ejemplo@gmail.com"
         } else {
-            service.createNewUser(email: email,
-                                  password: password,
-                                  name: "",
-                                  surname: "",
-                                  imageData: imageData) { [weak self] result in
-                switch result {
-                case .success(let user):
-                    self?.user = user
-                case .failure( _):
-                    self?.messageError = "Usuario ya registrado"
-                }
-            }
+            service.signUp(username: username, email: email, password: password, imageData: imageData, onSuccess: onSuccess, onError: onError)
         }
     }
     
-    func login(email: String, password: String) {
+    func login(email: String, password: String, onSuccess: @escaping(_ user: User) -> Void, onError: @escaping(_ errorMessage: String) -> Void) {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         
@@ -62,14 +49,7 @@ final class AuthenticationViewModel: ObservableObject {
         } else if emailPred.evaluate(with: email) == false {
             self.messageError = LocalizedKeys.Errors.emailNotValid
         } else {
-            service.login(email: email, password: password, name: "", surname: "") { [weak self] result in
-                switch result {
-                case .success(let user):
-                    self?.user = user
-                case .failure(_):
-                    self?.messageError = "Usuario o contraseña incorrecta"
-                }
-            }
+            service.signIn(email: email, password: password, onSuccess: onSuccess, onError: onError)
         }
     }
     
@@ -78,51 +58,11 @@ final class AuthenticationViewModel: ObservableObject {
             try Auth.auth().signOut()
             self.user = nil
         } catch {
-            print("Error logout")
+            print("_Error logout")
         }
     }
     
-    func getCurrentProvider() {
-        linkedAccounts = service.getCurrentProvider()
-        print("User Provider \(linkedAccounts)")
+    func editProfile(imageData: Data, username: String, bio: String, onSuccess: @escaping(_ user: User) -> Void, onError: @escaping(_ errorMessage: String) -> Void) {
+        service.editProfile(username: username, bio: bio, imageData: imageData, onSuccess: onSuccess, onError: onError)
     }
-    
-    func isEmailAndPasswordLinked() -> Bool {
-        linkedAccounts.contains(where: { $0.rawValue == "password" })
-    }
-    
-    func linkEmailAndPassword(email: String, password: String) {
-        service.linkEmailAndPassword(email: email,
-                                     password: password) { [weak self] isSuccess in
-            print("Linked Email and Password \(isSuccess.description)")
-            self?.isAccountLinked = isSuccess
-            self?.showAlert.toggle()
-            self?.getCurrentProvider()
-        }
-    }
-    
-    func isFacebookLinked() -> Bool {
-        linkedAccounts.contains(where: { $0.rawValue == "facebook.com" })
-    }
-    
-    func linkFacebook() {
-        service.linkFacebook { [weak self] isSuccess in
-            print("Linked Facebook \(isSuccess.description)")
-            self?.isAccountLinked = isSuccess
-            self?.showAlert.toggle()
-            self?.getCurrentProvider()
-        }
-    }
-    
-    func loginFacebook() {
-        service.loginFacebook() { [weak self] result in
-            switch result {
-            case .success(let user):
-                self?.user = user
-            case .failure(let error):
-                self?.messageError = error.localizedDescription
-            }
-        }
-    }
-    
 }

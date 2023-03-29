@@ -11,8 +11,7 @@ struct RegisterEmailView: View {
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
     @State var email: String = ""
     @State var password: String = ""
-    @State var name: String = ""
-    @State var surname: String = ""
+    @State var username: String = ""
     @State var profileImage: Image?
     @State var pickerImage: Image?
     @State var showingActionSheet = false
@@ -21,7 +20,9 @@ struct RegisterEmailView: View {
     @State var sourceType: UIImagePickerController.SourceType = .photoLibrary
     @State var error: String = ""
     @State var showingAlert = false
+    @State var showingAlertSuccess = false
     @State var alertTitle: String = LocalizedKeys.Errors.errorTitle
+    @State var alertTitleSuccess: String = "_Registro Completado"
     
     func loadImage() {
         guard let inputImage = pickerImage else { return }
@@ -32,7 +33,7 @@ struct RegisterEmailView: View {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         
-        if email.isEmpty || password.isEmpty || imageData.isEmpty {
+        if email.isEmpty || password.isEmpty || imageData.isEmpty || username.isEmpty {
             return LocalizedKeys.Errors.emailEmpty
         } else if password.count < 6 {
             return LocalizedKeys.Errors.passwordNotChar
@@ -43,25 +44,28 @@ struct RegisterEmailView: View {
     }
     
     func clear() {
+        self.username = ""
         self.email = ""
         self.password = ""
+        self.imageData = Data()
+        self.profileImage = Image("icon_profile_image")
     }
     
     func signUp() {
         if let error = errorCheck() {
             self.error = error
-            self.showingAlert = true
+            self.showingAlert.toggle()
             return
         }
-        AuthService.signUp(email: email, password: password, name: name, surname: surname, imageData: imageData, onSuccess: { (user) in
+        authenticationViewModel.createNewUserViewModel(username: username, email: email.lowercased(), password: password, imageData: imageData, onSuccess: { (user) in
             self.clear()
+            self.showingAlertSuccess.toggle()
         }) { (errorMessage) in
-            print("Error \(errorMessage)")
+            print("_Error \(errorMessage)")
             self.error = errorMessage
-            self.showingAlert = true
+            self.showingAlert.toggle()
             return
         }
-        //authenticationViewModel.createNewUser(email: textFieldEmail, password: textFieldPassword, imageData: imageData)
     }
     
     var body: some View {
@@ -83,12 +87,11 @@ struct RegisterEmailView: View {
                     .padding(.bottom, 2)
                 if profileImage != nil {
                     profileImage!.resizable()
-                        .clipShape(Circle())
                         .frame(width: 150, height: 150)
                         .padding(.top, 20)
                         .padding(.bottom, 20)
                         .onTapGesture {
-                            self.showingActionSheet = true
+                            self.showingActionSheet.toggle()
                         }
                 } else {
                     Image("icon_profile_image")
@@ -97,10 +100,11 @@ struct RegisterEmailView: View {
                         .padding(.top, 20)
                         .padding(.bottom, 40)
                         .onTapGesture {
-                            self.showingActionSheet = true
+                            self.showingActionSheet.toggle()
                         }
                 }
                 VStack(spacing: 32) {
+                    TextField("_Introduce tu nombre de usuario*", text: $username)
                     TextField(LocalizedKeys.SignUp.emailTextFieldSignup, text: $email)
                         .accessibilityIdentifier("usernameTextField")
                     SecureField(LocalizedKeys.SignUp.passwordTextFieldSignup, text: $password)
@@ -112,46 +116,40 @@ struct RegisterEmailView: View {
                 .padding(.bottom, 20)
                 .keyboardType(.emailAddress)
                 Button(action: signUp) {
-                    Text(LocalizedKeys.Generic.ok)
+                    Text(LocalizedKeys.SignUp.signupButton)
                 }
                 .font(.headline)
                 .foregroundColor(.white)
                 .padding()
-                .frame(width: 100, height: 45)
+                .frame(width: 150, height: 45)
                 .background(Color.gray)
                 .cornerRadius(12)
                 .accessibilityIdentifier("signInButton")
                 .alert(isPresented: $showingAlert) {
-                    Alert(title: Text(alertTitle), message: Text(error), dismissButton: .default(Text("OK")))
+                    Alert(title: Text(alertTitleSuccess), message: Text("_Cuenta creada correctamente, Inicia Sesión"), dismissButton: .default(Text(LocalizedKeys.Generic.ok)))
+                }
+                .alert(isPresented: $showingAlertSuccess) {
+                    Alert(title: Text(alertTitleSuccess), message: Text("_Cuenta creada correctamente, Inicia Sesión"), dismissButton: .default(Text(LocalizedKeys.Generic.ok)))
                 }
                 Text(LocalizedKeys.Generic.requiredFields)
                     .padding(.horizontal, 8)
                     .multilineTextAlignment(.center)
                     .font(.title3)
                     .foregroundColor(.gray.opacity(0.5))
-                if let messageError = authenticationViewModel.messageError {
-                    Text(messageError)
-                        .bold()
-                        .font(.body)
-                        .foregroundColor(.red)
-                        .padding(.top, 20)
-                        .accessibilityIdentifier("messageText")
-                }
             }
             .padding(.horizontal, 32)
             Spacer()
         }
+        .accentColor(.black)
+        .preferredColorScheme(.light)
         .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
             ImagePicker(pickerImage: self.$pickerImage, showImagePicker: self.$showingImagePicker, imageData: self.$imageData)
         }
         .actionSheet(isPresented: $showingActionSheet) {
-            ActionSheet(title: Text(""), buttons: [.default(Text(LocalizedKeys.SignUp.choosePhoto)) {
+            ActionSheet(title: Text("_Galeria"), buttons: [.default(Text(LocalizedKeys.SignUp.choosePhoto)) {
                 self.sourceType = .photoLibrary
-                self.showingImagePicker = true
-            },.default(Text(LocalizedKeys.SignUp.takePhoto)) {
-                self.sourceType = .camera
-                self.showingImagePicker = true
-            }, .cancel()])
+                self.showingImagePicker.toggle()
+            },.cancel()])
         }
     }
 }

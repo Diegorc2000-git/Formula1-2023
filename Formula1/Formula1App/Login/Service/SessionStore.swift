@@ -21,7 +21,7 @@ class SessionStore: ObservableObject {
             
             if let user = user {
                 
-                let firestoreUserId = AuthService.getUserId(userId: user.uid)
+                let firestoreUserId = LoginAccountRegistrationProvider.getUserId(userId: user.uid)
                 firestoreUserId.getDocument { (document, error) in
                     if let dict = document?.data() {
                         guard let decodedUser = try? User.init(fromDictionary: dict) else { return }

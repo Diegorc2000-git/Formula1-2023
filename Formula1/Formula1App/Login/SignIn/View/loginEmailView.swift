@@ -1,5 +1,5 @@
 //
-//  loginEmailView.swift
+//  LoginEmailView.swift
 //  Formula1
 //
 //  Created by Diego Rodriguez Casillas on 15/3/23.
@@ -41,11 +41,11 @@ struct LoginEmailView: View {
             self.showingAlert = true
             return
         }
-        AuthService.signIn(email: email, password: password, onSuccess: { (user) in
+        authenticationViewModel.login(email: email.lowercased(), password: password, onSuccess: { (user) in
             self.clear()
         }) { errorMessage in
-            print("Error \(errorMessage)")
-            self.error = errorMessage
+            print("_Error \(errorMessage)")
+            self.error = "Usuario no registrado"
             self.showingAlert = true
             return
         }
@@ -94,7 +94,7 @@ struct LoginEmailView: View {
                 .font(.headline)
                 .foregroundColor(.white)
                 .padding()
-                .frame(width: 100, height: 45)
+                .frame(width: 150, height: 45)
                 .background(Color.gray)
                 .cornerRadius(12)
                 .accessibilityIdentifier("loginButton")
@@ -106,18 +106,12 @@ struct LoginEmailView: View {
                     .multilineTextAlignment(.center)
                     .font(.title3)
                     .foregroundColor(.gray.opacity(0.5))
-                if let messageError = authenticationViewModel.messageError {
-                    Text(messageError)
-                        .bold()
-                        .font(.body)
-                        .foregroundColor(.red)
-                        .padding(.top, 20)
-                        .accessibilityIdentifier("messageText")
-                }
             }
             .padding(.horizontal, 32)
             Spacer()
         }
+        .accentColor(.black)
+        .preferredColorScheme(.light)
     }
 }
 

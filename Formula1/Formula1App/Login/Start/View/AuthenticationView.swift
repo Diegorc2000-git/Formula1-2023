@@ -28,19 +28,13 @@ struct AuthenticationView: View {
             if (session.session != nil) {
                 TopBarContentView()
             } else {
-                AuthenticationView2(authenticationViewModel: AuthenticationViewModel(service: NetworkServiceFactory.create()))
+                FirstScreenView(authenticationViewModel: AuthenticationViewModel(service: NetworkServiceFactory.create()))
             }
         }.onAppear(perform: listen)
     }
 }
 
-struct AuthenticationView_Previews: PreviewProvider {
-    static var previews: some View {
-        AuthenticationView()
-    }
-}
-
-struct AuthenticationView2: View {
+struct FirstScreenView: View {
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
     @State private var authenticationSheetView: AuthenticationSheetView?
     
@@ -64,27 +58,11 @@ struct AuthenticationView2: View {
                 .tint(.blue)
                 .foregroundColor(.black)
                 .accessibilityIdentifier("emailButton")
-                Button {
-                    authenticationViewModel.loginFacebook()
-                } label: {
-                    Label(LocalizedKeys.SignIn.enterWithFacebook, image: "icon_facebook")
-                        .fixedSize()
-                        .foregroundColor(.black)
-                }
-                .tint(.blue)
-                .accessibilityIdentifier("FBButton")
             }
             .controlSize(.large)
             .buttonStyle(.bordered)
             .buttonBorderShape(.capsule)
             .padding(.top, 60)
-            if let messageError = authenticationViewModel.messageError {
-                Text(messageError)
-                    .bold()
-                    .font(.body)
-                    .foregroundColor(.red)
-                    .padding(.top, 20)
-            }
             Spacer()
             VStack {
                 Button {
@@ -105,6 +83,8 @@ struct AuthenticationView2: View {
                 LoginEmailView(authenticationViewModel: authenticationViewModel)
             }
         }
+        .accentColor(.black)
+        .preferredColorScheme(.light)
     }
     
 }
