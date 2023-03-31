@@ -1,0 +1,81 @@
+//APP
+"" = "";
+"app_name" = "Formula1";
+
+//Generic
+"open_allery" = "Open Gallery";
+"required_fields" = "* Required fields";
+"ok" = "OK";
+
+// SignIn
+"login_button_title" = "Login";
+"signup_button_title" = "Sign up";
+"no_account" = "¿You have no account?";
+"enter_with_email" = "Enter with Email";
+"enter_with_facebook" = "Enter with Facebook";
+"login_title" = "Log in to access the app";
+"email_text_field_login" = "Enter your email*";
+"password_text_field_login" = "Enter your email*";
+"login_button" = "Log in";
+
+// SignUp
+"signun_completed" = "SignUp Completed";
+"signup_title" = "Register to access the app.";
+"email_text_field_signup" = "Enter your email*";
+"surname_text_field_signup" = "Enter your User Name*";
+"password_text_field_signup" = "Enter your password*";
+"signup_button" = "Sign Up";
+"choose_photo" = "Choose photo";
+"take_photo" = "Take photo";
+"signup_success" = "Account created successfully, Login";
+
+// 2 Tab
+"second_tab_title" = "Information about F1";
+"menu_ar_cell_title" = "Open augmented menu";
+"menu_cicuits_cell_title" = "Open Circuits";
+"menu_pilots_cell_title" = "Open Pilots";
+"menu_teams_cell_title" = "Open teams";
+
+// AR
+"ar_title" = "AR Menu";
+"ar_menu_title_f1" = "Formula One";
+"ar_menu_title_supercars" = "Supercars";
+
+// Profile
+"profile_email" = "Email: ";
+"profile_name" = "Name: ";
+"profile_bio" = "Biography: ";
+"profile_vinculated_accounts_title" = "Link other accounts to the current session";
+"profile_vinculated_email" = "Link Email";
+"profile_vinculated_facebook" = "Link Facebook account";
+"profile_edit_profile" = "Edit profile";
+"profile_log_out" = "Logout";
+"profile_title" = "Profile";
+
+// Edit Profile
+"edit_profile_name" = "Enter your name*: ";
+"edit_profile_surname" = "Enter your last name*: ";
+"edit_profile_bio" = "Enter a biography*: ";
+"edit_button" = "Edit";
+"edit_subtitle" = "The changes are applied the next time you log in.";
+"fill_all_fields" = "fill in all the fields";
+
+// Vinculated Accounts
+"vinculate_email_password" = "Link Email and Password";
+"vinculate_email_with_session_account" = "Link your email with the session you are currently logged in.";
+"vinculate_enter_email" = "Enter your email*";
+"vinculate_enter_password" = "Enter your password*";
+"vinculate_button" = "Link";
+"vinculate_alert_account_vinculated" = "Account Linked!";
+"vinculate_alert_account_vinculated_success" = "✅ You just linked your account";
+"vinculate_alert_account_vinculated_failure" = "❌ Error linking account";
+
+
+// Errors
+"error" = "Error";
+"error_title" = "An error has occurred!";
+"email_empty" = "Fill in the required fields.";
+"password_not_char" = "The password must be at least 6 digits.";
+"email_not_valid" = "The email entered is incorrect, example@gmail.com";
+
+
